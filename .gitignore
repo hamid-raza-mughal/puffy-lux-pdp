@@ -5,3 +5,10 @@
 # deliverable page. ~1.2 GB: the reference PNGs, the 435 MB reference bundle,
 # the derived DOM evidence, gate output under diffs/, and node_modules.
 puffy-pdp-code/capture/
+
+# Saved copies of the live page, kept for reference. Local only: this is captured
+# third-party markup, and the repo already carries frozen ground truth under
+# capture/. Note the rights walk in capture/lib-rights.mjs does not skip this
+# directory — dropping binary assets in here will trip the "third-party binaries
+# confined to assets/third-party/" check.
+puffy-pdp-code/archives/
