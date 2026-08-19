@@ -5,3 +5,9 @@
 # deliverable page. ~1.2 GB: the reference PNGs, the 435 MB reference bundle,
 # the derived DOM evidence, gate output under diffs/, and node_modules.
 capture/
+
+# Former nested clone of this same repo, kept on disk as a local duplicate.
+# Its git metadata was removed; contents are byte-identical to the repo root.
+# NOTE: capture/verify.mjs rights check fails while this directory exists,
+# because it holds third-party binaries outside assets/third-party/.
+puffy-pdp-code/
