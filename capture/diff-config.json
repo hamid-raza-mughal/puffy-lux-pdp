@@ -1,6 +1,0 @@
-{
-  "note": "Exact diff configuration, recorded because an unrecorded config makes a reported percentage meaningless.",
-  "pixelmatch": { "threshold": 0.1, "includeAA": false, "alpha": 0.1, "diffMask": true },
-  "tile": { "size": 64, "maxTilePct": 5.0 },
-  "gate": { "sectionPct": 0.5, "fullPagePct": 1.0, "heightDeltaPx": 0, "geometryTolerancePx": 1 }
-}

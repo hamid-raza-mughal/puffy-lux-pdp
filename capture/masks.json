@@ -1,4 +1,0 @@
-{
-  "note": "Every mask must be declared here with a reason AND evidence that deterministic freezing was attempted first. Preference order is: fix the CSS -> reproduce captured content exactly -> freeze harder -> mask (last resort). Masking and freezing the same element is incoherent; do one.",
-  "masks": []
-}
