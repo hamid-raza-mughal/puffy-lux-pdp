@@ -1,0 +1,989 @@
+{
+  "note": "Assets requested only while the gallery carousel is advanced past slide 1. The rest-state capture never requests these, so they are absent from manifest.json. manifest.json is the frozen record of the rest-state capture and is NOT rewritten here.",
+  "probedAt": "2026-08-19T11:45:04.799Z",
+  "target": "https://puffy.com/products/puffy-lux-mattress",
+  "profileHash": "fbb11c7636a9a5e2",
+  "assetCount": 140,
+  "assets": [
+    {
+      "originalUrl": "https://puffy.com/_next/static/media/32c830f11645148a-s.p.3c2afce5.woff2",
+      "localPath": "assets/third-party/fonts/32c830f11645148a-s.p.3c2afce5.woff2",
+      "bytes": 13888,
+      "sha256": "a33eb532bcca84cbc5987874dc7fb9d4b04e02471301e39b6834fa1a9a7b0f3d",
+      "resourceType": "font"
+    },
+    {
+      "originalUrl": "https://puffy.com/_next/static/media/49eabb9678b0be2e-s.p.1919f857.woff2",
+      "localPath": "assets/third-party/fonts/49eabb9678b0be2e-s.p.1919f857.woff2",
+      "bytes": 13924,
+      "sha256": "f99a9dbd8c90f851ab29b130957f73319efb7bb5d8225b0542333498ccaaf7d1",
+      "resourceType": "font"
+    },
+    {
+      "originalUrl": "https://puffy.com/_next/static/media/80bb744e92754df7-s.p.1eaf03ad.woff2",
+      "localPath": "assets/third-party/fonts/80bb744e92754df7-s.p.1eaf03ad.woff2",
+      "bytes": 13400,
+      "sha256": "202b8aa6108ec44ba8f3d717b0c9f7f94c7f4d76f01943104eaadaf6cf3da602",
+      "resourceType": "font"
+    },
+    {
+      "originalUrl": "https://puffy.com/_next/static/media/a3346ffcb420890f-s.p.49ba098b.woff2",
+      "localPath": "assets/third-party/fonts/a3346ffcb420890f-s.p.49ba098b.woff2",
+      "bytes": 14052,
+      "sha256": "76ce968da88b901185cf700e73e8dddc9c68bce9b0f9c76d36aea3877e7657cb",
+      "resourceType": "font"
+    },
+    {
+      "originalUrl": "https://puffy.com/_next/static/media/bec5c09c262b1b7f-s.p.aaa2cd55.woff2",
+      "localPath": "assets/third-party/fonts/bec5c09c262b1b7f-s.p.aaa2cd55.woff2",
+      "bytes": 13540,
+      "sha256": "57d3ae6c4b78cc2d5b568212e1fcd75e5a0be45e6249e55750ba77d22e22bc3b",
+      "resourceType": "font"
+    },
+    {
+      "originalUrl": "https://puffy.com/_next/static/media/ed113078b1c8eb25-s.p.a00262de.woff2",
+      "localPath": "assets/third-party/fonts/ed113078b1c8eb25-s.p.a00262de.woff2",
+      "bytes": 13500,
+      "sha256": "585cf3b69625c652a9ef37a7c67817010f03cbecb1841243157ca76b8209f99c",
+      "resourceType": "font"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-for-arthritis-mattress-nerd-mattress-clarity.svg?",
+      "localPath": "assets/third-party/icons/best-for-arthritis-mattress-nerd-mattress-clarity.svg",
+      "bytes": 51936,
+      "sha256": "3cf5fa7f88fe9c857d0e595594f611573fa3f8bf17325d64b43b3daf30b9ccdd",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-for-arthritis-mattress-nerd.svg?",
+      "localPath": "assets/third-party/icons/best-for-arthritis-mattress-nerd.svg",
+      "bytes": 25513,
+      "sha256": "17ec22b319d4e75e6f8d35f5abc67ff568d6a8b91ff94d37650dc00dde07cb8d",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-for-shoulder-pain-sleep-doctor.svg?",
+      "localPath": "assets/third-party/icons/best-for-shoulder-pain-sleep-doctor.svg",
+      "bytes": 65167,
+      "sha256": "35518614c001900906df8e6d629d8355ae85e6556e22cb243583ab4c20062395",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-full-size-matrs-mattress-nerd.svg?",
+      "localPath": "assets/third-party/icons/best-full-size-matrs-mattress-nerd.svg",
+      "bytes": 22103,
+      "sha256": "ad89a442b80929a4a5723e1f48973b3c03e084272eef8864d09126b08a04a524",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-hybrid-mattress-2025.svg?",
+      "localPath": "assets/third-party/icons/best-hybrid-mattress-2025.svg",
+      "bytes": 34660,
+      "sha256": "195cc0362fa280d9d0a4a823dd3a1ecb893b5be01a3170bbf489107707532e12",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-hybrid-mattress-mattress-nerd.svg?",
+      "localPath": "assets/third-party/icons/best-hybrid-mattress-mattress-nerd.svg",
+      "bytes": 22731,
+      "sha256": "ce51e6bd2f8f38a29c39b45cacb31fda0aee81d4493517898b8e4047bc0626ae",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-innerspiring-mattress-mattress-nerd.svg?",
+      "localPath": "assets/third-party/icons/best-innerspiring-mattress-mattress-nerd.svg",
+      "bytes": 24948,
+      "sha256": "d0c96bcaa1dc10440591acf18868d5eee84598e0c75c315a2a9192ada97960ba",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-king-size-mattress-2025-good-housekeeping.svg?",
+      "localPath": "assets/third-party/icons/best-king-size-mattress-2025-good-housekeeping.svg",
+      "bytes": 37307,
+      "sha256": "0646bc9a66aae90708f6d6309d8d546d71a61a0aa22f388f80cef668122bc8ee",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-luxury-mattress-healthline.svg?",
+      "localPath": "assets/third-party/icons/best-luxury-mattress-healthline.svg",
+      "bytes": 29907,
+      "sha256": "3e1417525c833ee7140126d63dcdf1f2b68698ebf85a9273190a2aefb3bf8fb9",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-2025.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-2025.svg",
+      "bytes": 27840,
+      "sha256": "e7bedc3827eea3ee9dd5cbf68d0a3a59bc76d2f4a7ec3bf64e8d78a1ec9bb1ef",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-back-pain-good-housekeeping.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-for-back-pain-good-housekeeping.svg",
+      "bytes": 36501,
+      "sha256": "489050ca6cd900e05e3af7debc7a384812411c936d9c68c55d8ac933fa4a10ae",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-combination-sleepers-mattress-nerd.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-for-combination-sleepers-mattress-nerd.svg",
+      "bytes": 36831,
+      "sha256": "6e5c8ea1660b4e9475ca4cc68ea9631afdd4a36024e189f60ea83385a37275ed",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-combination-sleepers-sleepiverse.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-for-combination-sleepers-sleepiverse.svg",
+      "bytes": 39630,
+      "sha256": "b81046aa151e8aa213b9bbd71e0b897baa1b7c4974c422cdf809840ef8f00ac2",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-combination-sleepers-us-news.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-for-combination-sleepers-us-news.svg",
+      "bytes": 26554,
+      "sha256": "5ace0dddfbb3c7fc6fe4caaf92a5a709168a3d9345c39d9730ccb978fafa5723",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-guest-room-sleep-doctor.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-for-guest-room-sleep-doctor.svg",
+      "bytes": 65298,
+      "sha256": "08719928f3720308d05642b3e0887b997a6b21c75586c0bbd176f0b650ee75cf",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-light-weight-sleepers-forbes.svg?v=1785150181",
+      "localPath": "assets/third-party/icons/best-mattress-for-light-weight-sleepers-forbes-1b8400bc.svg",
+      "bytes": 49148,
+      "sha256": "7360dbd2d6fe90ec15ebe10d308e7b557609c0b625aadf97e2328507ba65f9e4",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-light-weight-sleepers-sleepdoctor.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-for-light-weight-sleepers-sleepdoctor.svg",
+      "bytes": 75305,
+      "sha256": "fb492ca382cde688f40953e9796ae828a509be9b5b511833afdc3e9f810a2192",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-luxury--sleepiverse.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-for-luxury--sleepiverse.svg",
+      "bytes": 31937,
+      "sha256": "47e08cf07481eaaa38cb597a7ab41ffe64eb5b1d9e59a62daf0bf67b05407562",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-luxury-sleepiverse.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-for-luxury-sleepiverse.svg",
+      "bytes": 29021,
+      "sha256": "947ff7121cfadc499c96bfe70fca0b592f06064ad7ab54e4c21bfd5ee51bc656",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-menopause-sleep-doctor.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-for-menopause-sleep-doctor.svg",
+      "bytes": 63223,
+      "sha256": "24b25ffebb4bbc08bd5489ebc214357e74a94c8a3ca67f35b2f9d7cf32c9f134",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-money-2025.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-for-money-2025.svg",
+      "bytes": 23500,
+      "sha256": "b34d17cc4346855666a3762add436246f9ede42bc3d8d21a03769f5204e732ad",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-side-sleepers-healthline.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-for-side-sleepers-healthline.svg",
+      "bytes": 41877,
+      "sha256": "b672d41c66cdc8d5a016515f7e8efd3942228df4116013b17ee04cdbaec34613",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-sidesleepers-good-housekeeping.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-for-sidesleepers-good-housekeeping.svg",
+      "bytes": 43559,
+      "sha256": "549d1a4165eee682811047393ad334fde3ed4e9674817e5800861b1127087675",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-in-a-box-good-housekeeping.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-in-a-box-good-housekeeping.svg",
+      "bytes": 30977,
+      "sha256": "80980a45ae287fabc602082a9fd36895bde63ad6f2814eb26dfe1104e8c5c013",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-in-a-box-mattress-advisor.svg?",
+      "localPath": "assets/third-party/icons/best-mattress-in-a-box-mattress-advisor.svg",
+      "bytes": 43756,
+      "sha256": "f47c07ffa6a60b1cdaa3bb99e88849b1e5fbac1461918742a823fe26500d4b75",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattresses-for-pregnancy-2025-mattress-nerd.svg?",
+      "localPath": "assets/third-party/icons/best-mattresses-for-pregnancy-2025-mattress-nerd.svg",
+      "bytes": 26631,
+      "sha256": "5de9a63792c38b1a4b5fb30717b62edd70a4b6d7db87d1aedcb79dc5adea11bc",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattresses-for-seniors-2025-mattress-nerd.svg?v=1770014772",
+      "localPath": "assets/third-party/icons/best-mattresses-for-seniors-2025-mattress-nerd-f01016fb.svg",
+      "bytes": 27398,
+      "sha256": "dd705e626b7389f29f25c52703302f0e55245089705be595760f9b6f63905a91",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-memory-foam-mattress-2026-mattress-nerd.svg?",
+      "localPath": "assets/third-party/icons/best-memory-foam-mattress-2026-mattress-nerd.svg",
+      "bytes": 30014,
+      "sha256": "b3954fd8896392e965d182349e12ecb4b58afee6c5dae958e8f68a685f7fd484",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-memory-foam-mattress-2026-sleepivors.svg?",
+      "localPath": "assets/third-party/icons/best-memory-foam-mattress-2026-sleepivors.svg",
+      "bytes": 34540,
+      "sha256": "0719ee481ae8d5973d8985fa3d7d52f7145c647ec88b4b11eff9aa40ad764cf1",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-memory-foam-mattress-hgtv.svg?",
+      "localPath": "assets/third-party/icons/best-memory-foam-mattress-hgtv.svg",
+      "bytes": 15989,
+      "sha256": "db20d882f3853df4cecf978e2c181e4710b87ff389f242e458ea213021420dff",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-memory-foam-mattress-mattress-nerd.svg?",
+      "localPath": "assets/third-party/icons/best-memory-foam-mattress-mattress-nerd.svg",
+      "bytes": 23977,
+      "sha256": "b11b80cf62f0229033810515e2ac447dbc98808de6b4196e62b30ec1f9cd051b",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-memory-foam-mattress-people.svg?",
+      "localPath": "assets/third-party/icons/best-memory-foam-mattress-people.svg",
+      "bytes": 39558,
+      "sha256": "8efa9974177d130c4f84de4d3334fae8298dca85858efd50368c910260d408e3",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-memory-foam-mattress-us-news.svg?",
+      "localPath": "assets/third-party/icons/best-memory-foam-mattress-us-news.svg",
+      "bytes": 23856,
+      "sha256": "e7e5ec2acd05f4a999207d92ac8728e3488ac4ce4f92eb41a2975bc612a85284",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mtrs-for-adjustable-bed-mtrs-nerd.svg?",
+      "localPath": "assets/third-party/icons/best-mtrs-for-adjustable-bed-mtrs-nerd.svg",
+      "bytes": 30083,
+      "sha256": "40a6e2ad4f15a17a6bc25b34006a177313481995873245b5d935d2281f1310f4",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mtrs-for-adjustable-bed.svg?",
+      "localPath": "assets/third-party/icons/best-mtrs-for-adjustable-bed.svg",
+      "bytes": 43532,
+      "sha256": "221078c4354411d334e4963e0f610ca4ff25ed4f42fb8a0d99e194dfd35c78ed",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-online-mattresses-2025-mtrs-nerd.svg?",
+      "localPath": "assets/third-party/icons/best-online-mattresses-2025-mtrs-nerd.svg",
+      "bytes": 22417,
+      "sha256": "248d7c5b8fe8a4ca0d3d2047acd42cad0695fec6e909659cc7836cad8e132c7f",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-soft-mattress--good-housekeeping.svg?",
+      "localPath": "assets/third-party/icons/best-soft-mattress--good-housekeeping.svg",
+      "bytes": 32240,
+      "sha256": "753948662579022140b6316cddcee9c296a905315638580a02a521e5e3f57f81",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-soft-mattress-2025-mattress-clarity.svg?",
+      "localPath": "assets/third-party/icons/best-soft-mattress-2025-mattress-clarity.svg",
+      "bytes": 23429,
+      "sha256": "59facd788d17856c026b9b0eeecd1a9862f922ed4d2ca7dcc6db0a2d735c6350",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-soft-mattress-2025-mattress-nerd.svg?",
+      "localPath": "assets/third-party/icons/best-soft-mattress-2025-mattress-nerd.svg",
+      "bytes": 13343,
+      "sha256": "d3e08eb5467730cfba8957cd45ad65996828ab12b9aae623b2968e045118b27a",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-soft-mattress-for-side-sleepers--health.svg?",
+      "localPath": "assets/third-party/icons/best-soft-mattress-for-side-sleepers--health.svg",
+      "bytes": 26678,
+      "sha256": "f3b78e9c4a1f4f2bb9883035d7df7676bf8af0e6d9b499859b0c538bf244e65b",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-soft-mattress-for-side-sleepers-cnet.svg?",
+      "localPath": "assets/third-party/icons/best-soft-mattress-for-side-sleepers-cnet.svg",
+      "bytes": 27321,
+      "sha256": "c0f4f361933c32be09c7f0b43b04c634f13d8e6c3a6359621fd0128416f1a2b8",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/Circle_check_svg.svg?v=1781800344",
+      "localPath": "assets/third-party/icons/Circle_check_svg-89876f4a.svg",
+      "bytes": 2575,
+      "sha256": "d5eb321d7e97d166b4ce94cf2c259b3e8e12fe3312581d0ab3fcc5358efc59a1",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/circle-gray-check.svg?v=1755235024",
+      "localPath": "assets/third-party/icons/circle-gray-check-60e94433.svg",
+      "bytes": 2654,
+      "sha256": "b1609c8508ab528dfc5c1634c04bf624c2323f5b71843638416b69c8f717c9c8",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/footer-365-night-trial--logo.svg?",
+      "localPath": "assets/third-party/icons/footer-365-night-trial--logo.svg",
+      "bytes": 20469,
+      "sha256": "d62153e28b403cb20ea248a4d4cd5a7fbfc5c0eb794383513015d5dfc5234ca1",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/footer-assembled-in-usa-logo.svg?v=1758805816",
+      "localPath": "assets/third-party/icons/footer-assembled-in-usa-logo-70e2d1ac.svg",
+      "bytes": 16923,
+      "sha256": "807fe66370192ec2a0a5aebb89407e44298829df629c085ccace8087dd9ae0f3",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/footer-free-shipping-logo.svg?v=1727847548",
+      "localPath": "assets/third-party/icons/footer-free-shipping-logo-41f30a61.svg",
+      "bytes": 45548,
+      "sha256": "a16440fc90cbbe9c5ab7dc69ebd340e06fe49d378e2cdd66ac3b9aec4e56cca8",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/footer-lifetime-warranty-logo.svg?v=1727847547",
+      "localPath": "assets/third-party/icons/footer-lifetime-warranty-logo-a4fdea6e.svg",
+      "bytes": 12794,
+      "sha256": "dc5c7073bfaa68845a5752db423ea657f3386ceca457bab5855870c6a830ee2b",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/Free-gifts-plus_77c3c793-9b5a-439c-8e28-11bb9a803c3f.svg?",
+      "localPath": "assets/third-party/icons/Free-gifts-plus_77c3c793-9b5a-439c-8e28-11bb9a803c3f.svg",
+      "bytes": 342,
+      "sha256": "68a423b8cec4558ecbcc00afe98df537e8af06be799a9b70ee8b2e7e4b4af14b",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/POY.svg?v=1763100288",
+      "localPath": "assets/third-party/icons/POY-90dab7ef.svg",
+      "bytes": 28608,
+      "sha256": "ed2ad4d2f69f999293c0bd21e848cbc65f90beefe831792a66b546d882da1e77",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/poy-award.svg?v=1763121472",
+      "localPath": "assets/third-party/icons/poy-award-04a78165.svg",
+      "bytes": 28646,
+      "sha256": "eee183a3beb956f71d4bb0f8f5db432d10fcd513deb07af9772a31061b2a035f",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/POY-Lux-Badge-v3.svg?",
+      "localPath": "assets/third-party/icons/POY-Lux-Badge-v3.svg",
+      "bytes": 74808,
+      "sha256": "5d628f10baab71038963337aeb30aa62e823ab2fd1a7eed9d45f6621153b42ba",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/trustoo-ask-question-icon.svg?v=1782281188",
+      "localPath": "assets/third-party/icons/trustoo-ask-question-icon-33975513.svg",
+      "bytes": 1120,
+      "sha256": "e54c7069a9e32ba0407b3e548bce049831de147e9303382f6fe8506163263235",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/videos/c/o/v/188d5c327b55442b99d4185a50f138d4.mp4",
+      "localPath": "assets/third-party/images/188d5c327b55442b99d4185a50f138d4.mp4",
+      "bytes": 2116947,
+      "sha256": "3f03f2f9b6d432e088764481371d4b3da3d50e6442e996ae3f622cf2db3c5575",
+      "resourceType": "media"
+    },
+    {
+      "originalUrl": "https://puffy.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F1740%2F0017%2Ffiles%2F2-pillows--gallery.png%3F&w=1920&q=100",
+      "localPath": "assets/third-party/images/2-pillows--gallery-8d085c3a.png",
+      "bytes": 5692,
+      "sha256": "279e643aaa8709905a34d054c4c737b26cfaf26ddf706fb9e988812eb0f3a1ab",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/videos/c/o/v/5ce9c236bee74b7bb52b8495ef330f16.mp4",
+      "localPath": "assets/third-party/images/5ce9c236bee74b7bb52b8495ef330f16.mp4",
+      "bytes": 875901,
+      "sha256": "c5b3295fa33d015c30e1dcdfed13135dc6066267a699d43f1ae4923f707903a1",
+      "resourceType": "media"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/videos/c/o/v/64a37b8ddb0846a383a9c8d2789db8f4.mp4",
+      "localPath": "assets/third-party/images/64a37b8ddb0846a383a9c8d2789db8f4.mp4",
+      "bytes": 1010042,
+      "sha256": "8c80c0de59d64b67521726620977859c9f846403d058d72a26be4777d32a86de",
+      "resourceType": "media"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/Award_Winner_Badge.gif?v=1765859054&width=300&format=webp&quality=80",
+      "localPath": "assets/third-party/images/Award_Winner_Badge-297d9d7f.gif",
+      "bytes": 915634,
+      "sha256": "438826589518cec518496dc7402c24e1dff29cd45df0aa85a06b6e0907dc1713",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/award-winner-badge-static.webp?&width=300&format=webp&quality=80",
+      "localPath": "assets/third-party/images/award-winner-badge-static-81cc1445.webp",
+      "bytes": 8070,
+      "sha256": "74cf12774dfce83497aa493bb39a760e70e4d037024952c2c0ad5ad98326326f",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/Awards_page_Base_v11.05.26.png?",
+      "localPath": "assets/third-party/images/Awards_page_Base_v11.05.26.png",
+      "bytes": 244300,
+      "sha256": "bb1af60d639e2bad6c0f9990967a4d61320bc8584ec9150d6d919d519b12459b",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/Awards_page-Premium_cooling_and_breathability_v11.05.26.png?",
+      "localPath": "assets/third-party/images/Awards_page-Premium_cooling_and_breathability_v11.05.26.png",
+      "bytes": 157200,
+      "sha256": "89cef6d87d58f9deb0c7c2bc925620a3813a55b662410a9b61886d5cadd3f28d",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/Awards_page-Top_layer_v3.png?v=1775630703",
+      "localPath": "assets/third-party/images/Awards_page-Top_layer_v3-878b86b4.png",
+      "bytes": 280350,
+      "sha256": "4d3b9394e454601d85bcc68ebaeecf6e16fd24e7f8227896bb47ed0c30a7ecbf",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-cooling-mattress-architectural-digest.png?",
+      "localPath": "assets/third-party/images/best-cooling-mattress-architectural-digest.png",
+      "bytes": 30462,
+      "sha256": "31aa533f700f9b17ca332bc4adb0eda19484ebdc3fd5401ccb5e4bc4b1491b97",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-firm-mattress--CNN.png?",
+      "localPath": "assets/third-party/images/best-firm-mattress--CNN.png",
+      "bytes": 16080,
+      "sha256": "ee3aa633c398b5a7d704299d6960d0561d0cae86b607740f1a41b352e0ecb050",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-hybrid-mattress-architectural-digest.png?",
+      "localPath": "assets/third-party/images/best-hybrid-mattress-architectural-digest.png",
+      "bytes": 40358,
+      "sha256": "840d6ef4bf294c3c870cf6b6f7e3594b476f0ddb822a3f841207e6d0b485418a",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-latex-free-natural-mattress-round-up.png?",
+      "localPath": "assets/third-party/images/best-latex-free-natural-mattress-round-up.png",
+      "bytes": 16636,
+      "sha256": "82e68b682e76af70507a56d9f91de13ac496954a7e5b5eb8fe0e75fd5263814e",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattress-for-light-weight-sleepers-cnn.png?",
+      "localPath": "assets/third-party/images/best-mattress-for-light-weight-sleepers-cnn.png",
+      "bytes": 28104,
+      "sha256": "ece56a08cebf16139b5ea51e398c97d40020da668fedf6b7bd6f001ef2246e25",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/best-mattresses-for-snoring-2025-sleep-foundation.png?",
+      "localPath": "assets/third-party/images/best-mattresses-for-snoring-2025-sleep-foundation.png",
+      "bytes": 18218,
+      "sha256": "d47a6c7050119b41cb4d3003d9355062983371e83dd9b2e75fc55f9dc1aca362",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/videos/c/o/v/bf74e0422ae1486bb04b6f4b31e4f2ef.mp4",
+      "localPath": "assets/third-party/images/bf74e0422ae1486bb04b6f4b31e4f2ef.mp4",
+      "bytes": 1559584,
+      "sha256": "dc2566bd8d090754841d9000d8de54737a05aeb2db36ef9dae3f8867fc493627",
+      "resourceType": "media"
+    },
+    {
+      "originalUrl": "https://puffy.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F1740%2F0017%2Ffiles%2Fbundle-sleep-mask.png%3Fv%3D1745834999&w=1920&q=100",
+      "localPath": "assets/third-party/images/bundle-sleep-mask-47369965.png",
+      "bytes": 3652,
+      "sha256": "e40bb48dc5c1ed4ddcd6900591d694ac2737f30a36454738e8a826c52f71c549",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/bundle-sleep-mask.png?v=1745834999",
+      "localPath": "assets/third-party/images/bundle-sleep-mask-86f88661.png",
+      "bytes": 6212,
+      "sha256": "5aa933a62010261a1fb15d5bf8fd89ba638c33d5cef420c3c7a962c91d55eb6f",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/carousel-collection--lux--v11_05_26_2026-05-21T11-52-47.png?format=webp&width=600&quality=80",
+      "localPath": "assets/third-party/images/carousel-collection--lux--v11_05_26_2026-05-21T11-52-47-2b8d6a45.png",
+      "bytes": 26936,
+      "sha256": "29d3de0ee6852bdbd1a0f4e12b7f5d4f08ca6ee700cb1bd87e21905ad4c2a21a",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/carousel-collection--monarch--mattress.png?format=webp&width=600&quality=80",
+      "localPath": "assets/third-party/images/carousel-collection--monarch--mattress-2b8d6a45.png",
+      "bytes": 25558,
+      "sha256": "ca9368183d11dac1c75dca3e035cdc50aa37856a2250ddea43e53772632e610b",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/carousel-collection--royal__2026-06-11.png?format=webp&width=600&quality=80",
+      "localPath": "assets/third-party/images/carousel-collection--royal__2026-06-11-2b8d6a45.png",
+      "bytes": 17932,
+      "sha256": "9272c82b87091e27f0cb9ce2cae9a07dd634594d8549e80d2ad5a6a34af5aa3a",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/chat-avatar.png?v=1745988004",
+      "localPath": "assets/third-party/images/chat-avatar-a79497b8.png",
+      "bytes": 6330,
+      "sha256": "b2f3dc008cdf6002dc467be68d1fb3bfa73a5931d08e0458277de0a878f9e078",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/Consumer-Mattress-Award.png?",
+      "localPath": "assets/third-party/images/Consumer-Mattress-Award.png",
+      "bytes": 20478,
+      "sha256": "1dd76f5c2707641379ec5b33046546b4f24961d917bbfea7918904f1a6a9d3ef",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/Consumer-Ranking-Award.png?",
+      "localPath": "assets/third-party/images/Consumer-Ranking-Award.png",
+      "bytes": 22764,
+      "sha256": "66d2c9f06610693047dccd4feab25c41792a926d65c801d77fae901d102d5468",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/0263/8957/7816/files/contact-us-section-bg-v3.png?",
+      "localPath": "assets/third-party/images/contact-us-section-bg-v3.png",
+      "bytes": 4140036,
+      "sha256": "b66fcc0e7068c0ec14008881ebd19f038ec4022919c1f5c25657e4450291881b",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/footer-bg-desktop.png?",
+      "localPath": "assets/third-party/images/footer-bg-desktop.png",
+      "bytes": 1093668,
+      "sha256": "65399123f945cac510b28e91f7e96b486b141ab5845bd2308125a83decf9f9b4",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/free-gifts--2-pillows-1-mask--D--v07.07.26.png?",
+      "localPath": "assets/third-party/images/free-gifts--2-pillows-1-mask--D--v07.07.26.png",
+      "bytes": 114322,
+      "sha256": "3d602c2646d0cc6847263c6a7ef5bb50e409655c4c7b3cd56a0e4289d67383d7",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/free-shipping-puffy--lux--v16.03.26.png?",
+      "localPath": "assets/third-party/images/free-shipping-puffy--lux--v16.03.26.png",
+      "bytes": 70886,
+      "sha256": "670921dfa5ca8ee057a2286cd914bd899c4c3ab1af1415a88bc6ca749a59815b",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/gallery--bundle-1-masks--v30.06.26.jpg?",
+      "localPath": "assets/third-party/images/gallery--bundle-1-masks--v30.06.26.jpg",
+      "bytes": 440122,
+      "sha256": "022c00089086912fc745ba916485f27d8d56a9f95c04d04e45753b3509a412d0",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/gallery--lux--04--v19.05.26.jpg?",
+      "localPath": "assets/third-party/images/gallery--lux--04--v19.05.26.jpg",
+      "bytes": 1092836,
+      "sha256": "ca139ac7b6f88a6fe0c9b47618ad35ba3d41d2928026f7d6efb9906c3c4b4d84",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/gallery--lux--layers--v16_06_26_2026-06-17T12-40-51.jpg?",
+      "localPath": "assets/third-party/images/gallery--lux--layers--v16_06_26_2026-06-17T12-40-51.jpg",
+      "bytes": 108686,
+      "sha256": "35a264552ca347df5b4aea71549f6eaa32fb403c1ebb913dee58ed38e4321e00",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/gallery-thumbnail--lux--04--v19.05.26.png?&width=200&format=webp&quality=75",
+      "localPath": "assets/third-party/images/gallery-thumbnail--lux--04--v19.05.26-54c4fa3f.png",
+      "bytes": 4560,
+      "sha256": "50da4f9e6b2fe81d4696194ed07d52899a7a36c2bd017662f8a1424512318d92",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/gallery-thumbnail--lux--05--v19.05.26.png?&width=200&format=webp&quality=75",
+      "localPath": "assets/third-party/images/gallery-thumbnail--lux--05--v19.05.26-54c4fa3f.png",
+      "bytes": 2314,
+      "sha256": "f916930e75c37b37cd250414d8df3203282977701590e0dcb0dffb68423f0266",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/hp--free-pillow--v3.2.png?v=1783321485",
+      "localPath": "assets/third-party/images/hp--free-pillow--v3.2-34f646ee.png",
+      "bytes": 28406,
+      "sha256": "fffe217491b6e04ff4b9addf92091b89df39a0fa6666aa76fa565b725012b00c",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/lux_plush_contouring_layer.png?",
+      "localPath": "assets/third-party/images/lux_plush_contouring_layer.png",
+      "bytes": 8872,
+      "sha256": "7150c477dfed3c0292035563dba4ed0b300e96f61de4e6c550221088e33c5cd9",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://puffy.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F1740%2F0017%2Ffiles%2FLux-D-dual-comfort-layers_2026-06-17T13-08-51.png%3F&w=1920&q=95",
+      "localPath": "assets/third-party/images/Lux-D-dual-comfort-layers_2026-06-17T13-08-51-a436180a.png",
+      "bytes": 48895,
+      "sha256": "2af673fbddf859c96eb951c24b6a88462fc153fb8fa3bf00048dd77343d568b2",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/lux-difference-puffy-lux-mattress.png?",
+      "localPath": "assets/third-party/images/lux-difference-puffy-lux-mattress.png",
+      "bytes": 32478,
+      "sha256": "6bbdcb3eec660f5a8fb91a9310ebd36c54819517101e4add8339e6423e499da0",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/lux-difference-standard.png?",
+      "localPath": "assets/third-party/images/lux-difference-standard.png",
+      "bytes": 7004,
+      "sha256": "2641fc2531a60c26986990f5e10ed4bc223acb2149b11575c334c61bf047e2d5",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/lux-hybrid-poy-d-v3_2026-06-08T12-29-20.png?",
+      "localPath": "assets/third-party/images/lux-hybrid-poy-d-v3_2026-06-08T12-29-20.png",
+      "bytes": 229424,
+      "sha256": "c182896f05e0d3c47e03db0bb2e15c7deeeb9116000eec7d0c7e5d45ea9653cf",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/lux-spotlight-poster-m.png?",
+      "localPath": "assets/third-party/images/lux-spotlight-poster-m.png",
+      "bytes": 25870,
+      "sha256": "8dda19a5b7595901f344785b21ab8ff7040dd0bd0f6e8cfbc7471dd4a8dd6eff",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/lux-spotlight-poster.png?",
+      "localPath": "assets/third-party/images/lux-spotlight-poster.png",
+      "bytes": 151052,
+      "sha256": "73392f77884fb1ac804193b1d6757a3a1b3b14afec16ee16daf96461ba2d940d",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/LuxRoyal-BackandBodySupport.png?",
+      "localPath": "assets/third-party/images/LuxRoyal-BackandBodySupport.png",
+      "bytes": 40528,
+      "sha256": "357ac39f54daa4a57f97e5fb2b5b714b9c26caed460c35227c963ce27aa4207c",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/morning-step--bg--M.png?v=1733306892",
+      "localPath": "assets/third-party/images/morning-step--bg--M-c05173b0.png",
+      "bytes": 161188,
+      "sha256": "ed96c7e67eb93ada6891d544e931d4d32b7a02d92eff12e94e5070e490caf5fb",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/PDP_-_LUX_top_layer.png?",
+      "localPath": "assets/third-party/images/PDP_-_LUX_top_layer.png",
+      "bytes": 9948,
+      "sha256": "d4b5af5c3cf006b4646f762d9e75c0723867d8f42462e7165fad51df27d0150e",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-backpain-lux-icon-2-desktop.png?v=1722237795",
+      "localPath": "assets/third-party/images/pdp-backpain-lux-icon-2-desktop-60e71735.png",
+      "bytes": 8686,
+      "sha256": "d4ef13a1c93fc4836c94eaaaf40ce2ab0c436e653021153456d433283710b659",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-backpain-lux-icon-3-desktop.png?v=1722237795",
+      "localPath": "assets/third-party/images/pdp-backpain-lux-icon-3-desktop-60e71735.png",
+      "bytes": 9552,
+      "sha256": "8f098f597bee34ecd98dd54a492fe5ea04ff21b3cae63a3552f3ad8add5d11c5",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-backpain-lux-icon-4-desktop.png?v=1722237794",
+      "localPath": "assets/third-party/images/pdp-backpain-lux-icon-4-desktop-3b4b8837.png",
+      "bytes": 6385,
+      "sha256": "a572ec869682381ea8ec2bfedbad54a737a2d62ce8dea35a5d7d4e01ac9d3675",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-cloud-cooling-points-2.png?v=1724221634",
+      "localPath": "assets/third-party/images/pdp-cloud-cooling-points-2-86960996.png",
+      "bytes": 8917,
+      "sha256": "74cb6649a18b5be502e47f609690a6221bb9fca3ba6ea7b174c71a7079fd04f9",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-mattress-gallery-lux-front_2026-05-21T11-21-37.jpg?",
+      "localPath": "assets/third-party/images/pdp-mattress-gallery-lux-front_2026-05-21T11-21-37.jpg",
+      "bytes": 452720,
+      "sha256": "618df9129b9a7619caf7cc7a16935cb054bce5ecf29c0274326f4dd489317c1b",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-mattress-gallery-lux-front-thumb_2026-05-21T11-24-01.jpg?&width=200&format=webp&quality=75",
+      "localPath": "assets/third-party/images/pdp-mattress-gallery-lux-front-thumb_2026-05-21T11-24-01-54c4fa3f.jpg",
+      "bytes": 3384,
+      "sha256": "01059a4efee2f99a20b6d8abe5fc45a1e2f73e1723735aff945311684a1e971f",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-mattress-gallery-lux-side_2026-06-08T12-54-37.jpg?",
+      "localPath": "assets/third-party/images/pdp-mattress-gallery-lux-side_2026-06-08T12-54-37.jpg",
+      "bytes": 320228,
+      "sha256": "ffc65316de825557504e8c6d99a8daeac65cf6c39abca32db757dd2e78846452",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-mattress-gallery-lux-side-thumb_2026-05-21T11-24-01.jpg?&width=200&format=webp&quality=75",
+      "localPath": "assets/third-party/images/pdp-mattress-gallery-lux-side-thumb_2026-05-21T11-24-01-54c4fa3f.jpg",
+      "bytes": 3698,
+      "sha256": "bb1d95005a4282cd9aba268aa00f0cd62fb88813c3027cdd4df109e4ac018335",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-mattress-gallery-lux-top_2026-05-21T11-21-37.jpg?",
+      "localPath": "assets/third-party/images/pdp-mattress-gallery-lux-top_2026-05-21T11-21-37.jpg",
+      "bytes": 665322,
+      "sha256": "31dbd8f8009a1c0235be5ec8fc0dd43d3a69a8a0050ba460332ab574975547fc",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-mattress-gallery-lux-top-thumb_2026-05-21T11-24-01.jpg?&width=200&format=webp&quality=75",
+      "localPath": "assets/third-party/images/pdp-mattress-gallery-lux-top-thumb_2026-05-21T11-24-01-54c4fa3f.jpg",
+      "bytes": 3878,
+      "sha256": "f12a76c077ec1acca9fcb3a90a2939d953d074281ec068f83aaf6cad5de1b5b0",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-mattress-gallery-royal-front_2026-06-11.jpg?",
+      "localPath": "assets/third-party/images/pdp-mattress-gallery-royal-front_2026-06-11.jpg",
+      "bytes": 615852,
+      "sha256": "edbb4b0913063ad69e427fc7f29d26b16e1d918489947419c0b07a54246ef5a5",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-upgrade-banner-bg-left.png?v=1764141530",
+      "localPath": "assets/third-party/images/pdp-upgrade-banner-bg-left-d71875c2.png",
+      "bytes": 6323,
+      "sha256": "ec13dce0bb0d095af3ae280aad283265c30d3869770705262ef176644991976d",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-upgrade-banner-bg-right.png?v=1764141530",
+      "localPath": "assets/third-party/images/pdp-upgrade-banner-bg-right-d71875c2.png",
+      "bytes": 5937,
+      "sha256": "80358c5580878742bc7051906dfd311d11b97b9b8c928511a77cf7f0cd827a34",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/plush_countouring_layer.png?v=1765381012",
+      "localPath": "assets/third-party/images/plush_countouring_layer-a2b67716.png",
+      "bytes": 5374,
+      "sha256": "4079a2dbe365d9ac4a6843958de93a295a2a08c055d077b8aa6675c3e985b059",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/popup-v3-image--desktop_2026-06-08T13-03-49.png?",
+      "localPath": "assets/third-party/images/popup-v3-image--desktop_2026-06-08T13-03-49.png",
+      "bytes": 190790,
+      "sha256": "a61ea263ecd96c7b41a3ad456b4deb4ff065b4c94b30114d9a7ca02aea679aac",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/puffy-mattress-gives-lifetime-warranty.png?",
+      "localPath": "assets/third-party/images/puffy-mattress-gives-lifetime-warranty.png",
+      "bytes": 52082,
+      "sha256": "93c1d84ed4ea0089736f10dc1c7541a405055d37e9de4644c526da09b472d238",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/reasons--lux--1_2026-06-08T13-00-01.png?",
+      "localPath": "assets/third-party/images/reasons--lux--1_2026-06-08T13-00-01.png",
+      "bytes": 85902,
+      "sha256": "11854e8f52cdef79456b32d3ae7995c4c8d33e91a0b68ff8e34b3f074e32bbdd",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/reasons--mattress--1--v08.04.26_664824ae-63ba-4ddf-bcd6-59d1488ec2ec.png?",
+      "localPath": "assets/third-party/images/reasons--mattress--1--v08.04.26_664824ae-63ba-4ddf-bcd6-59d1488ec2ec.png",
+      "bytes": 129062,
+      "sha256": "bcf17c36216f225d9b49609c951c821ebeaec33cd1876d24b411859694e0d054",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/reasons--mattress--3--v11.05.26.png?v=1778515513",
+      "localPath": "assets/third-party/images/reasons--mattress--3--v11.05.26-2a3b8a63.png",
+      "bytes": 188418,
+      "sha256": "5041f273bf72252ac7ac14c66591aad5660c04845f7678a1af48d3e03b4fc6a1",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/sleep-foundation-fibromyalgia.png?",
+      "localPath": "assets/third-party/images/sleep-foundation-fibromyalgia.png",
+      "bytes": 18884,
+      "sha256": "d44de0501fb46d455aa7736f55c083c3144424d3272beb4e0df1d2849f21938f",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/SleepUninterrupted-Desktop.png?v=1751350930",
+      "localPath": "assets/third-party/images/SleepUninterrupted-Desktop-2ebf2214.png",
+      "bytes": 117108,
+      "sha256": "d36e4cfb38278417b5058905fb89707300ae898bef00e2588da6d674ae00fc87",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/SleepUninterrupted-Mob.png?v=1751350929",
+      "localPath": "assets/third-party/images/SleepUninterrupted-Mob-59eefe34.png",
+      "bytes": 49722,
+      "sha256": "c0b250de4376cf0401a5878c55badd51437ce6cb8d24a7ab5300ed3537538596",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/Spotlight_carousel-Lux.png?",
+      "localPath": "assets/third-party/images/Spotlight_carousel-Lux.png",
+      "bytes": 114800,
+      "sha256": "52be7fc7bfbb369fb1a86df4c7f6a2646540f4a85ee7f67259ec1aa51b6f36ae",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/spotlight--lux--1.png?",
+      "localPath": "assets/third-party/images/spotlight--lux--1.png",
+      "bytes": 99196,
+      "sha256": "33e672ee253a75defcecc81b7d765b39c1cadf701ea6a7be230e23fdc749e572",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/spotlight--lux--3.png?",
+      "localPath": "assets/third-party/images/spotlight--lux--3.png",
+      "bytes": 63432,
+      "sha256": "d42c434a0ddb391e1d5cf00c05d4c3ef7f6cf6398a6b1ab39f64e2e1fc1fcbac",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/spotlight--lux--4.png?",
+      "localPath": "assets/third-party/images/spotlight--lux--4.png",
+      "bytes": 102100,
+      "sha256": "e913abaaba6401ae3f9d5398b9f858f8730bd6099722d6adfd00077cca305b49",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/spotlight--lux--5.png?",
+      "localPath": "assets/third-party/images/spotlight--lux--5.png",
+      "bytes": 47890,
+      "sha256": "d4c314233c61b00fc21f244fddf00deabe36983abdd0bf1fad05a5b7d05f110b",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/StayCool-Desktop.png?v=1751350929",
+      "localPath": "assets/third-party/images/StayCool-Desktop-59eefe34.png",
+      "bytes": 90106,
+      "sha256": "450c30659d074ad407b2048225645ea6762af5552cdd4b837658ccc6e53c8c06",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/StayCool-Mob.png?v=1751350929",
+      "localPath": "assets/third-party/images/StayCool-Mob-59eefe34.png",
+      "bytes": 33304,
+      "sha256": "125247ed12fd5f32fd60aef3bdf3bde92936af8435338a4e331e278a077127b8",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/SupportYourBack-Desktop.png?v=1751350711",
+      "localPath": "assets/third-party/images/SupportYourBack-Desktop-e9acac97.png",
+      "bytes": 101210,
+      "sha256": "9b014f46febf169cbc86ca6a97d04c3a3c1ea3664618e1b2e671780656526e67",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/SupportYourBack-Mob.png?v=1751350711",
+      "localPath": "assets/third-party/images/SupportYourBack-Mob-e9acac97.png",
+      "bytes": 46278,
+      "sha256": "f42692a5e1437eaca4338c961adda12306d0ee33e1b47b4ca3528e442d9b2b85",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/thumbnail--bundle-1-masks--v30.06.26.png?&width=200&format=webp&quality=75",
+      "localPath": "assets/third-party/images/thumbnail--bundle-1-masks--v30.06.26-54c4fa3f.png",
+      "bytes": 2674,
+      "sha256": "ed74b580c30f38672efdd39dbc4faf93f90f1befc8a8f710a08497aad5249478",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/unboxing--lux-1.jpg?",
+      "localPath": "assets/third-party/images/unboxing--lux-1.jpg",
+      "bytes": 26402,
+      "sha256": "7d353b500158abde685a3c5fb128a602ee87127f90c48c21c91d81998547eb80",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/unboxing--lux-2-v3.png?",
+      "localPath": "assets/third-party/images/unboxing--lux-2-v3.png",
+      "bytes": 21250,
+      "sha256": "b476f37f8fd8f03c70fa91b4622b60497c05c2e74dac68455cdab5b2b48f287d",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/unboxing--lux-3-v11.05.26.png?",
+      "localPath": "assets/third-party/images/unboxing--lux-3-v11.05.26.png",
+      "bytes": 28600,
+      "sha256": "a4b619dc9321712a59d3684c537cabd0ef91182e6c1790ba1a52b3371939f24c",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/unboxing--lux-4-v11.05.26.png?",
+      "localPath": "assets/third-party/images/unboxing--lux-4-v11.05.26.png",
+      "bytes": 32098,
+      "sha256": "c867da7e502a8103824542f613f49e7f71ad03f033cb6dcc80fb6e1cfb7567ec",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/upgrade--lux--v11.05.26.png?",
+      "localPath": "assets/third-party/images/upgrade--lux--v11.05.26.png",
+      "bytes": 10256,
+      "sha256": "d9a4a93b6e5a230dd1f5dfa11a33a9da30a0ba362172cc9902a104096acc96e7",
+      "resourceType": "image"
+    },
+    {
+      "originalUrl": "https://cdn.shopify.com/s/files/1/1740/0017/files/upgrade--Royal--v11.05.26.png?",
+      "localPath": "assets/third-party/images/upgrade--Royal--v11.05.26.png",
+      "bytes": 9933,
+      "sha256": "1f01d28c30a04896f5f5d6742baaf8020976e4b0a70544a0911cc7643d056f5b",
+      "resourceType": "image"
+    }
+  ]
+}

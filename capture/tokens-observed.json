@@ -1,0 +1,6476 @@
+{
+  "generatedAt": "2026-08-18T19:58:38.383Z",
+  "note": "Mechanically derived from capture/dom/*/computed.json. Values are OBSERVED, not snapped. Near-duplicate clusters indicate the source system is internally inconsistent — keep the original value for fidelity and document the tension (see docs/TOKENS.md).",
+  "colors": {
+    "text": [
+      {
+        "value": "#333333",
+        "count": 18590,
+        "where": [
+          "body.mukta_d42cc534-module__GqjTsq__variable.pt_serif_a5906e0c-module__hlwxJW__variable",
+          "span",
+          "div",
+          "#desktop-navbar-backdrop-portal",
+          "#desktop-navbar-backdrop.absolute.left-0",
+          "#header-barrier.header-barrier.pointer-events-none",
+          "#header.ease-[cubic-bezier(0.4,0,0.2,1)].transition-transform",
+          "#header-content.relative.z-20",
+          "#radix-_R_alpbbb_.w-72.rounded-xl",
+          "#sale-banner.relative",
+          "div.flex.items-center",
+          "div.flex.flex-row"
+        ]
+      },
+      {
+        "value": "#2b2f44",
+        "count": 2024,
+        "where": [
+          "span.tracking-[-0.07em.relative",
+          "#pdp-above-the-fold.relative.scroll-mt-[var(--header-height)]",
+          "div.relative.z-[2]",
+          "div.flex.flex-col",
+          "div.relative.flex",
+          "div.w-full.shrink-0",
+          "div.relative.left-0",
+          "@pdp_gallery_carousel.relative.z-[1]",
+          "div.h-full.is-loop",
+          "@carousel-content.flex.gap-4",
+          "@pdp_img_carousel_puffy-lux-mattress_image1.min-w-0.shrink-0",
+          "header.pointer-events-none.absolute"
+        ]
+      },
+      {
+        "value": "#ffffff",
+        "count": 1847,
+        "where": [
+          "div.grid.w-full",
+          "div.w-fit.min-w-0",
+          "div.block.w-full",
+          "div.invisible.block",
+          "div.hidden.whitespace-nowrap",
+          "div.min-w-0.[grid-area:description]",
+          "div.w-fit.max-w-full",
+          "div.flex.flex-wrap",
+          "@pdp_sticky_add_to_cart_btn.ring-offset-background.focus-visible:outline-none",
+          "span.pointer-events-none.relative",
+          "div.flex.items-center",
+          "span"
+        ]
+      },
+      {
+        "value": "#596c7f",
+        "count": 1256,
+        "where": [
+          "div.flex.flex-col",
+          "span.inline-flex.items-center",
+          "div.flex.items-center",
+          "svg",
+          "defs",
+          "#star-tjtwkun8l",
+          "stop",
+          "path",
+          "#star-8vnk1r0qu",
+          "#star-th8qan85x",
+          "#star-xepn1h5sw",
+          "#star-u44whu6xx"
+        ]
+      },
+      {
+        "value": "#d5d2cc",
+        "count": 804,
+        "where": [
+          "#navbar.relative.z-10",
+          "div.absolute.left-0",
+          "div.z-20.xl:hidden",
+          "#header-sheet.flex.flex-col",
+          "@logo.z-30",
+          "#desktop-header-menu.flex-1.justify-center",
+          "div",
+          "ul.group.flex",
+          "li",
+          "#primary-Mattresses.group.inline-flex",
+          "#menu_header_mattress_desktop.flex.min-h-[60px]",
+          "span.relative.before:absolute"
+        ]
+      },
+      {
+        "value": "#2b2f44@0.8",
+        "count": 594,
+        "where": [
+          "li.flex.items-start",
+          "@Size Twin XL.flex.min-w-12",
+          "@Size Full.flex.min-w-12",
+          "@Size Queen.flex.min-w-12",
+          "@Size King.flex.min-w-12",
+          "@Size Cal King.flex.min-w-12",
+          "@Size Split Head Queen.flex.min-w-12",
+          "span.inline-block.leading-5",
+          "br",
+          "@Size Split Head King.flex.min-w-12",
+          "@Size Split King.flex.min-w-12",
+          "span.font-serif.text-xl"
+        ]
+      },
+      {
+        "value": "#303030",
+        "count": 316,
+        "where": [
+          "#trustoo-allinone.trustoo-widget.trustoo-write-review",
+          "div.tt-write-content",
+          "div.window-head",
+          "div.window-close",
+          "svg",
+          "path",
+          "span.head-title",
+          "form.review-message",
+          "div.window-product",
+          "div.product-image",
+          "div.product-right",
+          "div.tt-write-rating"
+        ]
+      },
+      {
+        "value": "#067a57",
+        "count": 284,
+        "where": [
+          "#tick-check-line-16",
+          "path",
+          "@final-price.pr-1.text-xl",
+          "span.font-bold.text-success",
+          "strong.text-base.font-bold",
+          "span.inline-flex.items-center",
+          "#check-green-icon",
+          "rect",
+          "#mask_check_green_icon",
+          "g",
+          "strong.block.rounded-sm",
+          "strong.font-serif.text-4xl"
+        ]
+      },
+      {
+        "value": "#000000",
+        "count": 256,
+        "where": [
+          "html",
+          "title",
+          "iframe",
+          "li.sort-title",
+          "div.tt-review-avatar",
+          "svg",
+          "path",
+          "li.page-control-button.pre-page",
+          "li.page-control-item",
+          "li.page-control-button.next-page",
+          "#trustoo-review-detail.trustoo-widget.trustoo-ltr",
+          "div.close-wrapper"
+        ]
+      },
+      {
+        "value": "#f5f5f5",
+        "count": 240,
+        "where": [
+          "time.tabular-nums.text-lp-accent",
+          "span.sr-only"
+        ]
+      },
+      {
+        "value": "#c79344",
+        "count": 200,
+        "where": [
+          "span.mb-1.5.block",
+          "span.grid.size-8",
+          "svg",
+          "path",
+          "summary.inline-flex.cursor-pointer"
+        ]
+      },
+      {
+        "value": "#1773b0",
+        "count": 72,
+        "where": [
+          "a.font-medium.text-[#1773B0]",
+          "@privacy-policy-link.text-[#1773B0].underline",
+          "@your-privacy-choices-link.iubenda-cs-preferences-link-puffy.inline-flex",
+          "svg",
+          "g",
+          "path",
+          "defs",
+          "#a",
+          "span",
+          "a.underline.[text-underline-offset:2px]"
+        ]
+      },
+      {
+        "value": "#64748b",
+        "count": 68,
+        "where": [
+          "div.rounded-md.text-muted-foreground",
+          "#radix-_r_1s_-content-0.col-span-2.mt-2",
+          "div.relative.min-h-[180px]",
+          "img.absolute.left-3",
+          "img.relative.z-[1]",
+          "#reasons-grid-m-0.animate-pulse.absolute",
+          "div.absolute.top-1/2",
+          "div.flex.items-center",
+          "div.flex.flex-1",
+          "#radix-_r_1s_-content-1.col-span-2.mt-2",
+          "#radix-_r_1s_-content-2.col-span-2.mt-2",
+          "#radix-_r_1s_-content-3.col-span-2.mt-2"
+        ]
+      },
+      {
+        "value": "#0f172a",
+        "count": 64,
+        "where": [
+          "div.css-1ozga6k.eqzn0w21",
+          "div.css-1e0lny8.e1xfelzv7",
+          "div.css-a19lfp.e1xfelzv5",
+          "div.css-1tsmpaw.e1xfelzv4",
+          "div.css-14tkdn2.e1xfelzv3",
+          "div.css-1ofqig9.e1xfelzv0",
+          "div.css-122fqzo.e1xfelzv1",
+          "div.css-1lrte49.e1o5ydf23",
+          "div.css-ezjhuq.e2njm3f0",
+          "div.css-1361zu6.e2njm3f3",
+          "form.css-1iyv76y.e2njm3f1",
+          "div.css-1rghpnz.e2njm3f2"
+        ]
+      },
+      {
+        "value": "#e0be70",
+        "count": 52,
+        "where": [
+          "span",
+          "#info-24",
+          "path"
+        ]
+      },
+      {
+        "value": "#ffffff@0.7",
+        "count": 40,
+        "where": [
+          "p.mt-1.text-lg",
+          "span.text-left.text-base",
+          "p.m-0.max-w-screen-mlg",
+          "br"
+        ]
+      },
+      {
+        "value": "#f1eeea",
+        "count": 28,
+        "where": [
+          "div.relative.flex",
+          "#cart-28",
+          "g",
+          "path",
+          "@cart-count.absolute.right-[-8px]"
+        ]
+      },
+      {
+        "value": "#ffffff@0.65",
+        "count": 28,
+        "where": [
+          "span.hidden.flex-1"
+        ]
+      },
+      {
+        "value": "#222222",
+        "count": 28,
+        "where": [
+          "#name.tt-form-control",
+          "#email.tt-form-control",
+          "#question.tt-form-control",
+          "input.upload-input",
+          "input",
+          "#tt-qa-unpublish"
+        ]
+      },
+      {
+        "value": "#94a3b8",
+        "count": 28,
+        "where": [
+          "a.css-2vkq0v.e1cxxqvk0",
+          "svg",
+          "g",
+          "path",
+          "defs",
+          "#clip0_1671_29227",
+          "rect"
+        ]
+      },
+      {
+        "value": "#8f6c1a@0.8",
+        "count": 24,
+        "where": [
+          "#sleep-trial-56",
+          "path",
+          "#warranty-56",
+          "g"
+        ]
+      },
+      {
+        "value": "#202223",
+        "count": 20,
+        "where": [
+          "li.sort-item.",
+          "li.sort-item.active"
+        ]
+      },
+      {
+        "value": "#869cb2",
+        "count": 16,
+        "where": [
+          "svg",
+          "path"
+        ]
+      },
+      {
+        "value": "#595959",
+        "count": 16,
+        "where": [
+          "div.iub__us-widget",
+          "div.iub__us-widget__wrapper",
+          "a.iub__us-widget__link.iubenda-cs-uspr-link",
+          "button.iub__us-widget__link.iub__us-widget__link--privacy-choices"
+        ]
+      },
+      {
+        "value": "#e0c194",
+        "count": 12,
+        "where": [
+          "p.mb-0.5.text-base",
+          "svg",
+          "path"
+        ]
+      },
+      {
+        "value": "#dc3545",
+        "count": 12,
+        "where": [
+          "div.tt-form-error-message"
+        ]
+      },
+      {
+        "value": "#005bd3",
+        "count": 12,
+        "where": [
+          "a"
+        ]
+      },
+      {
+        "value": "#faf6ef",
+        "count": 8,
+        "where": [
+          "svg",
+          "path"
+        ]
+      },
+      {
+        "value": "#ffffff@0.5",
+        "count": 8,
+        "where": [
+          "p.line-through--not-dark.text-sm"
+        ]
+      },
+      {
+        "value": "#596c7f@0.7",
+        "count": 8,
+        "where": [
+          "span.text-lg.font-semibold"
+        ]
+      },
+      {
+        "value": "#3c8a50@0.8",
+        "count": 8,
+        "where": [
+          "div"
+        ]
+      },
+      {
+        "value": "#303030@0.4",
+        "count": 8,
+        "where": [
+          "div.feedback-count",
+          "span"
+        ]
+      },
+      {
+        "value": "#ffffff@0.45",
+        "count": 4,
+        "where": [
+          "span.text-base.font-semibold"
+        ]
+      },
+      {
+        "value": "#060809",
+        "count": 4,
+        "where": [
+          "span.__affirm-logo.__affirm-logo-blue"
+        ]
+      },
+      {
+        "value": "#8f6c1a",
+        "count": 4,
+        "where": [
+          "p.text-base.font-medium"
+        ]
+      },
+      {
+        "value": "#3376c5",
+        "count": 4,
+        "where": [
+          "span.discount-copy"
+        ]
+      }
+    ],
+    "background": [
+      {
+        "value": "#ffffff",
+        "count": 450,
+        "where": [
+          "div.flex.items-center",
+          "button.outline-none.shrink-0",
+          "button.outline-none.size-2",
+          "div.relative.z-[11]",
+          "div.overflow-hidden.bg-white",
+          "div.flex.flex-col",
+          "div.mb-2.border-b",
+          "div.h-fit.bg-white",
+          "button.grid.size-8",
+          "span.grid.size-8",
+          "th.relative.rounded-tl-3xl",
+          "td.border-x.border-x-[rgba(75,75,75,0.40)]"
+        ]
+      },
+      {
+        "value": "#d5d2cc",
+        "count": 198,
+        "where": [
+          "#product-page.mattress-page.bg-sub-strong",
+          "#best-for-back-pain__tab.group.flex-shrink-0",
+          "#best-in-box__tab.group.flex-shrink-0",
+          "#best-for-luxury__tab.group.flex-shrink-0",
+          "#best-for-joint-and-muscle-support__tab.group.flex-shrink-0",
+          "#best-for-sleeper-types__tab.group.flex-shrink-0",
+          "#best-overall__tab.group.flex-shrink-0",
+          "div.slider.--bar",
+          "@carousel-item.min-w-0.shrink-0",
+          "#spotlight_img_carousel__item-0.relative.h-auto",
+          "#spotlight_img_carousel__item-1.relative.h-auto",
+          "#spotlight_img_carousel__item-2.relative.h-auto"
+        ]
+      },
+      {
+        "value": "#464645",
+        "count": 196,
+        "where": [
+          "div.absolute.bottom-full",
+          "#best-for-comfort__tab.group.flex-shrink-0",
+          "div.h-[3px].w-3",
+          "@pdp_faq_category_all.h-10.rounded-xl",
+          "#reasons-tab-0.items-center.justify-center",
+          "#all-transformations__tab.flex.h-10",
+          "span.tt-tab.active",
+          "li.page-control-item.active"
+        ]
+      },
+      {
+        "value": "#e5e3df",
+        "count": 193,
+        "where": [
+          "body.mukta_d42cc534-module__GqjTsq__variable.pt_serif_a5906e0c-module__hlwxJW__variable",
+          "#pdp_awards_section.w-full.overflow-x-hidden",
+          "div.bg-normal",
+          "#morning-steps.relative.h-fit",
+          "div.mx-auto.flex",
+          "@pdp_faq_category_shipping.h-10.rounded-xl",
+          "@pdp_faq_category_warranty.h-10.rounded-xl",
+          "div.css-1ozga6k.eqzn0w21",
+          "div.border-b.rounded-3xl",
+          "div.h-8.w-full",
+          "#reasons-tab-1.items-center.justify-center",
+          "#reasons-tab-2.items-center.justify-center"
+        ]
+      },
+      {
+        "value": "#2b2f44",
+        "count": 136,
+        "where": [
+          "div.grid.w-full",
+          "div.absolute.-right-[var(--removed-body-scroll-bar-size,0px)]",
+          "@pdp_sticky_add_to_cart_btn.ring-offset-background.focus-visible:outline-none",
+          "span.flex.items-center",
+          "@pdp_main_atc_button.whitespace-nowrap.font-medium",
+          "#usp_tag_banner.relative.z-[2]",
+          "div.flex.items-center",
+          "button.flex.shrink-0",
+          "@pdp_mattress_collection__puffy-lux-mattress__add_to_cart_btn.whitespace-nowrap.font-medium",
+          "button.css-p5finx.e1wtj5o91",
+          "@pdp_before_after_reviews_shop_cta.inline-flex.items-center",
+          "#ttFormSubmit.tt-form-btn.tt-form-btn-submit"
+        ]
+      },
+      {
+        "value": "#e5e7eb@0.3",
+        "count": 120,
+        "where": [
+          "div.relative.flex",
+          "#base-ui-_r_3g_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "div.relative.size-full",
+          "#base-ui-_r_3l_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3e_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3a_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3p_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_38_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3r_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3j_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3c_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3n_.!left-[var(--lp-timeline-thumb-position)].size-4"
+        ]
+      },
+      {
+        "value": "#f5f5f5",
+        "count": 120,
+        "where": [
+          "div.h-full.w-[var(--lp-played-width)]",
+          "div.h-full.w-[var(--lp-volume-value)]",
+          "#base-ui-_r_2c_.block.size-2",
+          "#base-ui-_r_2f_.block.size-2",
+          "#base-ui-_r_2i_.block.size-2",
+          "#base-ui-_r_2l_.block.size-2",
+          "#base-ui-_r_2o_.block.size-2",
+          "#base-ui-_r_2r_.block.size-2",
+          "#base-ui-_r_2u_.block.size-2",
+          "#base-ui-_r_31_.block.size-2",
+          "#base-ui-_r_34_.block.size-2",
+          "#base-ui-_r_37_.block.size-2"
+        ]
+      },
+      {
+        "value": "#000000",
+        "count": 112,
+        "where": [
+          "#pdp-above-the-fold.relative.scroll-mt-[var(--header-height)]",
+          "div.w-full.shrink-0",
+          "div.relative.flex",
+          "div.relative.h-[275px]",
+          "div.resource-item"
+        ]
+      },
+      {
+        "value": "#ffffff@0.1",
+        "count": 59,
+        "where": [
+          "li.rounded-lg.bg-white/10",
+          "ul.mx-4.flex",
+          "div.relative.flex"
+        ]
+      },
+      {
+        "value": "#333333",
+        "count": 51,
+        "where": [
+          "span.inline-flex.size-7",
+          "#top-one.absolute.right-0",
+          "#bottom-one.absolute.right-0"
+        ]
+      },
+      {
+        "value": "#e0be70",
+        "count": 40,
+        "where": [
+          "div.inline-flex.items-center"
+        ]
+      },
+      {
+        "value": "#f4f5f9",
+        "count": 40,
+        "where": [
+          "#stream-player-marcel-eisma-back pain-0-all transformations.size-full.bg-background",
+          "#stream-player-carol-g-verified-hip pain-1-all transformations.size-full.bg-background",
+          "#stream-player-terilynn-bench-hip pain-2-all transformations.size-full.bg-background",
+          "#stream-player-julie-i-body pain-3-all transformations.size-full.bg-background",
+          "#stream-player-dan-schmillen-body pain-4-all transformations.size-full.bg-background",
+          "#stream-player-matthew-woodward-poor sleep-5-all transformations.size-full.bg-background",
+          "#stream-player-christie-verified-hip pain-6-all transformations.size-full.bg-background",
+          "#stream-player-patricia-b-body pain-7-all transformations.size-full.bg-background",
+          "#stream-player-ken-e-poor sleep-8-all transformations.size-full.bg-background",
+          "#stream-player-eileen-q-back pain-9-all transformations.size-full.bg-background"
+        ]
+      },
+      {
+        "value": "#000000@0.5",
+        "count": 40,
+        "where": [
+          "@button.whitespace-nowrap.text-sm"
+        ]
+      },
+      {
+        "value": "#f5f5f5@0.2",
+        "count": 40,
+        "where": [
+          "div.!left-[var(--lp-buffered-start)].h-full"
+        ]
+      },
+      {
+        "value": "#eeeeee",
+        "count": 40,
+        "where": [
+          "div.tt-review-avatar"
+        ]
+      },
+      {
+        "value": "#8f6c1a@0.1",
+        "count": 40,
+        "where": [
+          "div.merchant-reply"
+        ]
+      },
+      {
+        "value": "#ebeae7",
+        "count": 34,
+        "where": [
+          "#variant-selector.fixed.bottom-[-1px]",
+          "@risk_free_trial_section.flex.flex-col",
+          "div.bg-soft",
+          "#morning-step-1.cursor-pointer.rounded-3xl",
+          "#morning-step-2.cursor-pointer.rounded-3xl",
+          "@pdp_poy_section.bg-soft.py-10",
+          "@pdp_mattress_quiz.bg-soft.py-10",
+          "@cooling_backpain_support_section.bg-soft.py-10",
+          "div.grid.max-h-[calc(100dvh-64px)]"
+        ]
+      },
+      {
+        "value": "#fbfbfa",
+        "count": 32,
+        "where": [
+          "section.relative.w-full",
+          "div.grid.justify-evenly",
+          "div.flex.w-full",
+          "div.relative.overflow-hidden",
+          "div.bg-sub-soft.5xl:pl-16"
+        ]
+      },
+      {
+        "value": "#ffffff@0.7",
+        "count": 32,
+        "where": [
+          "button.flex.shrink-0",
+          "div.rounded-2xl.bg-white/70"
+        ]
+      },
+      {
+        "value": "#8e8c89",
+        "count": 31,
+        "where": [
+          "div.slider.--slider",
+          "button.bg-white.outline-none",
+          "button.outline-none.rounded-full",
+          "button.outline-none.flex-1"
+        ]
+      },
+      {
+        "value": "#f1e3cf",
+        "count": 24,
+        "where": [
+          "#radix-_R_alpbbb_.w-72.rounded-xl",
+          "@lux_pdp__luxToRoyalUpgrade__lux.relative.flex",
+          "@Size Twin.flex.min-w-12",
+          "p.mx-auto.flex"
+        ]
+      },
+      {
+        "value": "#067a57",
+        "count": 20,
+        "where": [
+          "span.absolute.w-fit",
+          "span.absolute.-top-3",
+          "div.flex.h-6",
+          "div.absolute.left-1/2"
+        ]
+      },
+      {
+        "value": "#c79344",
+        "count": 16,
+        "where": [
+          "span.rounded-md.bg-beige-700",
+          "span.relative.grid"
+        ]
+      },
+      {
+        "value": "#000000@0.1",
+        "count": 12,
+        "where": [
+          "@pdp_img_carousel_puffy-lux-mattress_prev_button.absolute.left-4",
+          "@pdp_img_carousel_puffy-lux-mattress_next_button.absolute.right-4",
+          "div.min-h-px.w-full"
+        ]
+      },
+      {
+        "value": "#8f6c1a@0.8",
+        "count": 12,
+        "where": [
+          "p.flex.w-fit",
+          "div.inline-flex.items-center"
+        ]
+      },
+      {
+        "value": "#888888",
+        "count": 12,
+        "where": [
+          "div.tt-loading-1.tt-loading-item",
+          "div.tt-loading-2.tt-loading-item",
+          "div.tt-loading-3.tt-loading-item"
+        ]
+      },
+      {
+        "value": "#000000@0.15",
+        "count": 8,
+        "where": [
+          "button.mb-2.flex",
+          "button.mt-2.flex"
+        ]
+      },
+      {
+        "value": "#2b2f44@0.85",
+        "count": 8,
+        "where": [
+          "button.absolute.left-0",
+          "button.absolute.right-0"
+        ]
+      },
+      {
+        "value": "#ffffff@0.15",
+        "count": 8,
+        "where": [
+          "button.flex.shrink-0",
+          "button.absolute.right-4"
+        ]
+      },
+      {
+        "value": "#e0d8c8",
+        "count": 8,
+        "where": [
+          "span.shrink-0.rounded-full",
+          "span.grid.size-5"
+        ]
+      },
+      {
+        "value": "#a8c7e0",
+        "count": 8,
+        "where": [
+          "span.shrink-0.rounded-full",
+          "span.grid.size-5"
+        ]
+      },
+      {
+        "value": "#3a4b9f",
+        "count": 8,
+        "where": [
+          "span.shrink-0.rounded-full",
+          "span.grid.size-5"
+        ]
+      },
+      {
+        "value": "#79b3b0",
+        "count": 8,
+        "where": [
+          "span.shrink-0.rounded-full",
+          "span.grid.size-5"
+        ]
+      },
+      {
+        "value": "#c9ccd2",
+        "count": 8,
+        "where": [
+          "span.shrink-0.rounded-full",
+          "span.grid.size-5"
+        ]
+      },
+      {
+        "value": "#dfe0e2",
+        "count": 8,
+        "where": [
+          "span.shrink-0.rounded-full",
+          "span.grid.size-5"
+        ]
+      },
+      {
+        "value": "#33343f",
+        "count": 8,
+        "where": [
+          "span.shrink-0.rounded-full",
+          "span.grid.size-5"
+        ]
+      },
+      {
+        "value": "#21d59f",
+        "count": 8,
+        "where": [
+          "span.absolute.inline-flex",
+          "span.relative.inline-flex"
+        ]
+      },
+      {
+        "value": "#596c7f",
+        "count": 8,
+        "where": [
+          "@call-phone-number-button.flex.w-full",
+          "div.css-4ou4jg.e1rxy98v4",
+          "div.css-igli3j.e1rxy98v4"
+        ]
+      },
+      {
+        "value": "#067a57@0.2",
+        "count": 8,
+        "where": [
+          "strong.block.rounded-sm"
+        ]
+      },
+      {
+        "value": "#c3bbae",
+        "count": 8,
+        "where": [
+          "div.absolute.top-1/2"
+        ]
+      },
+      {
+        "value": "#0d0d0d",
+        "count": 8,
+        "where": [
+          "div.bg-[#0D0D0D].px-4",
+          "#footer.relative.overflow-hidden"
+        ]
+      },
+      {
+        "value": "#000000@0.4",
+        "count": 4,
+        "where": [
+          "#desktop-navbar-backdrop.absolute.left-0"
+        ]
+      },
+      {
+        "value": "#f1eeea",
+        "count": 4,
+        "where": [
+          "@cart-count.absolute.right-[-8px]"
+        ]
+      },
+      {
+        "value": "#000000@0.2",
+        "count": 4,
+        "where": [
+          "div.right-6.flex"
+        ]
+      },
+      {
+        "value": "#eceae4",
+        "count": 4,
+        "where": [
+          "span.shrink-0.rounded-full"
+        ]
+      },
+      {
+        "value": "#c79344@0.4",
+        "count": 4,
+        "where": [
+          "span.absolute.inset-0"
+        ]
+      },
+      {
+        "value": "#0acc92@0.05",
+        "count": 4,
+        "where": [
+          "#market-value-variant-price-section.relative.flex"
+        ]
+      },
+      {
+        "value": "#eceae8",
+        "count": 4,
+        "where": [
+          "div.border-[1px].border-[#CEAE82]"
+        ]
+      },
+      {
+        "value": "#fafafa",
+        "count": 4,
+        "where": [
+          "div.relative.flex"
+        ]
+      },
+      {
+        "value": "#faf6ef",
+        "count": 4,
+        "where": [
+          "@layers-section.relative.isolate"
+        ]
+      },
+      {
+        "value": "#ffffff@0.25",
+        "count": 4,
+        "where": [
+          "span.grid.size-5"
+        ]
+      },
+      {
+        "value": "#2b3d87",
+        "count": 4,
+        "where": [
+          "p.mx-auto.mb-2"
+        ]
+      },
+      {
+        "value": "#e0bd70",
+        "count": 4,
+        "where": [
+          "p.flex.w-fit"
+        ]
+      },
+      {
+        "value": "#8f6c1a",
+        "count": 4,
+        "where": [
+          "p.flex.w-fit"
+        ]
+      },
+      {
+        "value": "#8e8c89@0.2",
+        "count": 4,
+        "where": [
+          "section.border-y.border-y-amber-soft"
+        ]
+      },
+      {
+        "value": "#000000@0.6",
+        "count": 4,
+        "where": [
+          "#trustoo-mask"
+        ]
+      },
+      {
+        "value": "#cec9b6",
+        "count": 4,
+        "where": [
+          "div.media-swiper"
+        ]
+      },
+      {
+        "value": "#303030@0.4",
+        "count": 4,
+        "where": [
+          "button.form-submit"
+        ]
+      },
+      {
+        "value": "#303030",
+        "count": 4,
+        "where": [
+          "button"
+        ]
+      },
+      {
+        "value": "#000000@0.8",
+        "count": 4,
+        "where": [
+          "@email_popup_close_overlay.fixed.inset-0"
+        ]
+      }
+    ],
+    "border": [
+      {
+        "value": "#dadce8",
+        "count": 26149,
+        "where": [
+          "html",
+          "title",
+          "iframe",
+          "body.mukta_d42cc534-module__GqjTsq__variable.pt_serif_a5906e0c-module__hlwxJW__variable",
+          "span",
+          "div",
+          "#desktop-navbar-backdrop-portal",
+          "#desktop-navbar-backdrop.absolute.left-0",
+          "#header-barrier.header-barrier.pointer-events-none",
+          "#header.ease-[cubic-bezier(0.4,0,0.2,1)].transition-transform",
+          "#header-content.relative.z-20",
+          "#navbar.relative.z-10"
+        ]
+      },
+      {
+        "value": "#333333",
+        "count": 259,
+        "where": [
+          "@lux_pdp__luxToRoyalUpgrade__lux.relative.flex",
+          "@Size Twin.flex.min-w-12",
+          "textarea.css-sru60k.e2njm3f4",
+          "#base-ui-_r_3g_-input",
+          "#base-ui-_r_3h_-input",
+          "input",
+          "#base-ui-_r_2c_-input",
+          "#base-ui-_r_3l_-input",
+          "#base-ui-_r_3m_-input",
+          "#base-ui-_r_2f_-input",
+          "#base-ui-_r_3e_-input",
+          "#base-ui-_r_3f_-input"
+        ]
+      },
+      {
+        "value": "#d5d2cc",
+        "count": 144,
+        "where": [
+          "#header-sheet.flex.flex-col",
+          "#variant-selector.fixed.bottom-[-1px]",
+          "#multi-layer-popover-trigger.inline-flex.items-center",
+          "div.mb-2.border-b",
+          "@Size Twin XL.flex.min-w-12",
+          "@Size Full.flex.min-w-12",
+          "@Size Queen.flex.min-w-12",
+          "@Size King.flex.min-w-12",
+          "@Size Cal King.flex.min-w-12",
+          "@Size Split Head Queen.flex.min-w-12",
+          "@Size Split Head King.flex.min-w-12",
+          "@Size Split King.flex.min-w-12"
+        ]
+      },
+      {
+        "value": "#ffffff",
+        "count": 53,
+        "where": [
+          "@pdp_img_carousel_puffy-lux-mattress_prev_button.absolute.left-4",
+          "@pdp_img_carousel_puffy-lux-mattress_next_button.absolute.right-4",
+          "img.h-[200px].w-full",
+          "#ttFormSubmit.tt-form-btn.tt-form-btn-submit",
+          "li.page-control-item.active",
+          "@call-phone-number-button.flex.min-w-[min(100%,250px)]",
+          "button.flex.min-w-[min(100%,250px)]",
+          "a.flex.min-w-[min(100%,250px)]",
+          "div.css-4ou4jg.e1rxy98v4",
+          "button.form-submit",
+          "button",
+          "div.css-igli3j.e1rxy98v4"
+        ]
+      },
+      {
+        "value": "#8e8c89",
+        "count": 40,
+        "where": [
+          "@lux_pdp__luxToRoyalUpgrade__royal.relative.flex",
+          "div.h-6.w-6",
+          "hr.hidden.w-full",
+          "@pdp_mattress_collection__puffy-royal-mattress__shop_now_btn.flex.min-w-[min(100%,250px)]",
+          "@pdp_mattress_collection__puffy-monarch-mattress__shop_now_btn.flex.min-w-[min(100%,250px)]",
+          "@pdp_mattress_collection_quiz_btn.flex.w-fit",
+          "@pdp_mattress_quiz_btn.flex.w-fit",
+          "#ttFormCancelBtn.tt-form-btn.tt-form-btn-cancel"
+        ]
+      },
+      {
+        "value": "#e0be70",
+        "count": 28,
+        "where": [
+          "div.w-fit.items-center"
+        ]
+      },
+      {
+        "value": "#b1bdc8",
+        "count": 28,
+        "where": [
+          "@button.inline-flex.items-center",
+          "#_r_3i_-form-item.flex.h-10",
+          "#_r_2q_-form-item.flex.h-10",
+          "#_r_30_-form-item.flex.h-10",
+          "#_r_36_-form-item.flex.h-10"
+        ]
+      },
+      {
+        "value": "#333333@0.1",
+        "count": 28,
+        "where": [
+          "button.flex.shrink-0"
+        ]
+      },
+      {
+        "value": "#000000",
+        "count": 28,
+        "where": [
+          "li.page-control-button.pre-page",
+          "li.page-control-item",
+          "li.page-control-button.next-page",
+          "iframe.tt-detail-frame"
+        ]
+      },
+      {
+        "value": "#303030@0.4",
+        "count": 28,
+        "where": [
+          "input.small-input.user-input",
+          "textarea.big-input.user-input",
+          "div.tt-uploader.tt-image-uploader",
+          "div.tt-uploader.tt-video-uploader"
+        ]
+      },
+      {
+        "value": "#4b4b4b@0.4",
+        "count": 24,
+        "where": [
+          "th.relative.rounded-tl-3xl",
+          "th.border-y.border-r"
+        ]
+      },
+      {
+        "value": "#596c7f",
+        "count": 16,
+        "where": [
+          "hr.h-4.w-px",
+          "#see-bp-details.peer.hidden",
+          "#see-cooling-details.peer.hidden",
+          "div.css-y50anx.eknn8ug1"
+        ]
+      },
+      {
+        "value": "#dddddd",
+        "count": 16,
+        "where": [
+          "#name.tt-form-control",
+          "#email.tt-form-control",
+          "#question.tt-form-control",
+          "div.product-image"
+        ]
+      },
+      {
+        "value": "#d4d4d4",
+        "count": 12,
+        "where": [
+          "div.relative.flex",
+          "hr.w-full.border-t",
+          "span.mx-7.hidden"
+        ]
+      },
+      {
+        "value": "#595959",
+        "count": 12,
+        "where": [
+          "div.iub__us-widget__wrapper",
+          "a.iub__us-widget__link.iubenda-cs-uspr-link",
+          "button.iub__us-widget__link.iub__us-widget__link--privacy-choices"
+        ]
+      },
+      {
+        "value": "#067a57",
+        "count": 8,
+        "where": [
+          "div.flex.h-6",
+          "#market-value-variant-price-section.relative.flex"
+        ]
+      },
+      {
+        "value": "#ebeae7",
+        "count": 8,
+        "where": [
+          "@pdp-top-fold-free-luxury-bundle.border-bg-soft.pt-0",
+          "section.mx-auto.h-fit"
+        ]
+      },
+      {
+        "value": "#d9d1c5",
+        "count": 8,
+        "where": [
+          "hr.my-5.border-beige-300"
+        ]
+      },
+      {
+        "value": "#222222",
+        "count": 8,
+        "where": [
+          "input",
+          "#tt-qa-unpublish"
+        ]
+      },
+      {
+        "value": "#0f172a",
+        "count": 6,
+        "where": [
+          "button.css-p5finx.e1wtj5o91",
+          "div.css-iv0mwh.etyqcsi2"
+        ]
+      },
+      {
+        "value": "#2c3640",
+        "count": 4,
+        "where": [
+          "div.relative.flex"
+        ]
+      },
+      {
+        "value": "#1b1d2b",
+        "count": 4,
+        "where": [
+          "@main_size_selector.grid.border-solid"
+        ]
+      },
+      {
+        "value": "#ceae82",
+        "count": 4,
+        "where": [
+          "div.border-[1px].border-[#CEAE82]"
+        ]
+      },
+      {
+        "value": "#e5e3df",
+        "count": 4,
+        "where": [
+          "div.css-1ozga6k.eqzn0w21"
+        ]
+      },
+      {
+        "value": "#c2d3e4",
+        "count": 4,
+        "where": [
+          "div.css-1361zu6.e2njm3f3"
+        ]
+      },
+      {
+        "value": "#333333@0",
+        "count": 4,
+        "where": [
+          "button.head-button.tt-write-qa"
+        ]
+      },
+      {
+        "value": "#2b2f44",
+        "count": 4,
+        "where": [
+          "div.tt-tabs-list"
+        ]
+      },
+      {
+        "value": "#8f6c1a@0.2",
+        "count": 4,
+        "where": [
+          "section.border-y.border-y-amber-soft"
+        ]
+      },
+      {
+        "value": "#d5d2cc@0.2",
+        "count": 4,
+        "where": [
+          "hr.w-full.border-sub-soft/20"
+        ]
+      },
+      {
+        "value": "#e8ebf2",
+        "count": 4,
+        "where": [
+          "div.product-info"
+        ]
+      },
+      {
+        "value": "#acacac",
+        "count": 4,
+        "where": [
+          "div.product-shop"
+        ]
+      }
+    ]
+  },
+  "type": {
+    "families": [
+      {
+        "value": "Mukta",
+        "count": 25719,
+        "where": [
+          "body.mukta_d42cc534-module__GqjTsq__variable.pt_serif_a5906e0c-module__hlwxJW__variable",
+          "span",
+          "div",
+          "#desktop-navbar-backdrop-portal",
+          "#desktop-navbar-backdrop.absolute.left-0",
+          "#header-barrier.header-barrier.pointer-events-none",
+          "#header.ease-[cubic-bezier(0.4,0,0.2,1)].transition-transform",
+          "#header-content.relative.z-20",
+          "#navbar.relative.z-10",
+          "div.absolute.left-0",
+          "div.z-20.xl:hidden",
+          "#header-sheet.flex.flex-col"
+        ]
+      },
+      {
+        "value": "PT Serif",
+        "count": 1248,
+        "where": [
+          "span.absolute.-bottom-1.5",
+          "h2.whitespace-nowrap.font-serif",
+          "b",
+          "div.w-fit.items-center",
+          "span",
+          "div.cursor-default.flex-row-reverse",
+          "button.flex.shrink-0",
+          "div.relative",
+          "div.absolute.left-1/2",
+          "#info-24",
+          "path",
+          "h2.block.w-full"
+        ]
+      },
+      {
+        "value": "-apple-system",
+        "count": 16,
+        "where": [
+          "div.iub__us-widget",
+          "div.iub__us-widget__wrapper",
+          "a.iub__us-widget__link.iubenda-cs-uspr-link",
+          "button.iub__us-widget__link.iub__us-widget__link--privacy-choices"
+        ]
+      },
+      {
+        "value": "Times",
+        "count": 12,
+        "where": [
+          "html",
+          "title",
+          "iframe"
+        ]
+      },
+      {
+        "value": "affirm",
+        "count": 4,
+        "where": [
+          "span.__affirm-logo.__affirm-logo-blue"
+        ]
+      },
+      {
+        "value": "Arial",
+        "count": 4,
+        "where": [
+          "#question.tt-form-control"
+        ]
+      }
+    ],
+    "weights": [
+      {
+        "value": "400",
+        "count": 19496,
+        "where": [
+          "html",
+          "title",
+          "iframe",
+          "body.mukta_d42cc534-module__GqjTsq__variable.pt_serif_a5906e0c-module__hlwxJW__variable",
+          "span",
+          "div",
+          "#desktop-navbar-backdrop-portal",
+          "#desktop-navbar-backdrop.absolute.left-0",
+          "#header-barrier.header-barrier.pointer-events-none",
+          "#header.ease-[cubic-bezier(0.4,0,0.2,1)].transition-transform",
+          "#header-content.relative.z-20",
+          "#navbar.relative.z-10"
+        ]
+      },
+      {
+        "value": "500",
+        "count": 5821,
+        "where": [
+          "@menu_header_365-night-guarantee.h-full.px-2",
+          "@menu_header_puffy-vs.h-full.px-2",
+          "@menu_header_support.h-full.px-2",
+          "@menu_header_stores.h-full.px-2",
+          "p.text-center.font-medium",
+          "#multi-layer-popover-trigger.inline-flex.items-center",
+          "div.flex.w-full",
+          "span.line-clamp-2.whitespace-break-spaces",
+          "svg",
+          "path",
+          "@pdp_sticky_add_to_cart_btn.ring-offset-background.focus-visible:outline-none",
+          "span.pointer-events-none.relative"
+        ]
+      },
+      {
+        "value": "700",
+        "count": 1271,
+        "where": [
+          "b",
+          "h2.block.w-full",
+          "article",
+          "p",
+          "span.font-serif.text-xs",
+          "p.font-serif.text-base",
+          "div.font-serif.font-bold",
+          "span.rounded-md.bg-beige-700",
+          "h3.text-balance.font-serif",
+          "div.absolute.bottom-full",
+          "span",
+          "div.font-sans.text-base"
+        ]
+      },
+      {
+        "value": "600",
+        "count": 383,
+        "where": [
+          "span",
+          "span.text-base.font-semibold",
+          "p.mb-0.5.text-base",
+          "span.text-left.text-base",
+          "span.hidden.flex-1",
+          "button.flex.shrink-0",
+          "span.grid.size-5",
+          "span.text-lg.font-semibold",
+          "h3.mb-3.text-center",
+          "p.--overwrite.font-sans",
+          "div.pr-5.text-left",
+          "div"
+        ]
+      },
+      {
+        "value": "450",
+        "count": 24,
+        "where": [
+          "div.tt-rating-title",
+          "div.tt-input-title"
+        ]
+      },
+      {
+        "value": "800",
+        "count": 8,
+        "where": [
+          "span.whitespace-nowrap.font-sans",
+          "span.inline"
+        ]
+      }
+    ],
+    "sizes": [
+      {
+        "value": "16px",
+        "count": 17395,
+        "where": [
+          "html",
+          "title",
+          "iframe",
+          "body.mukta_d42cc534-module__GqjTsq__variable.pt_serif_a5906e0c-module__hlwxJW__variable",
+          "span",
+          "div",
+          "#desktop-navbar-backdrop-portal",
+          "#desktop-navbar-backdrop.absolute.left-0",
+          "#header-barrier.header-barrier.pointer-events-none",
+          "#header.ease-[cubic-bezier(0.4,0,0.2,1)].transition-transform",
+          "#header-content.relative.z-20",
+          "#navbar.relative.z-10"
+        ]
+      },
+      {
+        "value": "14px",
+        "count": 2570,
+        "where": [
+          "#header-sheet.flex.flex-col",
+          "span.tracking-[-0.07em.relative",
+          "#radix-_R_alpbbb_.w-72.rounded-xl",
+          "div.w-fit.items-center",
+          "span",
+          "div.cursor-default.flex-row-reverse",
+          "button.flex.shrink-0",
+          "div.relative",
+          "div.absolute.left-1/2",
+          "#info-24",
+          "path",
+          "#multi-layer-popover-trigger.inline-flex.items-center"
+        ]
+      },
+      {
+        "value": "18px",
+        "count": 2190,
+        "where": [
+          "#menu_header_mattress_desktop.flex.min-h-[60px]",
+          "span.relative.before:absolute",
+          "#menu_header_smartbeds_desktop.flex.min-h-[60px]",
+          "#menu_header_bedframes_desktop.flex.min-h-[60px]",
+          "#menu_header_beddings_desktop.flex.min-h-[60px]",
+          "div.block.w-full",
+          "div.invisible.block",
+          "span",
+          "@pdp_sticky_add_to_cart_btn.ring-offset-background.focus-visible:outline-none",
+          "span.pointer-events-none.relative",
+          "div.flex.items-center",
+          "hr.h-4.w-px"
+        ]
+      },
+      {
+        "value": "12px",
+        "count": 2074,
+        "where": [
+          "div.w-fit.items-center",
+          "span",
+          "time.tabular-nums.text-lp-accent",
+          "span.sr-only",
+          "#base-ui-_r_3h_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3h_-input",
+          "#base-ui-_r_3m_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3m_-input",
+          "#base-ui-_r_3f_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3f_-input",
+          "#base-ui-_r_3b_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3b_-input"
+        ]
+      },
+      {
+        "value": "20px",
+        "count": 1067,
+        "where": [
+          "#desktop-header-menu.flex-1.justify-center",
+          "div",
+          "ul.group.flex",
+          "li",
+          "#primary-Mattresses.group.inline-flex",
+          "#primary-Smart Beds.group.inline-flex",
+          "#primary-Bed Frames.group.inline-flex",
+          "#primary-Bedding.group.inline-flex",
+          "div.absolute.left-0",
+          "div.hidden.whitespace-nowrap",
+          "span",
+          "p.text-center.font-medium"
+        ]
+      },
+      {
+        "value": "0px",
+        "count": 888,
+        "where": [
+          "div.vstar-star",
+          "div.star-item",
+          "svg",
+          "path",
+          "div.star-item.half-star",
+          "div.item-nostar",
+          "div.item-star",
+          "button.head-button.tt-write-qa",
+          "div.tt-form-title",
+          "#ttFormCancelBtn.tt-form-btn.tt-form-btn-cancel",
+          "#ttFormSubmit.tt-form-btn.tt-form-btn-submit",
+          "div.user-verified"
+        ]
+      },
+      {
+        "value": "24px",
+        "count": 316,
+        "where": [
+          "p.text-pretty.text-sm",
+          "span",
+          "br",
+          "p.line-through--not-dark.text-sm",
+          "p.text-pretty.text-center",
+          "h3.text-balance.font-serif",
+          "span.font-serif.text-xl",
+          "br.hidden.md:max-lg:block",
+          "p.m-0.max-w-screen-mlg",
+          "div.font-strong.text-center",
+          "h3.mb-3.text-center",
+          "span.text-lg.font-normal"
+        ]
+      },
+      {
+        "value": "32px",
+        "count": 221,
+        "where": [
+          "div.mt-2.text-balance",
+          "article",
+          "p",
+          "div.mx-5.mt-2",
+          "h2.mx-5.text-balance",
+          "h2.text-balance.font-serif",
+          "br.block.min-[395px]:hidden",
+          "h3.text-balance.font-serif",
+          "h2.mb-6.text-center",
+          "strong",
+          "br",
+          "span.inline-block"
+        ]
+      },
+      {
+        "value": "28px",
+        "count": 97,
+        "where": [
+          "h2.whitespace-nowrap.font-serif",
+          "b",
+          "div.font-serif.font-bold",
+          "h1.font-serif.inline",
+          "h3.mx-auto.inline-block",
+          "span.font-normal",
+          "br",
+          "span.font-bold",
+          "h3.font-serif.text-xl",
+          "div.text-balance.font-serif",
+          "h2.--overwrite.font-serif",
+          "strong"
+        ]
+      },
+      {
+        "value": "40px",
+        "count": 74,
+        "where": [
+          "h2.block.w-full",
+          "article",
+          "p",
+          "h2.--overwrite.font-serif",
+          "strong",
+          "span.whitespace-nowrap",
+          "h2.--overwrite.md:tracking-[-1px]",
+          "h2.m-0.max-w-screen-mlg",
+          "br.max-sm:hidden",
+          "br.max-md:hidden",
+          "br.block.md:hidden",
+          "br"
+        ]
+      },
+      {
+        "value": "10px",
+        "count": 45,
+        "where": [
+          "span.text-xxs/[7px].font-normal",
+          "span.lg:hidden",
+          "span.hidden.lg:inline-block",
+          "span.uppercase.lg:text-xxs/[12px]"
+        ]
+      },
+      {
+        "value": "13px",
+        "count": 32,
+        "where": [
+          "div.tt-form-error-message",
+          "#tt-protection",
+          "label",
+          "a"
+        ]
+      },
+      {
+        "value": "30px",
+        "count": 8,
+        "where": [
+          "span"
+        ]
+      },
+      {
+        "value": "22px",
+        "count": 7,
+        "where": [
+          "div.window-title",
+          "@call-phone-number-button.flex.min-w-[min(100%,250px)]",
+          "button.flex.min-w-[min(100%,250px)]",
+          "a.flex.min-w-[min(100%,250px)]"
+        ]
+      },
+      {
+        "value": "16.2px",
+        "count": 6,
+        "where": [
+          "span.text-[0.7em]/[1.25].xs:text-[0.8em]/[1.25]",
+          "span.hidden"
+        ]
+      },
+      {
+        "value": "2px",
+        "count": 4,
+        "where": [
+          "#trustoo-review-detail.trustoo-widget.trustoo-ltr"
+        ]
+      },
+      {
+        "value": "19.776px",
+        "count": 3,
+        "where": [
+          "span.__affirm-logo.__affirm-logo-blue"
+        ]
+      },
+      {
+        "value": "9px",
+        "count": 2,
+        "where": [
+          "div.font-sans.font-medium",
+          "div.inline-flex.items-center"
+        ]
+      },
+      {
+        "value": "14.4px",
+        "count": 2,
+        "where": [
+          "span.text-[0.7em]/[1.25].xs:text-[0.8em]/[1.25]",
+          "span.hidden"
+        ]
+      }
+    ],
+    "sizeClusters": [
+      {
+        "centre": 0,
+        "total": 888,
+        "values": [
+          {
+            "value": "0px",
+            "count": 888
+          }
+        ]
+      },
+      {
+        "centre": 2,
+        "total": 4,
+        "values": [
+          {
+            "value": "2px",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "centre": 9,
+        "total": 2,
+        "values": [
+          {
+            "value": "9px",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "centre": 10,
+        "total": 45,
+        "values": [
+          {
+            "value": "10px",
+            "count": 45
+          }
+        ]
+      },
+      {
+        "centre": 12,
+        "total": 2074,
+        "values": [
+          {
+            "value": "12px",
+            "count": 2074
+          }
+        ]
+      },
+      {
+        "centre": 13,
+        "total": 32,
+        "values": [
+          {
+            "value": "13px",
+            "count": 32
+          }
+        ]
+      },
+      {
+        "centre": 14,
+        "total": 2572,
+        "values": [
+          {
+            "value": "14px",
+            "count": 2570
+          },
+          {
+            "value": "14.4px",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "centre": 16,
+        "total": 17401,
+        "values": [
+          {
+            "value": "16px",
+            "count": 17395
+          },
+          {
+            "value": "16.2px",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "centre": 18,
+        "total": 2190,
+        "values": [
+          {
+            "value": "18px",
+            "count": 2190
+          }
+        ]
+      },
+      {
+        "centre": 20,
+        "total": 1070,
+        "values": [
+          {
+            "value": "19.776px",
+            "count": 3
+          },
+          {
+            "value": "20px",
+            "count": 1067
+          }
+        ]
+      },
+      {
+        "centre": 22,
+        "total": 7,
+        "values": [
+          {
+            "value": "22px",
+            "count": 7
+          }
+        ]
+      },
+      {
+        "centre": 24,
+        "total": 316,
+        "values": [
+          {
+            "value": "24px",
+            "count": 316
+          }
+        ]
+      },
+      {
+        "centre": 28,
+        "total": 97,
+        "values": [
+          {
+            "value": "28px",
+            "count": 97
+          }
+        ]
+      },
+      {
+        "centre": 30,
+        "total": 8,
+        "values": [
+          {
+            "value": "30px",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "centre": 32,
+        "total": 221,
+        "values": [
+          {
+            "value": "32px",
+            "count": 221
+          }
+        ]
+      },
+      {
+        "centre": 40,
+        "total": 74,
+        "values": [
+          {
+            "value": "40px",
+            "count": 74
+          }
+        ]
+      }
+    ],
+    "lineHeights": [
+      {
+        "value": "24px",
+        "count": 19211,
+        "where": [
+          "html",
+          "title",
+          "iframe",
+          "body.mukta_d42cc534-module__GqjTsq__variable.pt_serif_a5906e0c-module__hlwxJW__variable",
+          "span",
+          "div",
+          "#desktop-navbar-backdrop-portal",
+          "#desktop-navbar-backdrop.absolute.left-0",
+          "#header-barrier.header-barrier.pointer-events-none",
+          "#header.ease-[cubic-bezier(0.4,0,0.2,1)].transition-transform",
+          "#header-content.relative.z-20",
+          "#navbar.relative.z-10"
+        ]
+      },
+      {
+        "value": "normal",
+        "count": 2778,
+        "where": [
+          "#reviews-head.review-head-type2",
+          "div.tt-head-content",
+          "div.tt-head-left.has-album",
+          "div.head-left",
+          "div.product-rating",
+          "p.point",
+          "div.vstar-star",
+          "div.star-item",
+          "svg",
+          "path",
+          "div.star-item.half-star",
+          "div.item-nostar"
+        ]
+      },
+      {
+        "value": "20px",
+        "count": 2281,
+        "where": [
+          "#header-sheet.flex.flex-col",
+          "span.tracking-[-0.07em.relative",
+          "#radix-_R_alpbbb_.w-72.rounded-xl",
+          "div.hidden.whitespace-nowrap",
+          "span",
+          "div.cursor-default.flex-row-reverse",
+          "button.flex.shrink-0",
+          "div.relative",
+          "div.absolute.left-1/2",
+          "#info-24",
+          "path",
+          "#multi-layer-popover-trigger.inline-flex.items-center"
+        ]
+      },
+      {
+        "value": "28px",
+        "count": 1028,
+        "where": [
+          "#desktop-header-menu.flex-1.justify-center",
+          "div",
+          "ul.group.flex",
+          "li",
+          "#primary-Mattresses.group.inline-flex",
+          "#primary-Smart Beds.group.inline-flex",
+          "#primary-Bed Frames.group.inline-flex",
+          "#primary-Bedding.group.inline-flex",
+          "div.absolute.left-0",
+          "p.text-center.font-medium",
+          "span.font-serif.text-xs",
+          "p.font-serif.text-base"
+        ]
+      },
+      {
+        "value": "16px",
+        "count": 464,
+        "where": [
+          "span.absolute.w-fit",
+          "span.absolute.-top-3",
+          "div.w-fit.items-center",
+          "span",
+          "time.tabular-nums.text-lp-accent",
+          "span.sr-only",
+          "#base-ui-_r_3h_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3h_-input",
+          "#base-ui-_r_3m_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3m_-input",
+          "#base-ui-_r_3f_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3f_-input"
+        ]
+      },
+      {
+        "value": "40px",
+        "count": 341,
+        "where": [
+          "div.mt-2.text-balance",
+          "article",
+          "p",
+          "div.mx-5.mt-2",
+          "h2.mx-5.text-balance",
+          "h2.text-balance.font-serif",
+          "br.block.min-[395px]:hidden",
+          "h3.text-balance.font-serif",
+          "h2.mb-6.text-center",
+          "strong",
+          "br",
+          "span.inline-block"
+        ]
+      },
+      {
+        "value": "32px",
+        "count": 305,
+        "where": [
+          "p.text-pretty.text-sm",
+          "span",
+          "br",
+          "p.line-through--not-dark.text-sm",
+          "p.text-pretty.text-center",
+          "div.font-serif.font-bold",
+          "h3.text-balance.font-serif",
+          "span.font-serif.text-xl",
+          "br.hidden.md:max-lg:block",
+          "p.m-0.max-w-screen-mlg",
+          "div.font-strong.text-center",
+          "h3.mb-3.text-center"
+        ]
+      },
+      {
+        "value": "15.4px",
+        "count": 144,
+        "where": [
+          "span.text-sm/[1.1].text-white",
+          "br"
+        ]
+      },
+      {
+        "value": "36px",
+        "count": 98,
+        "where": [
+          "h2.whitespace-nowrap.font-serif",
+          "b",
+          "h1.font-serif.inline",
+          "h3.mx-auto.inline-block",
+          "span.font-normal",
+          "br",
+          "span.font-bold",
+          "h3.font-serif.text-xl",
+          "div.css-sowrqw.e1xfelzv2",
+          "#success-window.trustoo-widget",
+          "div.text-balance.font-serif",
+          "h2.--overwrite.font-serif"
+        ]
+      },
+      {
+        "value": "48px",
+        "count": 74,
+        "where": [
+          "h2.block.w-full",
+          "article",
+          "p",
+          "h2.--overwrite.font-serif",
+          "strong",
+          "span.whitespace-nowrap",
+          "h2.--overwrite.md:tracking-[-1px]",
+          "h2.m-0.max-w-screen-mlg",
+          "br.max-sm:hidden",
+          "br.max-md:hidden",
+          "br.block.md:hidden",
+          "br"
+        ]
+      },
+      {
+        "value": "22px",
+        "count": 44,
+        "where": [
+          "span.text-base.font-semibold",
+          "p.mb-0.5.text-base",
+          "span.text-left.text-base",
+          "div.window-title"
+        ]
+      },
+      {
+        "value": "18px",
+        "count": 36,
+        "where": [
+          "div.block.w-full",
+          "span",
+          "div.w-fit.items-center",
+          "@Size Twin.flex.min-w-12",
+          "@Size Twin XL.flex.min-w-12",
+          "@Size Full.flex.min-w-12",
+          "@Size Queen.flex.min-w-12",
+          "@Size King.flex.min-w-12",
+          "@Size Cal King.flex.min-w-12",
+          "@Size Split Head Queen.flex.min-w-12",
+          "@Size Split Head King.flex.min-w-12",
+          "@Size Split King.flex.min-w-12"
+        ]
+      },
+      {
+        "value": "12px",
+        "count": 34,
+        "where": [
+          "span.text-xxs/[7px].font-normal",
+          "span.lg:hidden",
+          "span.hidden.lg:inline-block",
+          "span.display-text",
+          "span.uppercase.lg:text-xxs/[12px]"
+        ]
+      },
+      {
+        "value": "14px",
+        "count": 27,
+        "where": [
+          "input.small-input.user-input",
+          "span.upload-image-text",
+          "button.form-submit",
+          "div.window-content"
+        ]
+      },
+      {
+        "value": "7px",
+        "count": 27,
+        "where": [
+          "span.text-xxs/[7px].font-normal",
+          "span.lg:hidden",
+          "span.hidden.lg:inline-block"
+        ]
+      },
+      {
+        "value": "19.25px",
+        "count": 18,
+        "where": [
+          "span.rounded-md.bg-beige-700",
+          "span.whitespace-nowrap.font-sans",
+          "span.inline",
+          "p.text-pretty.text-sm",
+          "span",
+          "br",
+          "p.text-pretty.text-center"
+        ]
+      },
+      {
+        "value": "22.5px",
+        "count": 16,
+        "where": [
+          "span.text-[0.7em]/[1.25].xs:text-[0.8em]/[1.25]",
+          "span.hidden.2xl:inline",
+          "span.inline-flex.items-baseline",
+          "span.text-lg.font-semibold"
+        ]
+      },
+      {
+        "value": "27.5px",
+        "count": 16,
+        "where": [
+          "p.text-xl.font-medium",
+          "span.font-bold.text-sub-strong"
+        ]
+      },
+      {
+        "value": "30px",
+        "count": 14,
+        "where": [
+          "span",
+          "h3.text-balance.font-serif",
+          "div.css-sowrqw.e1xfelzv2"
+        ]
+      },
+      {
+        "value": "27px",
+        "count": 12,
+        "where": [
+          "div.invisible.block",
+          "span"
+        ]
+      },
+      {
+        "value": "24.75px",
+        "count": 8,
+        "where": [
+          "p.mt-2.text-lg",
+          "p.mt-1.5.text-lg"
+        ]
+      },
+      {
+        "value": "20.25px",
+        "count": 6,
+        "where": [
+          "span.text-[0.7em]/[1.25].xs:text-[0.8em]/[1.25]",
+          "span.hidden"
+        ]
+      },
+      {
+        "value": "25px",
+        "count": 4,
+        "where": [
+          "span.inline-flex.items-baseline"
+        ]
+      },
+      {
+        "value": "26px",
+        "count": 4,
+        "where": [
+          "button.w-fit.cursor-pointer"
+        ]
+      },
+      {
+        "value": "3px",
+        "count": 4,
+        "where": [
+          "#trustoo-review-detail.trustoo-widget.trustoo-ltr"
+        ]
+      },
+      {
+        "value": "19.776px",
+        "count": 3,
+        "where": [
+          "span.__affirm-logo.__affirm-logo-blue"
+        ]
+      }
+    ],
+    "letterSpacing": [
+      {
+        "value": "-1px",
+        "count": 183,
+        "where": [
+          "h2.--overwrite.font-serif",
+          "strong",
+          "span.whitespace-nowrap",
+          "h2.--overwrite.md:tracking-[-1px]",
+          "br.max-md:hidden",
+          "br.block.md:hidden",
+          "br",
+          "article",
+          "p",
+          "span",
+          "br.block",
+          "br.block.min-[379px]:hidden"
+        ]
+      },
+      {
+        "value": "-0.32px",
+        "count": 12,
+        "where": [
+          "div.font-serif.text-3xl",
+          "br.md:hidden",
+          "div.text-center.font-serif",
+          "br.lg:hidden"
+        ]
+      },
+      {
+        "value": "1.6px",
+        "count": 6,
+        "where": [
+          "span.text-base.font-semibold",
+          "p.mb-0.5.text-base"
+        ]
+      },
+      {
+        "value": "0.56px",
+        "count": 6,
+        "where": [
+          "span.whitespace-nowrap.font-sans",
+          "span.inline"
+        ]
+      },
+      {
+        "value": "1.4px",
+        "count": 2,
+        "where": [
+          "span.whitespace-nowrap.font-sans",
+          "span.inline"
+        ]
+      },
+      {
+        "value": "2.24px",
+        "count": 1,
+        "where": [
+          "span.text-base.font-semibold"
+        ]
+      },
+      {
+        "value": "1.92px",
+        "count": 1,
+        "where": [
+          "p.mb-0.5.text-base"
+        ]
+      }
+    ],
+    "textTransform": [
+      {
+        "value": "uppercase",
+        "count": 148,
+        "where": [
+          "span.text-xxs/[7px].font-normal",
+          "span.lg:hidden",
+          "span.hidden.lg:inline-block",
+          "div.w-fit.items-center",
+          "span",
+          "div.cursor-default.flex-row-reverse",
+          "span.absolute.w-fit",
+          "span.absolute.-top-3",
+          "div.absolute.left-1/2",
+          "div.inline-flex.cursor-default",
+          "strong.block.rounded-sm",
+          "span.uppercase.lg:text-xxs/[12px]"
+        ]
+      },
+      {
+        "value": "capitalize",
+        "count": 29,
+        "where": [
+          "@size_guide_btn.text-base.font-medium",
+          "#all-transformations__tab.flex.h-10",
+          "#back-pain__tab.flex.h-10",
+          "#poor-sleep__tab.flex.h-10",
+          "#hip-pain__tab.flex.h-10",
+          "#body-pain__tab.flex.h-10",
+          "div.text-base.font-medium",
+          "span.max-md:capitalize"
+        ]
+      }
+    ]
+  },
+  "space": {
+    "values": [
+      {
+        "value": "8px",
+        "count": 1882,
+        "where": [
+          "div.grid.w-full",
+          "ul.--awards.flex",
+          "li.rounded-lg.bg-white/10",
+          "span.absolute.w-fit",
+          "span.absolute.-top-3",
+          "div.absolute.left-1/2",
+          "button.mb-2.flex",
+          "button.mt-2.flex",
+          "div.mt-1.5.space-y-1",
+          "@lux_pdp__luxToRoyalUpgrade__lux.relative.flex",
+          "div.mx-auto.mb-2",
+          "@lux_pdp__luxToRoyalUpgrade__royal.relative.flex"
+        ]
+      },
+      {
+        "value": "-1px",
+        "count": 1476,
+        "where": [
+          "@previous-price.sr-only",
+          "#usp_tag_banner.relative.z-[2]",
+          "span.sr-only",
+          "#base-ui-_r_3g_-input",
+          "#base-ui-_r_3h_-input",
+          "input",
+          "#base-ui-_r_2c_-input",
+          "#base-ui-_r_3l_-input",
+          "#base-ui-_r_3m_-input",
+          "#base-ui-_r_2f_-input",
+          "#base-ui-_r_3e_-input",
+          "#base-ui-_r_3f_-input"
+        ]
+      },
+      {
+        "value": "12px",
+        "count": 1300,
+        "where": [
+          "#header-sheet.flex.flex-col",
+          "#variant-selector.fixed.bottom-[-1px]",
+          "#multi-layer-popover-trigger.inline-flex.items-center",
+          "li.rounded-lg.bg-white/10",
+          "div.relative.flex",
+          "#market-value-variant-price-section.relative.flex",
+          "div.py-3.text-center",
+          "header.mx-4.mb-3",
+          "div.h-fit.bg-white",
+          "div.mt-3.flex",
+          "button.flex.shrink-0",
+          "div.mt-3.space-y-2"
+        ]
+      },
+      {
+        "value": "16px",
+        "count": 1150,
+        "where": [
+          "#menu_header_mattress_desktop.flex.min-h-[60px]",
+          "#menu_header_smartbeds_desktop.flex.min-h-[60px]",
+          "#menu_header_bedframes_desktop.flex.min-h-[60px]",
+          "#menu_header_beddings_desktop.flex.min-h-[60px]",
+          "@menu_header_365-night-guarantee.h-full.px-2",
+          "@menu_header_puffy-vs.h-full.px-2",
+          "@menu_header_support.h-full.px-2",
+          "@menu_header_stores.h-full.px-2",
+          "div.flex.items-center",
+          "#multi-layer-popover-trigger.inline-flex.items-center",
+          "@pdp_sticky_add_to_cart_btn.ring-offset-background.focus-visible:outline-none",
+          "ul.mx-4.flex"
+        ]
+      },
+      {
+        "value": "20px",
+        "count": 752,
+        "where": [
+          "div.mx-5.mt-2",
+          "h2.mx-5.text-balance",
+          "div.flex.flex-col",
+          "div.grid.grid-cols-2",
+          "#market-value-variant-price-section.relative.flex",
+          "div.flex.justify-center",
+          "#best-for-comfort__tab.group.flex-shrink-0",
+          "#best-for-back-pain__tab.group.flex-shrink-0",
+          "#best-in-box__tab.group.flex-shrink-0",
+          "#best-for-luxury__tab.group.flex-shrink-0",
+          "#best-for-joint-and-muscle-support__tab.group.flex-shrink-0",
+          "#best-for-sleeper-types__tab.group.flex-shrink-0"
+        ]
+      },
+      {
+        "value": "32px",
+        "count": 662,
+        "where": [
+          "#variant-selector.fixed.bottom-[-1px]",
+          "header.pointer-events-none.absolute",
+          "div.pointer-events-none.absolute",
+          "@pdp_img_carousel_puffy-lux-mattress_prev_button.absolute.left-4",
+          "@pdp_img_carousel_puffy-lux-mattress_next_button.absolute.right-4",
+          "#see-inside-layer-scene.absolute.inset-0",
+          "div.flex.flex-row",
+          "#usp_tag_banner.relative.z-[2]",
+          "header.mx-auto.max-w-screen-lg",
+          "#pdp_awards_tabs.mx-auto.mb-8",
+          "#pdp_awards_carousel.relative.mx-auto",
+          "@risk_free_trial_section.flex.flex-col"
+        ]
+      },
+      {
+        "value": "4px",
+        "count": 622,
+        "where": [
+          "li",
+          "li.xl:h-full",
+          "div.min-w-0.[grid-area:description]",
+          "div.w-fit.items-center",
+          "span.absolute.w-fit",
+          "span.absolute.-top-3",
+          "div.right-6.flex",
+          "p.mb-0.5.text-base",
+          "p.mt-1.text-lg",
+          "div.mb-2.border-b",
+          "div.mb-5.flex",
+          "@Size Twin.flex.min-w-12"
+        ]
+      },
+      {
+        "value": "24px",
+        "count": 619,
+        "where": [
+          "#desktop-secondary-menu.relative.max-w-max",
+          "ul.--awards.flex",
+          "div.mx-5.mt-2",
+          "li.flex.w-fit",
+          "div.z-10.w-full",
+          "dl.mb-8.lg:mb-9",
+          "div.relative.flex",
+          "#usp_tag_banner.relative.z-[2]",
+          "div.mx-auto.mb-5",
+          "div.flex.flex-col",
+          "div.items-center.relative",
+          "section.container.px-6"
+        ]
+      },
+      {
+        "value": "2px",
+        "count": 393,
+        "where": [
+          "span.rounded-md.bg-beige-700",
+          "svg",
+          "div.w-fit.items-center",
+          "div.flex.justify-center",
+          "p.mx-auto.mb-2",
+          "p.mx-auto.flex",
+          "div.pointer-events-none.flex",
+          "p.flex.w-fit",
+          "div.inline-flex.items-center",
+          "div.star-item",
+          "div.star-item.half-star",
+          "p.reviews-num"
+        ]
+      },
+      {
+        "value": "6px",
+        "count": 294,
+        "where": [
+          "#header-sheet.flex.flex-col",
+          "div.mb-1.flex",
+          "span.rounded-md.bg-beige-700",
+          "button.flex.shrink-0",
+          "span.flex.items-center",
+          "span.mb-1.5.block",
+          "p.mt-1.5.text-lg",
+          "p.mx-auto.flex",
+          "#all-transformations__tab.flex.h-10",
+          "#back-pain__tab.flex.h-10",
+          "#poor-sleep__tab.flex.h-10",
+          "#hip-pain__tab.flex.h-10"
+        ]
+      },
+      {
+        "value": "-8px",
+        "count": 242,
+        "where": [
+          "div.-ml-2.flex",
+          "#x-twitter-36",
+          "#facebook-36",
+          "#instagram-36",
+          "#youtube-36",
+          "#linkedin-36",
+          "#pintrest-36",
+          "div.w-max.shrink-0",
+          "div.text-xl.max-md:-mt-2"
+        ]
+      },
+      {
+        "value": "10px",
+        "count": 220,
+        "where": [
+          "div.right-6.flex",
+          "button.flex.shrink-0",
+          "div.flex.w-full",
+          "@pdp_mattress_collection__puffy-lux-mattress__add_to_cart_btn.whitespace-nowrap.font-medium",
+          "@pdp_mattress_collection__puffy-royal-mattress__shop_now_btn.flex.min-w-[min(100%,250px)]",
+          "@pdp_mattress_collection__puffy-monarch-mattress__shop_now_btn.flex.min-w-[min(100%,250px)]",
+          "strong.block.rounded-sm",
+          "div.inline-flex.items-center",
+          "@pdp_faq_category_all.h-10.rounded-xl",
+          "@pdp_faq_category_shipping.h-10.rounded-xl",
+          "@pdp_faq_category_warranty.h-10.rounded-xl",
+          "div.css-sowrqw.e1xfelzv2"
+        ]
+      },
+      {
+        "value": "40px",
+        "count": 218,
+        "where": [
+          "#navbar.relative.z-10",
+          "div.flex.flex-col",
+          "h2.mb-6.text-center",
+          "th.relative.rounded-tl-3xl",
+          "th.text-left.text-xl",
+          "td.opacity-60",
+          "td.border-x.border-x-[rgba(75,75,75,0.40)]",
+          "td.border-x-[rgba(75,75,75,0.40)].bg-white",
+          "div.mt-8.flex",
+          "article.px-4.py-8",
+          "#morning-step-0.rounded-3xl.text-strong",
+          "#morning-step-1.cursor-pointer.rounded-3xl"
+        ]
+      },
+      {
+        "value": "52px",
+        "count": 178,
+        "where": [
+          "#best-for-comfort__award-0.min-w-0.shrink-0",
+          "#best-for-comfort__award-1.min-w-0.shrink-0",
+          "#best-for-comfort__award-2.min-w-0.shrink-0",
+          "#best-for-comfort__award-3.min-w-0.shrink-0",
+          "#best-for-comfort__award-4.min-w-0.shrink-0",
+          "#best-for-comfort__award-5.min-w-0.shrink-0",
+          "#best-for-comfort__award-6.min-w-0.shrink-0",
+          "#best-for-comfort__award-7.min-w-0.shrink-0",
+          "#best-for-comfort__award-8.min-w-0.shrink-0",
+          "#best-for-comfort__award-9.min-w-0.shrink-0",
+          "#best-for-comfort__award-10.min-w-0.shrink-0",
+          "#best-for-comfort__award-11.min-w-0.shrink-0"
+        ]
+      },
+      {
+        "value": "-4px",
+        "count": 150,
+        "where": [
+          "#info-24",
+          "#eye-now-viewing-36",
+          "div.-ml-1.size-7",
+          "div.vstar-star",
+          "div.w-fit.items-center"
+        ]
+      },
+      {
+        "value": "56px",
+        "count": 89,
+        "where": [
+          "div.h-fit.bg-white",
+          "header.mx-auto.max-w-screen-lg",
+          "header.text-strong.mx-auto",
+          "div.mt-6.flex",
+          "div.relative.my-8",
+          "#reviews-head.review-head-type2",
+          "div.summary-section-wrapper",
+          "#pdp_awards_section.w-full.overflow-x-hidden",
+          "@risk_free_trial_section.flex.flex-col",
+          "@layers-section.relative.isolate",
+          "section.container.px-6",
+          "@spotlight_cols_section.container.w-full"
+        ]
+      },
+      {
+        "value": "1px",
+        "count": 82,
+        "where": [
+          "th.max-md:hidden",
+          "th.border-y.border-r",
+          "strong.block.rounded-sm",
+          "div.mt-4.flex",
+          "div.head-left"
+        ]
+      },
+      {
+        "value": "28px",
+        "count": 44,
+        "where": [
+          "span.mx-7.hidden",
+          "div.mb-7.mt-[18px]",
+          "ul.mt-7.space-y-3",
+          "div.mb-6.mt-7",
+          "p.--disclaimer.!mb-8",
+          "th.relative.rounded-tl-3xl",
+          "section.grid.!w-full",
+          "div.mx-auto.flex",
+          "div.mt-4.flex"
+        ]
+      },
+      {
+        "value": "5px",
+        "count": 41,
+        "where": [
+          "div.product-shop",
+          "div.tt-uploader.tt-image-uploader",
+          "div.tt-uploader.tt-video-uploader",
+          "div.email-area.inline"
+        ]
+      },
+      {
+        "value": "80px",
+        "count": 32,
+        "where": [
+          "#pdp_awards_section.w-full.overflow-x-hidden",
+          "@risk_free_trial_section.flex.flex-col",
+          "@layers-section.relative.isolate",
+          "section.container.px-6",
+          "@spotlight_cols_section.container.w-full",
+          "@pdp_mattress_collection_section.mx-auto.max-w-full",
+          "div.relative.z-10",
+          "section.relative.z-[2]",
+          "@pdp_poy_section.bg-soft.py-10",
+          "@pdp_mattress_quiz.bg-soft.py-10",
+          "@cooling_backpain_support_section.bg-soft.py-10",
+          "#faqs.scroll-mt-[var(--header-height)].bg-sub-strong"
+        ]
+      },
+      {
+        "value": "-2px",
+        "count": 29,
+        "where": [
+          "#check-green-icon",
+          "#eye-now-viewing-36",
+          "#additional-info-tips-lp-48",
+          "#shipping-48"
+        ]
+      },
+      {
+        "value": "48px",
+        "count": 28,
+        "where": [
+          "div.pointer-events-none.relative",
+          "#pdp_awards_tabs.mx-auto.mb-8",
+          "section.border-y.border-y-amber-soft",
+          "div.mx-auto.w-full",
+          "div.relative.flex"
+        ]
+      },
+      {
+        "value": "13px",
+        "count": 28,
+        "where": [
+          "textarea.css-sru60k.e2njm3f4",
+          "a.css-2vkq0v.e1cxxqvk0",
+          "div.window-content"
+        ]
+      },
+      {
+        "value": "15px",
+        "count": 22,
+        "where": [
+          "ul.sort-list",
+          "button.form-submit",
+          "span.discount-copy"
+        ]
+      },
+      {
+        "value": "270.5px",
+        "count": 18,
+        "where": [
+          "svg"
+        ]
+      },
+      {
+        "value": "176px",
+        "count": 16,
+        "where": [
+          "div.relative.mx-auto",
+          "div.mx-auto.w-full"
+        ]
+      },
+      {
+        "value": "11px",
+        "count": 16,
+        "where": [
+          "div.css-1rghpnz.e2njm3f2",
+          "button.head-button.tt-write-qa",
+          "div.relative.mx-auto"
+        ]
+      },
+      {
+        "value": "30px",
+        "count": 16,
+        "where": [
+          "#reviews-footer",
+          "div.window-content",
+          "button"
+        ]
+      },
+      {
+        "value": "-12px",
+        "count": 13,
+        "where": [
+          "#additional-info-tips-lp-48",
+          "#warranty-56"
+        ]
+      },
+      {
+        "value": "18px",
+        "count": 12,
+        "where": [
+          "div.mb-7.mt-[18px]"
+        ]
+      },
+      {
+        "value": "26px",
+        "count": 12,
+        "where": [
+          "div.review-info",
+          "div.window-discount"
+        ]
+      },
+      {
+        "value": "64px",
+        "count": 11,
+        "where": [
+          "div.relative.z-10",
+          "section.m-auto.max-w-[1288px]",
+          "div.px-4.py-3",
+          "div.relative.mx-auto",
+          "div.mx-auto.flex"
+        ]
+      },
+      {
+        "value": "207.5px",
+        "count": 10,
+        "where": [
+          "header.mx-auto.max-w-screen-lg"
+        ]
+      },
+      {
+        "value": "14px",
+        "count": 9,
+        "where": [
+          "span.flex.items-center",
+          "#_r_4b_-form-item.flex.w-full",
+          "#_r_3r_-form-item.flex.w-full",
+          "#_r_3j_-form-item.flex.w-full"
+        ]
+      },
+      {
+        "value": "22px",
+        "count": 8,
+        "where": [
+          "textarea.css-sru60k.e2njm3f4"
+        ]
+      },
+      {
+        "value": "123px",
+        "count": 8,
+        "where": [
+          "div.mx-auto.grid",
+          "svg"
+        ]
+      },
+      {
+        "value": "60px",
+        "count": 7,
+        "where": [
+          "article.px-4.py-8",
+          "#faqs.scroll-mt-[var(--header-height)].bg-sub-strong",
+          "div.container.max-w-[1200px]",
+          "div.py-10.md:pb-14",
+          "div.tt-write-content"
+        ]
+      },
+      {
+        "value": "-16px",
+        "count": 6,
+        "where": [
+          "div.-mt-5.px-2",
+          "@carousel-content.flex.gap-4",
+          "div.items-center.relative"
+        ]
+      },
+      {
+        "value": "357.5px",
+        "count": 6,
+        "where": [
+          "article.mx-auto.max-w-[637px]"
+        ]
+      },
+      {
+        "value": "175.5px",
+        "count": 6,
+        "where": [
+          "header.mx-auto.max-w-screen-lg"
+        ]
+      },
+      {
+        "value": "120px",
+        "count": 6,
+        "where": [
+          "div.container.max-w-[1200px]",
+          "#reviews-wrapper.trustoo-reviews-wrapper",
+          "div.mx-auto.mb-5"
+        ]
+      },
+      {
+        "value": "44px",
+        "count": 6,
+        "where": [
+          "div.flex.gap-1.5"
+        ]
+      },
+      {
+        "value": "169.5px",
+        "count": 6,
+        "where": [
+          "article.mx-auto.max-w-[637px]"
+        ]
+      },
+      {
+        "value": "48.8125px",
+        "count": 6,
+        "where": [
+          "p.mx-auto.flex"
+        ]
+      },
+      {
+        "value": "42.4844px",
+        "count": 6,
+        "where": [
+          "p.mx-auto.flex"
+        ]
+      },
+      {
+        "value": "41.5px",
+        "count": 6,
+        "where": [
+          "article.mx-auto.max-w-[637px]"
+        ]
+      },
+      {
+        "value": "53px",
+        "count": 4,
+        "where": [
+          "div.absolute.top-full"
+        ]
+      },
+      {
+        "value": "5.1875px",
+        "count": 4,
+        "where": [
+          "div.mx-auto.mb-2"
+        ]
+      },
+      {
+        "value": "229px",
+        "count": 4,
+        "where": [
+          "div.mx-auto.flex"
+        ]
+      },
+      {
+        "value": "155.5px",
+        "count": 4,
+        "where": [
+          "header.mx-auto.max-w-screen-lg"
+        ]
+      },
+      {
+        "value": "3px",
+        "count": 4,
+        "where": [
+          "div.vstar-star"
+        ]
+      },
+      {
+        "value": "50px",
+        "count": 4,
+        "where": [
+          "ul.sort-list"
+        ]
+      },
+      {
+        "value": "76px",
+        "count": 4,
+        "where": [
+          "section.m-auto.max-w-[1288px]",
+          "#footer.relative.overflow-hidden"
+        ]
+      },
+      {
+        "value": "116px",
+        "count": 4,
+        "where": [
+          "div.window-title"
+        ]
+      },
+      {
+        "value": "129.172px",
+        "count": 4,
+        "where": [
+          "@email_popup_close_no_thanks_button.mx-auto.mt-4"
+        ]
+      },
+      {
+        "value": "136.688px",
+        "count": 4,
+        "where": [
+          "div.mx-auto.mb-2"
+        ]
+      },
+      {
+        "value": "192px",
+        "count": 4,
+        "where": [
+          "div.relative.mx-auto",
+          "div.mx-auto.flex"
+        ]
+      },
+      {
+        "value": "72.6875px",
+        "count": 4,
+        "where": [
+          "div.mx-auto.mb-2"
+        ]
+      },
+      {
+        "value": "112px",
+        "count": 4,
+        "where": [
+          "div.bottom-5.right-6",
+          "svg"
+        ]
+      },
+      {
+        "value": "151px",
+        "count": 4,
+        "where": [
+          "div.mx-auto.flex"
+        ]
+      },
+      {
+        "value": "268px",
+        "count": 3,
+        "where": [
+          "div.tt-form-content",
+          "div.mt-auto.w-fit"
+        ]
+      },
+      {
+        "value": "77px",
+        "count": 3,
+        "where": [
+          "div.mx-auto.flex",
+          "#footer.relative.overflow-hidden"
+        ]
+      },
+      {
+        "value": "46px",
+        "count": 3,
+        "where": [
+          "#desktop-secondary-menu.relative.max-w-max"
+        ]
+      },
+      {
+        "value": "-50px",
+        "count": 3,
+        "where": [
+          "div.mx-auto.-mt-[50px]"
+        ]
+      },
+      {
+        "value": "-20px",
+        "count": 3,
+        "where": [
+          "div.-mt-5.px-2"
+        ]
+      },
+      {
+        "value": "49.3594px",
+        "count": 3,
+        "where": [
+          "p.mx-auto.flex"
+        ]
+      },
+      {
+        "value": "49.3438px",
+        "count": 3,
+        "where": [
+          "p.mx-auto.flex"
+        ]
+      },
+      {
+        "value": "15.3906px",
+        "count": 3,
+        "where": [
+          "span.ml-auto.block"
+        ]
+      },
+      {
+        "value": "24.2969px",
+        "count": 3,
+        "where": [
+          "span.ml-auto.block"
+        ]
+      }
+    ],
+    "clusters": [
+      {
+        "centre": -50,
+        "total": 3,
+        "values": [
+          {
+            "value": "-50px",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "centre": -20,
+        "total": 3,
+        "values": [
+          {
+            "value": "-20px",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "centre": -16,
+        "total": 6,
+        "values": [
+          {
+            "value": "-16px",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "centre": -12,
+        "total": 13,
+        "values": [
+          {
+            "value": "-12px",
+            "count": 13
+          }
+        ]
+      },
+      {
+        "centre": -8,
+        "total": 242,
+        "values": [
+          {
+            "value": "-8px",
+            "count": 242
+          }
+        ]
+      },
+      {
+        "centre": -4,
+        "total": 150,
+        "values": [
+          {
+            "value": "-4px",
+            "count": 150
+          }
+        ]
+      },
+      {
+        "centre": -1.02,
+        "total": 1505,
+        "values": [
+          {
+            "value": "-2px",
+            "count": 29
+          },
+          {
+            "value": "-1px",
+            "count": 1476
+          }
+        ]
+      },
+      {
+        "centre": 1.83,
+        "total": 475,
+        "values": [
+          {
+            "value": "1px",
+            "count": 82
+          },
+          {
+            "value": "2px",
+            "count": 393
+          }
+        ]
+      },
+      {
+        "centre": 3.99,
+        "total": 626,
+        "values": [
+          {
+            "value": "3px",
+            "count": 4
+          },
+          {
+            "value": "4px",
+            "count": 622
+          }
+        ]
+      },
+      {
+        "centre": 5.87,
+        "total": 339,
+        "values": [
+          {
+            "value": "5px",
+            "count": 41
+          },
+          {
+            "value": "5.1875px",
+            "count": 4
+          },
+          {
+            "value": "6px",
+            "count": 294
+          }
+        ]
+      },
+      {
+        "centre": 8,
+        "total": 1882,
+        "values": [
+          {
+            "value": "8px",
+            "count": 1882
+          }
+        ]
+      },
+      {
+        "centre": 10.07,
+        "total": 236,
+        "values": [
+          {
+            "value": "10px",
+            "count": 220
+          },
+          {
+            "value": "11px",
+            "count": 16
+          }
+        ]
+      },
+      {
+        "centre": 12.02,
+        "total": 1328,
+        "values": [
+          {
+            "value": "12px",
+            "count": 1300
+          },
+          {
+            "value": "13px",
+            "count": 28
+          }
+        ]
+      },
+      {
+        "centre": 14.77,
+        "total": 34,
+        "values": [
+          {
+            "value": "14px",
+            "count": 9
+          },
+          {
+            "value": "15px",
+            "count": 22
+          },
+          {
+            "value": "15.3906px",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "centre": 16,
+        "total": 1150,
+        "values": [
+          {
+            "value": "16px",
+            "count": 1150
+          }
+        ]
+      },
+      {
+        "centre": 18,
+        "total": 12,
+        "values": [
+          {
+            "value": "18px",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "centre": 20,
+        "total": 752,
+        "values": [
+          {
+            "value": "20px",
+            "count": 752
+          }
+        ]
+      },
+      {
+        "centre": 22,
+        "total": 8,
+        "values": [
+          {
+            "value": "22px",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "centre": 24,
+        "total": 622,
+        "values": [
+          {
+            "value": "24px",
+            "count": 619
+          },
+          {
+            "value": "24.2969px",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "centre": 26,
+        "total": 12,
+        "values": [
+          {
+            "value": "26px",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "centre": 28,
+        "total": 44,
+        "values": [
+          {
+            "value": "28px",
+            "count": 44
+          }
+        ]
+      },
+      {
+        "centre": 30,
+        "total": 16,
+        "values": [
+          {
+            "value": "30px",
+            "count": 16
+          }
+        ]
+      },
+      {
+        "centre": 32,
+        "total": 662,
+        "values": [
+          {
+            "value": "32px",
+            "count": 662
+          }
+        ]
+      },
+      {
+        "centre": 40,
+        "total": 218,
+        "values": [
+          {
+            "value": "40px",
+            "count": 218
+          }
+        ]
+      },
+      {
+        "centre": 41.99,
+        "total": 12,
+        "values": [
+          {
+            "value": "41.5px",
+            "count": 6
+          },
+          {
+            "value": "42.4844px",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "centre": 44,
+        "total": 6,
+        "values": [
+          {
+            "value": "44px",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "centre": 46,
+        "total": 3,
+        "values": [
+          {
+            "value": "46px",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "centre": 48.14,
+        "total": 34,
+        "values": [
+          {
+            "value": "48px",
+            "count": 28
+          },
+          {
+            "value": "48.8125px",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "centre": 49.61,
+        "total": 10,
+        "values": [
+          {
+            "value": "49.3438px",
+            "count": 3
+          },
+          {
+            "value": "49.3594px",
+            "count": 3
+          },
+          {
+            "value": "50px",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "centre": 52.02,
+        "total": 182,
+        "values": [
+          {
+            "value": "52px",
+            "count": 178
+          },
+          {
+            "value": "53px",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "centre": 56,
+        "total": 89,
+        "values": [
+          {
+            "value": "56px",
+            "count": 89
+          }
+        ]
+      },
+      {
+        "centre": 60,
+        "total": 7,
+        "values": [
+          {
+            "value": "60px",
+            "count": 7
+          }
+        ]
+      },
+      {
+        "centre": 64,
+        "total": 11,
+        "values": [
+          {
+            "value": "64px",
+            "count": 11
+          }
+        ]
+      },
+      {
+        "centre": 72.69,
+        "total": 4,
+        "values": [
+          {
+            "value": "72.6875px",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "centre": 76.43,
+        "total": 7,
+        "values": [
+          {
+            "value": "76px",
+            "count": 4
+          },
+          {
+            "value": "77px",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "centre": 80,
+        "total": 32,
+        "values": [
+          {
+            "value": "80px",
+            "count": 32
+          }
+        ]
+      },
+      {
+        "centre": 112,
+        "total": 4,
+        "values": [
+          {
+            "value": "112px",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "centre": 116,
+        "total": 4,
+        "values": [
+          {
+            "value": "116px",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "centre": 120,
+        "total": 6,
+        "values": [
+          {
+            "value": "120px",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "centre": 123,
+        "total": 8,
+        "values": [
+          {
+            "value": "123px",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "centre": 129.17,
+        "total": 4,
+        "values": [
+          {
+            "value": "129.172px",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "centre": 136.69,
+        "total": 4,
+        "values": [
+          {
+            "value": "136.688px",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "centre": 151,
+        "total": 4,
+        "values": [
+          {
+            "value": "151px",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "centre": 155.5,
+        "total": 4,
+        "values": [
+          {
+            "value": "155.5px",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "centre": 169.5,
+        "total": 6,
+        "values": [
+          {
+            "value": "169.5px",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "centre": 175.86,
+        "total": 22,
+        "values": [
+          {
+            "value": "175.5px",
+            "count": 6
+          },
+          {
+            "value": "176px",
+            "count": 16
+          }
+        ]
+      },
+      {
+        "centre": 192,
+        "total": 4,
+        "values": [
+          {
+            "value": "192px",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "centre": 207.5,
+        "total": 10,
+        "values": [
+          {
+            "value": "207.5px",
+            "count": 10
+          }
+        ]
+      },
+      {
+        "centre": 229,
+        "total": 4,
+        "values": [
+          {
+            "value": "229px",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "centre": 268,
+        "total": 3,
+        "values": [
+          {
+            "value": "268px",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "centre": 270.5,
+        "total": 18,
+        "values": [
+          {
+            "value": "270.5px",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "centre": 357.5,
+        "total": 6,
+        "values": [
+          {
+            "value": "357.5px",
+            "count": 6
+          }
+        ]
+      }
+    ],
+    "gaps": [
+      {
+        "value": "8px",
+        "count": 1337,
+        "where": [
+          "div.flex.flex-wrap",
+          "#variant-selector.fixed.bottom-[-1px]",
+          "div.cursor-default.flex-row-reverse",
+          "ul.--awards.flex",
+          "li.rounded-lg.bg-white/10",
+          "div.hidden.lg:flex",
+          "div.mb-1.flex",
+          "span.flex.items-center",
+          "h1.font-serif.inline",
+          "div.flex.flex-col",
+          "div.flex.items-center",
+          "div.mb-5.flex"
+        ]
+      },
+      {
+        "value": "4px",
+        "count": 1327,
+        "where": [
+          "div.flex.flex-row",
+          "div.relative.flex",
+          "li.flex.w-fit",
+          "div.right-6.flex",
+          "div.flex.gap-1.5",
+          "span.flex.flex-col",
+          "div.-order-1.mb-2",
+          "span.inline-flex.items-center",
+          "div.flex.flex-col",
+          "div.w-fit.items-center",
+          "li.flex.items-start",
+          "article.relative.flex"
+        ]
+      },
+      {
+        "value": "20px",
+        "count": 1132,
+        "where": [
+          "section.mx-auto.flex",
+          "div.flex.size-full",
+          "div.flex.flex-col",
+          "div.product-rating",
+          "div.flex.items-center",
+          "div.tt-write-content",
+          "#tt-qa-private",
+          "article.absolute.left-1/2",
+          "div.mx-auto.hidden",
+          "ul.flex.flex-wrap",
+          "div.tt-head-right",
+          "@unbox_section_carousel_container.flex.carousel-content"
+        ]
+      },
+      {
+        "value": "12px",
+        "count": 766,
+        "where": [
+          "div.hidden.min-w-0",
+          "div.max-lg:grid.max-lg:w-full",
+          "#multi-layer-popover-trigger.inline-flex.items-center",
+          "div.flex.flex-col",
+          "div.flex.w-fit",
+          "div.flex.items-center",
+          "div.items-center.gap-2",
+          "span.inline-flex.items-baseline",
+          "#pdp_awards_tabs.mx-auto.mb-8",
+          "div.grid.grid-cols-2",
+          "p.flex.items-end",
+          "li.flex.justify-between"
+        ]
+      },
+      {
+        "value": "16px",
+        "count": 333,
+        "where": [
+          "div.flex.items-center",
+          "#variant-selector.fixed.bottom-[-1px]",
+          "@carousel-content.flex.gap-4",
+          "div.flex.flex-col",
+          "div.grid.grid-cols-2",
+          "#market-value-variant-price-section.relative.flex",
+          "div.flex.w-full",
+          "@carousel-content.flex.ml-0",
+          "article.grid-cols-[28px_minmax(0,1fr)].gap-3",
+          "div.mt-auto.w-fit",
+          "#faq-item-all-0.flex.flex-1",
+          "#faq-item-all-1.flex.flex-1"
+        ]
+      },
+      {
+        "value": "6px",
+        "count": 246,
+        "where": [
+          "div.flex.items-center",
+          "div.flex.flex-col",
+          "button.flex.shrink-0",
+          "div.flex.gap-1",
+          "a.css-2vkq0v.e1cxxqvk0",
+          "div.flex.gap-1.5"
+        ]
+      },
+      {
+        "value": "24px",
+        "count": 140,
+        "where": [
+          "div.flex.w-full",
+          "div.pointer-events-none.absolute",
+          "div.relative.flex",
+          "#see-inside-layer-scene.absolute.inset-0",
+          "div.relative.z-[11]",
+          "div.mx-auto.flex",
+          "#radix-_r_1f_.flex.flex-col",
+          "div.flex.max-w-full",
+          "ul.!flex.!max-w-[480px]",
+          "div.tt-review-list",
+          "div.hidden.gap-x-6",
+          "div.flex-col.gap-6"
+        ]
+      },
+      {
+        "value": "2px",
+        "count": 102,
+        "where": [
+          "div.flex.flex-col",
+          "div.flex.items-center",
+          "div.relative.flex",
+          "span.flex.flex-col",
+          "#multi-layer-popover-trigger.inline-flex.items-center",
+          "li.flex.items-start",
+          "li.flex.w-fit"
+        ]
+      },
+      {
+        "value": "10px",
+        "count": 84,
+        "where": [
+          "button.flex.shrink-0",
+          "div.css-11imqum.e1rxy98v3",
+          "div.upload-area",
+          "div.flex.w-full",
+          "#pdp_awards_tabs.mx-auto.mb-8",
+          "@carousel-content.flex.ml-0",
+          "div.css-n6bvc2.e1rxy98v3"
+        ]
+      },
+      {
+        "value": "40px",
+        "count": 41,
+        "where": [
+          "@risk_free_trial_section.flex.flex-col",
+          "article.absolute.left-1/2",
+          "section.mx-auto.flex",
+          "div.flex.flex-col",
+          "div.relative.mx-auto",
+          "div.mx-auto.flex",
+          "div.flex.w-full"
+        ]
+      },
+      {
+        "value": "28px",
+        "count": 33,
+        "where": [
+          "@carousel-content.m-0.mx-auto",
+          "div.flex.w-full",
+          "section.grid.!w-full",
+          "ul.m-0.flex"
+        ]
+      },
+      {
+        "value": "32px",
+        "count": 30,
+        "where": [
+          "div.mx-auto.flex",
+          "div.hidden.gap-x-6",
+          "ul.grid.max-h-[485px]",
+          "div.hidden.items-center",
+          "div.tt-review-list",
+          "div.flex.w-full"
+        ]
+      },
+      {
+        "value": "14px",
+        "count": 21,
+        "where": [
+          "div.flex.w-full",
+          "div.flex.h-fit"
+        ]
+      },
+      {
+        "value": "64px",
+        "count": 21,
+        "where": [
+          "div.grid.grid-cols-2",
+          "div.relative.mx-auto",
+          "div.mx-auto.flex",
+          "div.flex.max-w-full"
+        ]
+      },
+      {
+        "value": "48px",
+        "count": 9,
+        "where": [
+          "div.hidden.items-center",
+          "div.mx-auto.flex"
+        ]
+      },
+      {
+        "value": "30px",
+        "count": 9,
+        "where": [
+          "div.tt-head-left.has-album"
+        ]
+      },
+      {
+        "value": "80px",
+        "count": 6,
+        "where": [
+          "div.flex.max-w-full",
+          "div.flex.flex-col"
+        ]
+      },
+      {
+        "value": "56px",
+        "count": 6,
+        "where": [
+          "div.flex.w-full",
+          "div.mx-auto.flex"
+        ]
+      },
+      {
+        "value": "72px",
+        "count": 4,
+        "where": [
+          "div.flex.flex-col"
+        ]
+      },
+      {
+        "value": "36px",
+        "count": 3,
+        "where": [
+          "div.grid.grid-cols-2"
+        ]
+      }
+    ]
+  },
+  "shape": {
+    "radii": [
+      {
+        "value": "9999px",
+        "count": 3076,
+        "where": [
+          "@cart-count.absolute.right-[-8px]",
+          "div.right-6.flex",
+          "button.outline-none.shrink-0",
+          "button.outline-none.size-2",
+          "div.flex.items-center",
+          "button.absolute.left-0",
+          "span.shrink-0.rounded-full",
+          "button.absolute.right-0",
+          "button.absolute.right-4",
+          "span.flex.items-center",
+          "span.absolute.inset-0",
+          "span.relative.grid"
+        ]
+      },
+      {
+        "value": "20px",
+        "count": 2738,
+        "where": [
+          "div.grid.justify-evenly",
+          "div.flex.w-full",
+          "div.relative.flex",
+          "#best-for-comfort__award-0.min-w-0.shrink-0",
+          "#best-for-comfort__award-1.min-w-0.shrink-0",
+          "#best-for-comfort__award-2.min-w-0.shrink-0",
+          "#best-for-comfort__award-3.min-w-0.shrink-0",
+          "#best-for-comfort__award-4.min-w-0.shrink-0",
+          "#best-for-comfort__award-5.min-w-0.shrink-0",
+          "#best-for-comfort__award-6.min-w-0.shrink-0",
+          "#best-for-comfort__award-7.min-w-0.shrink-0",
+          "#best-for-comfort__award-8.min-w-0.shrink-0"
+        ]
+      },
+      {
+        "value": "8px",
+        "count": 2287,
+        "where": [
+          "#header-sheet.flex.flex-col",
+          "#multi-layer-popover-trigger.inline-flex.items-center",
+          "@pdp_sticky_add_to_cart_btn.ring-offset-background.focus-visible:outline-none",
+          "li.rounded-lg.bg-white/10",
+          "@pdp_img_carousel_puffy-lux-mattress_prev_button.absolute.left-4",
+          "@pdp_img_carousel_puffy-lux-mattress_thumb1.overflow-hidden.rounded-lg",
+          "@pdp_img_carousel_puffy-lux-mattress_thumb2.cursor-pointer.overflow-hidden",
+          "@pdp_img_carousel_puffy-lux-mattress_thumb3.cursor-pointer.overflow-hidden",
+          "@pdp_img_carousel_puffy-lux-mattress_next_button.absolute.right-4",
+          "button.flex.shrink-0",
+          "@lux_pdp__luxToRoyalUpgrade__lux.relative.flex",
+          "@lux_pdp__luxToRoyalUpgrade__royal.relative.flex"
+        ]
+      },
+      {
+        "value": "12px",
+        "count": 1120,
+        "where": [
+          "#radix-_R_alpbbb_.w-72.rounded-xl",
+          "div.pointer-events-none.absolute",
+          "ul.mx-4.flex",
+          "#market-value-variant-price-section.relative.flex",
+          "div.border-[1px].border-[#CEAE82]",
+          "section.relative.w-full",
+          "#best-for-comfort__tab.group.flex-shrink-0",
+          "#best-for-back-pain__tab.group.flex-shrink-0",
+          "#best-in-box__tab.group.flex-shrink-0",
+          "#best-for-luxury__tab.group.flex-shrink-0",
+          "#best-for-joint-and-muscle-support__tab.group.flex-shrink-0",
+          "#best-for-sleeper-types__tab.group.flex-shrink-0"
+        ]
+      },
+      {
+        "value": "4px",
+        "count": 880,
+        "where": [
+          "div.flex.items-center",
+          "span.absolute.w-fit",
+          "span.absolute.-top-3",
+          "button.mb-2.flex",
+          "button.mt-2.flex",
+          "div.absolute.bottom-full",
+          "div.absolute.left-1/2",
+          "p.mx-auto.mb-2",
+          "p.mx-auto.flex",
+          "div.pointer-events-none.flex",
+          "p.flex.w-fit",
+          "strong.block.rounded-sm"
+        ]
+      },
+      {
+        "value": "6px",
+        "count": 560,
+        "where": [
+          "div.relative.flex",
+          "span.rounded-md.bg-beige-700",
+          "div.rounded-md.text-muted-foreground",
+          "div.group.hidden",
+          "#base-ui-_r_2b_.slider.flex",
+          "div.relative.size-full",
+          "#base-ui-_r_2e_.slider.flex",
+          "#base-ui-_r_2h_.slider.flex",
+          "#base-ui-_r_2k_.slider.flex",
+          "#base-ui-_r_2n_.slider.flex",
+          "#base-ui-_r_2q_.slider.flex",
+          "#base-ui-_r_2t_.slider.flex"
+        ]
+      },
+      {
+        "value": "3px",
+        "count": 416,
+        "where": [
+          "#top-one.absolute.right-0",
+          "#bottom-one.absolute.right-0"
+        ]
+      },
+      {
+        "value": "16px",
+        "count": 148,
+        "where": [
+          "div.relative.flex",
+          "div.rounded-2xl.bg-white/70",
+          "video.max-xsm:aspect-[459/276].object-center",
+          "div.css-1ozga6k.eqzn0w21",
+          "div.css-y50anx.eknn8ug1",
+          "div.list-review"
+        ]
+      },
+      {
+        "value": "2px",
+        "count": 108,
+        "where": [
+          "button.head-button.tt-write-qa",
+          "div.product-image",
+          "div.flex.items-center",
+          "#trustoo-allinone.trustoo-widget.trustoo-write-review"
+        ]
+      },
+      {
+        "value": "50px",
+        "count": 32,
+        "where": [
+          "div.flex.h-6",
+          "div.h-6.w-6"
+        ]
+      },
+      {
+        "value": "10px",
+        "count": 32,
+        "where": [
+          "button.outline-none.flex-1",
+          "button.size-[10px].outline-none"
+        ]
+      },
+      {
+        "value": "24px",
+        "count": 32,
+        "where": [
+          "div.relative.mx-auto",
+          "img.h-full.max-h-[654px]"
+        ]
+      },
+      {
+        "value": "33px",
+        "count": 24,
+        "where": [
+          "div.css-4ou4jg.e1rxy98v4",
+          "div.css-11imqum.e1rxy98v3"
+        ]
+      },
+      {
+        "value": "100px",
+        "count": 16,
+        "where": [
+          "div.css-1361zu6.e2njm3f3"
+        ]
+      },
+      {
+        "value": "5px",
+        "count": 16,
+        "where": [
+          "div.iub__us-widget__wrapper"
+        ]
+      },
+      {
+        "value": "30px",
+        "count": 16,
+        "where": [
+          "div.window-discount"
+        ]
+      },
+      {
+        "value": "26px",
+        "count": 8,
+        "where": [
+          "div.css-igli3j.e1rxy98v4",
+          "div.css-n6bvc2.e1rxy98v3"
+        ]
+      }
+    ],
+    "radiusClusters": [
+      {
+        "centre": 2.79,
+        "total": 524,
+        "values": [
+          {
+            "value": "2px",
+            "count": 108
+          },
+          {
+            "value": "3px",
+            "count": 416
+          }
+        ]
+      },
+      {
+        "centre": 4.02,
+        "total": 896,
+        "values": [
+          {
+            "value": "4px",
+            "count": 880
+          },
+          {
+            "value": "5px",
+            "count": 16
+          }
+        ]
+      },
+      {
+        "centre": 6,
+        "total": 560,
+        "values": [
+          {
+            "value": "6px",
+            "count": 560
+          }
+        ]
+      },
+      {
+        "centre": 8,
+        "total": 2287,
+        "values": [
+          {
+            "value": "8px",
+            "count": 2287
+          }
+        ]
+      },
+      {
+        "centre": 10,
+        "total": 32,
+        "values": [
+          {
+            "value": "10px",
+            "count": 32
+          }
+        ]
+      },
+      {
+        "centre": 12,
+        "total": 1120,
+        "values": [
+          {
+            "value": "12px",
+            "count": 1120
+          }
+        ]
+      },
+      {
+        "centre": 16,
+        "total": 148,
+        "values": [
+          {
+            "value": "16px",
+            "count": 148
+          }
+        ]
+      },
+      {
+        "centre": 20,
+        "total": 2738,
+        "values": [
+          {
+            "value": "20px",
+            "count": 2738
+          }
+        ]
+      },
+      {
+        "centre": 24,
+        "total": 32,
+        "values": [
+          {
+            "value": "24px",
+            "count": 32
+          }
+        ]
+      },
+      {
+        "centre": 26,
+        "total": 8,
+        "values": [
+          {
+            "value": "26px",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "centre": 30,
+        "total": 16,
+        "values": [
+          {
+            "value": "30px",
+            "count": 16
+          }
+        ]
+      },
+      {
+        "centre": 33,
+        "total": 24,
+        "values": [
+          {
+            "value": "33px",
+            "count": 24
+          }
+        ]
+      },
+      {
+        "centre": 50,
+        "total": 32,
+        "values": [
+          {
+            "value": "50px",
+            "count": 32
+          }
+        ]
+      },
+      {
+        "centre": 100,
+        "total": 16,
+        "values": [
+          {
+            "value": "100px",
+            "count": 16
+          }
+        ]
+      },
+      {
+        "centre": 9999,
+        "total": 3076,
+        "values": [
+          {
+            "value": "9999px",
+            "count": 3076
+          }
+        ]
+      }
+    ],
+    "borderWidths": [
+      {
+        "value": "1px",
+        "count": 1593,
+        "where": [
+          "#header-sheet.flex.flex-col",
+          "#variant-selector.fixed.bottom-[-1px]",
+          "div.w-fit.items-center",
+          "#multi-layer-popover-trigger.inline-flex.items-center",
+          "hr.h-4.w-px",
+          "@pdp_img_carousel_puffy-lux-mattress_prev_button.absolute.left-4",
+          "@pdp_img_carousel_puffy-lux-mattress_next_button.absolute.right-4",
+          "div.mb-2.border-b",
+          "@lux_pdp__luxToRoyalUpgrade__lux.relative.flex",
+          "@lux_pdp__luxToRoyalUpgrade__royal.relative.flex",
+          "@Size Twin.flex.min-w-12",
+          "@Size Twin XL.flex.min-w-12"
+        ]
+      },
+      {
+        "value": "2px",
+        "count": 128,
+        "where": [
+          "@pdp_img_carousel_puffy-lux-mattress_thumb1.overflow-hidden.rounded-lg",
+          "@pdp_img_carousel_puffy-lux-mattress_thumb2.cursor-pointer.overflow-hidden",
+          "@pdp_img_carousel_puffy-lux-mattress_thumb3.cursor-pointer.overflow-hidden",
+          "div.flex.h-6",
+          "div.h-6.w-6",
+          "#name.tt-form-control",
+          "#email.tt-form-control",
+          "#question.tt-form-control"
+        ]
+      },
+      {
+        "value": "3px",
+        "count": 96,
+        "where": [
+          "img.hidden.h-full",
+          "img.h-[200px].w-full"
+        ]
+      },
+      {
+        "value": "5px",
+        "count": 40,
+        "where": [
+          "div.merchant-reply"
+        ]
+      }
+    ],
+    "shadows": [
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(255, 255, 255, 0.4) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "count": 32,
+        "where": [
+          "span.shrink-0.rounded-full"
+        ]
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "count": 24,
+        "where": [
+          "span.grid.size-8"
+        ]
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(255, 255, 255, 0.25) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "count": 12,
+        "where": [
+          "button.absolute.left-0",
+          "button.absolute.right-0",
+          "button.absolute.right-4"
+        ]
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+        "count": 8,
+        "where": [
+          "button.grid.size-8"
+        ]
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+        "count": 8,
+        "where": [
+          "button.flex.shrink-0",
+          "#reasons-tab-0.items-center.justify-center"
+        ]
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(236, 231, 226, 0.42) 0px 8.24px 43.94px 0px",
+        "count": 8,
+        "where": [
+          "img.relative.z-[1]"
+        ]
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(236, 231, 226, 0.42) 0px 8.23935px 43.9432px 0px",
+        "count": 8,
+        "where": [
+          "#reasons-grid-m-0.animate-pulse.absolute",
+          "#reasons-grid-d-0.absolute.top-0"
+        ]
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
+        "count": 4,
+        "where": [
+          "#radix-_R_alpbbb_.w-72.rounded-xl"
+        ]
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px, rgb(227, 198, 143) 0px 0px 0px 1px, rgba(0, 0, 0, 0.5) 0px 8px 20px 0px",
+        "count": 4,
+        "where": [
+          "span.flex.items-center"
+        ]
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+        "count": 4,
+        "where": [
+          "div.rounded-2xl.bg-white/70"
+        ]
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.2) 0px 0px 2px 0px, rgba(0, 0, 0, 0.1) 0px 2px 10px 0px",
+        "count": 4,
+        "where": [
+          "div.sort-popup"
+        ]
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.12) 0px 6.359px 19.076px 0px, rgba(60, 66, 87, 0.08) 0px 19.076px 44.51px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px",
+        "count": 4,
+        "where": [
+          "div.css-4ou4jg.e1rxy98v4",
+          "div.css-igli3j.e1rxy98v4"
+        ]
+      },
+      {
+        "value": "rgba(15, 23, 42, 0.1) 0px 4px 12px 0px",
+        "count": 4,
+        "where": [
+          "div.css-iv0mwh.etyqcsi2"
+        ]
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.25) 2px 2px 8px 0px",
+        "count": 4,
+        "where": [
+          "div.window-discount"
+        ]
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+        "count": 4,
+        "where": [
+          "#radix-_r_46_.fixed.left-[50%]",
+          "#radix-_r_3o_.fixed.left-[50%]",
+          "#radix-_r_3g_.fixed.left-[50%]"
+        ]
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(255, 255, 255, 0.7) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "count": 3,
+        "where": [
+          "button.flex.shrink-0"
+        ]
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(255, 255, 255, 0.7) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "count": 1,
+        "where": [
+          "button.flex.shrink-0"
+        ]
+      },
+      {
+        "value": "rgb(255, 255, 255) 0px 0px 0px 0px, rgb(5, 131, 242) 0px 0px 0px 2px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "count": 1,
+        "where": [
+          "#_r_4b_-form-item.flex.w-full"
+        ]
+      }
+    ]
+  },
+  "motion": {
+    "transitions": [
+      {
+        "value": "all",
+        "count": 25927,
+        "where": [
+          "html",
+          "title",
+          "iframe",
+          "body.mukta_d42cc534-module__GqjTsq__variable.pt_serif_a5906e0c-module__hlwxJW__variable",
+          "span",
+          "div",
+          "#desktop-navbar-backdrop-portal",
+          "#desktop-navbar-backdrop.absolute.left-0",
+          "#header-barrier.header-barrier.pointer-events-none",
+          "#header-content.relative.z-20",
+          "#navbar.relative.z-10",
+          "div.absolute.left-0"
+        ]
+      },
+      {
+        "value": "color cubic-bezier(0.4, 0, 0.2, 1), background-color cubic-bezier(0.4, 0, 0.2, 1), border-color cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color cubic-bezier(0.4, 0, 0.2, 1), fill cubic-bezier(0.4, 0, 0.2, 1), stroke cubic-bezier(0.4, 0, 0.2, 1)",
+        "count": 396,
+        "where": [
+          "div.relative.flex",
+          "#multi-layer-popover-trigger.inline-flex.items-center",
+          "@call-phone-number-button.flex.w-full",
+          "@button.inline-flex.items-center",
+          "button.inline.cursor-pointer",
+          "div.inline-flex.items-center",
+          "@pdp_view_all_faqs_button.items-center.justify-center",
+          "#reasons-tab-0.items-center.justify-center",
+          "#reasons-tab-1.items-center.justify-center",
+          "#reasons-tab-2.items-center.justify-center",
+          "#reasons-tab-3.items-center.justify-center",
+          "#reasons-tab-4.items-center.justify-center"
+        ]
+      },
+      {
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "count": 228,
+        "where": [
+          "@pdp_sticky_add_to_cart_btn.ring-offset-background.focus-visible:outline-none",
+          "@pdp_img_carousel_puffy-lux-mattress_prev_button.absolute.left-4",
+          "button.mb-2.flex",
+          "button.mt-2.flex",
+          "@pdp_img_carousel_puffy-lux-mattress_next_button.absolute.right-4",
+          "div.absolute.left-1/2",
+          "button.flex.shrink-0",
+          "@pdp_main_atc_button.whitespace-nowrap.font-medium",
+          "div.slider.--slider",
+          "div.pointer-events-none.absolute",
+          "@pdp_mattress_collection__puffy-lux-mattress__add_to_cart_btn.whitespace-nowrap.font-medium",
+          "#faq-item-all-0.flex.flex-1"
+        ]
+      },
+      {
+        "value": "opacity cubic-bezier(0.4, 0, 0.2, 1)",
+        "count": 128,
+        "where": [
+          "button.group.absolute",
+          "#base-ui-_r_3g_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3h_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_2b_.slider.flex",
+          "#base-ui-_r_3l_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3m_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_2e_.slider.flex",
+          "#base-ui-_r_3e_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3f_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_2h_.slider.flex",
+          "#base-ui-_r_3a_.!left-[var(--lp-timeline-thumb-position)].size-4",
+          "#base-ui-_r_3b_.!left-[var(--lp-timeline-thumb-position)].size-4"
+        ]
+      },
+      {
+        "value": "transform cubic-bezier(0.4, 0, 0.2, 1)",
+        "count": 68,
+        "where": [
+          "#header.ease-[cubic-bezier(0.4,0,0.2,1)].transition-transform",
+          "#variant-selector.fixed.bottom-[-1px]",
+          "svg",
+          "span.shrink-0.rounded-full",
+          "span.flex.items-center",
+          "img.h-full.w-full",
+          "div.cookie-consent-banner.!pointer-events-auto"
+        ]
+      },
+      {
+        "value": "transform cubic-bezier(0.4, 0, 0.2, 1), opacity cubic-bezier(0.4, 0, 0.2, 1)",
+        "count": 64,
+        "where": [
+          "button.duration-[700ms].ease-[cubic-bezier(.2,.8,.25,1)]"
+        ]
+      },
+      {
+        "value": "color cubic-bezier(0.4, 0, 0.2, 1), background-color cubic-bezier(0.4, 0, 0.2, 1), border-color cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color cubic-bezier(0.4, 0, 0.2, 1), fill cubic-bezier(0.4, 0, 0.2, 1), stroke cubic-bezier(0.4, 0, 0.2, 1), opacity cubic-bezier(0.4, 0, 0.2, 1), box-shadow cubic-bezier(0.4, 0, 0.2, 1), transform cubic-bezier(0.4, 0, 0.2, 1), filter cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter cubic-bezier(0.4, 0, 0.2, 1)",
+        "count": 48,
+        "where": [
+          "button.absolute.left-0",
+          "button.absolute.right-0",
+          "@Size Twin XL.flex.min-w-12",
+          "@Size Full.flex.min-w-12",
+          "@Size Queen.flex.min-w-12",
+          "@Size King.flex.min-w-12",
+          "@Size Cal King.flex.min-w-12",
+          "@Size Split Head Queen.flex.min-w-12",
+          "@Size Split Head King.flex.min-w-12",
+          "@Size Split King.flex.min-w-12",
+          "button.grid.size-8"
+        ]
+      },
+      {
+        "value": "opacity cubic-bezier(0, 0, 0.2, 1)",
+        "count": 40,
+        "where": [
+          "div.bg-size-[100%_45%].pointer-events-none"
+        ]
+      },
+      {
+        "value": "height cubic-bezier(0, 0, 0.2, 1)",
+        "count": 40,
+        "where": [
+          "#base-ui-_r_2a_.slider.h-1",
+          "#base-ui-_r_2d_.slider.h-1",
+          "#base-ui-_r_2g_.slider.h-1",
+          "#base-ui-_r_2j_.slider.h-1",
+          "#base-ui-_r_2m_.slider.h-1",
+          "#base-ui-_r_2p_.slider.h-1",
+          "#base-ui-_r_2s_.slider.h-1",
+          "#base-ui-_r_2v_.slider.h-1",
+          "#base-ui-_r_32_.slider.h-1",
+          "#base-ui-_r_35_.slider.h-1",
+          "#base-ui-_r_1s_.slider.h-1",
+          "#base-ui-_r_1v_.slider.h-1"
+        ]
+      },
+      {
+        "value": "color linear, background-color linear, border-color linear, text-decoration-color linear, fill linear, stroke linear",
+        "count": 32,
+        "where": [
+          "@pdp_mattress_collection__puffy-royal-mattress__shop_now_btn.flex.min-w-[min(100%,250px)]",
+          "@pdp_mattress_collection__puffy-monarch-mattress__shop_now_btn.flex.min-w-[min(100%,250px)]",
+          "@pdp_mattress_collection_quiz_btn.flex.w-fit",
+          "@pdp_mattress_quiz_btn.flex.w-fit",
+          "@call-phone-number-button.flex.min-w-[min(100%,250px)]",
+          "button.flex.min-w-[min(100%,250px)]",
+          "a.flex.min-w-[min(100%,250px)]"
+        ]
+      },
+      {
+        "value": "none cubic-bezier(0, 0, 0.2, 1)",
+        "count": 8,
+        "where": [
+          "div.absolute.inset-0",
+          "#see-inside-layer-scene.absolute.inset-0"
+        ]
+      },
+      {
+        "value": "background-color",
+        "count": 8,
+        "where": [
+          "a.iub__us-widget__link.iubenda-cs-uspr-link",
+          "button.iub__us-widget__link.iub__us-widget__link--privacy-choices"
+        ]
+      },
+      {
+        "value": "none",
+        "count": 6,
+        "where": [
+          "button.absolute.right-4",
+          "div.css-4ou4jg.e1rxy98v4",
+          "div.css-igli3j.e1rxy98v4"
+        ]
+      },
+      {
+        "value": "transform",
+        "count": 6,
+        "where": [
+          "div.css-4ou4jg.e1rxy98v4",
+          "#google-merchantwidget-iframe-wrapper"
+        ]
+      },
+      {
+        "value": "height",
+        "count": 4,
+        "where": [
+          "div.tt-form-content"
+        ]
+      }
+    ]
+  },
+  "layout": {
+    "containerMaxWidths": [
+      {
+        "value": "1025px",
+        "count": 72,
+        "where": [
+          "header.mx-auto.max-w-screen-lg",
+          "section.mx-auto.h-fit"
+        ]
+      },
+      {
+        "value": "576px",
+        "count": 28,
+        "where": [
+          "div.mx-auto.w-full"
+        ]
+      },
+      {
+        "value": "2200px",
+        "count": 24,
+        "where": [
+          "img.block.h-full"
+        ]
+      },
+      {
+        "value": "112px",
+        "count": 24,
+        "where": [
+          "div.flex.h-fit"
+        ]
+      },
+      {
+        "value": "302px",
+        "count": 13,
+        "where": [
+          "div.flex.min-h-[200px]",
+          "div.mx-auto.flex"
+        ]
+      },
+      {
+        "value": "90px",
+        "count": 12,
+        "where": [
+          "span.text-sm/[1.1].text-white"
+        ]
+      },
+      {
+        "value": "95px",
+        "count": 12,
+        "where": [
+          "img.h-20.lg:h-[46px]"
+        ]
+      },
+      {
+        "value": "637px",
+        "count": 12,
+        "where": [
+          "article.mx-auto.max-w-[637px]"
+        ]
+      },
+      {
+        "value": "642px",
+        "count": 12,
+        "where": [
+          "img.hidden.h-full"
+        ]
+      },
+      {
+        "value": "120px",
+        "count": 12,
+        "where": [
+          "li.rounded-lg.bg-white/10"
+        ]
+      },
+      {
+        "value": "1440px",
+        "count": 11,
+        "where": [
+          "#variant-selector.fixed.bottom-[-1px]",
+          "section.mx-auto.flex",
+          "div.relative.max-w-screen-1.7xl",
+          "@pdp_mattress_collection_section.mx-auto.max-w-full",
+          "#vstar-reviews.trustoo-widget.qa"
+        ]
+      },
+      {
+        "value": "100px",
+        "count": 10,
+        "where": [
+          "article.flex.w-[max(153px,32%)]"
+        ]
+      },
+      {
+        "value": "514px",
+        "count": 8,
+        "where": [
+          "article.flex.max-w-[514px]"
+        ]
+      },
+      {
+        "value": "992px",
+        "count": 8,
+        "where": [
+          "h2.m-0.max-w-screen-mlg",
+          "p.m-0.max-w-screen-mlg"
+        ]
+      },
+      {
+        "value": "592px",
+        "count": 8,
+        "where": [
+          "@mattress_pdp_backpain_support_section.flex.w-full",
+          "@mattress_pdp_cooling_technology_section.flex.w-full"
+        ]
+      },
+      {
+        "value": "968px",
+        "count": 8,
+        "where": [
+          "#gleen-product-faqs.w-full.max-w-[968px]",
+          "div.mx-auto.flex"
+        ]
+      },
+      {
+        "value": "1200px",
+        "count": 8,
+        "where": [
+          "div.container.max-w-[1200px]",
+          "#reviews-wrapper.trustoo-reviews-wrapper"
+        ]
+      },
+      {
+        "value": "600px",
+        "count": 8,
+        "where": [
+          "div.tt-form-content",
+          "div.tt-form-notification"
+        ]
+      },
+      {
+        "value": "440px",
+        "count": 7,
+        "where": [
+          "div.relative.aspect-[6/5]",
+          "div.flex.w-full"
+        ]
+      },
+      {
+        "value": "342px",
+        "count": 7,
+        "where": [
+          "div.items-center.relative"
+        ]
+      },
+      {
+        "value": "200px",
+        "count": 6,
+        "where": [
+          "div.flex.max-w-[140px]"
+        ]
+      },
+      {
+        "value": "338px",
+        "count": 6,
+        "where": [
+          "div.w-full.max-w-[338px]",
+          "div.flex.w-full",
+          "button.flex.min-w-[min(100%,250px)]"
+        ]
+      },
+      {
+        "value": "480px",
+        "count": 5,
+        "where": [
+          "div.bottom-5.right-6",
+          "ul.!flex.!max-w-[480px]"
+        ]
+      },
+      {
+        "value": "964px",
+        "count": 5,
+        "where": [
+          "div.mx-auto.flex",
+          "div.hidden.w-full"
+        ]
+      },
+      {
+        "value": "266px",
+        "count": 4,
+        "where": [
+          "#radix-_R_alpbbb_.w-72.rounded-xl"
+        ]
+      },
+      {
+        "value": "456px",
+        "count": 4,
+        "where": [
+          "div.mx-auto.grid"
+        ]
+      },
+      {
+        "value": "1690px",
+        "count": 4,
+        "where": [
+          "#pdp_awards_carousel.relative.mx-auto"
+        ]
+      },
+      {
+        "value": "1374px",
+        "count": 4,
+        "where": [
+          "div.container.mx-auto"
+        ]
+      },
+      {
+        "value": "720px",
+        "count": 4,
+        "where": [
+          "div.mx-auto.mb-5"
+        ]
+      },
+      {
+        "value": "938px",
+        "count": 4,
+        "where": [
+          "div.relative.mx-auto"
+        ]
+      }
+    ]
+  },
+  "media": {
+    "backgroundImages": [
+      {
+        "value": "linear-gradient(rgb(255, 255, 255), rgba(0, 0, 0, 0))",
+        "count": 352,
+        "where": [
+          "#best-for-comfort__award-0.min-w-0.shrink-0",
+          "#best-for-comfort__award-1.min-w-0.shrink-0",
+          "#best-for-comfort__award-2.min-w-0.shrink-0",
+          "#best-for-comfort__award-3.min-w-0.shrink-0",
+          "#best-for-comfort__award-4.min-w-0.shrink-0",
+          "#best-for-comfort__award-5.min-w-0.shrink-0",
+          "#best-for-comfort__award-6.min-w-0.shrink-0",
+          "#best-for-comfort__award-7.min-w-0.shrink-0",
+          "#best-for-comfort__award-8.min-w-0.shrink-0",
+          "#best-for-comfort__award-9.min-w-0.shrink-0",
+          "#best-for-comfort__award-10.min-w-0.shrink-0",
+          "#best-for-comfort__award-11.min-w-0.shrink-0"
+        ]
+      },
+      {
+        "value": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.008) 8.1%, rgba(0, 0, 0, 0.035) 15.5%, rgba(0, 0, 0, 0.075) 22.5%, rgba(0, 0, 0, 0.125) 29%, rgba(0, 0, 0, ",
+        "count": 40,
+        "where": [
+          "div.bg-size-[100%_45%].pointer-events-none"
+        ]
+      },
+      {
+        "value": "linear-gradient(rgb(229, 229, 229), rgb(213, 210, 204))",
+        "count": 36,
+        "where": [
+          "#radix-_r_1s_-content-0.col-span-2.mt-2",
+          "#radix-_r_1s_-content-1.col-span-2.mt-2",
+          "#radix-_r_1s_-content-2.col-span-2.mt-2",
+          "#radix-_r_1s_-content-3.col-span-2.mt-2",
+          "#radix-_r_1s_-content-4.col-span-2.mt-2",
+          "#radix-_r_1s_-content-5.col-span-2.mt-2",
+          "#radix-_r_1s_-content-6.col-span-2.mt-2",
+          "#radix-_r_1s_-content-7.col-span-2.mt-2",
+          "#radix-_r_1s_-content-8.col-span-2.mt-2",
+          "#radix-_r_1e_-content-0.col-span-2.mt-2",
+          "#radix-_r_1e_-content-1.col-span-2.mt-2",
+          "#radix-_r_1e_-content-2.col-span-2.mt-2"
+        ]
+      },
+      {
+        "value": "linear-gradient(rgb(235, 234, 231), rgb(213, 210, 204))",
+        "count": 36,
+        "where": [
+          "#radix-_r_1s_-content-0.mt-0.w-full",
+          "#radix-_r_1s_-content-1.mt-0.w-full",
+          "#radix-_r_1s_-content-2.mt-0.w-full",
+          "#radix-_r_1s_-content-3.mt-0.w-full",
+          "#radix-_r_1s_-content-4.mt-0.w-full",
+          "#radix-_r_1s_-content-5.mt-0.w-full",
+          "#radix-_r_1s_-content-6.mt-0.w-full",
+          "#radix-_r_1s_-content-7.mt-0.w-full",
+          "#radix-_r_1s_-content-8.mt-0.w-full",
+          "#radix-_r_1e_-content-0.mt-0.w-full",
+          "#radix-_r_1e_-content-1.mt-0.w-full",
+          "#radix-_r_1e_-content-2.mt-0.w-full"
+        ]
+      },
+      {
+        "value": "linear-gradient(to right, rgba(0, 0, 0, 0), rgb(255, 255, 255) 50%)",
+        "count": 20,
+        "where": [
+          "th.border-y.border-r"
+        ]
+      },
+      {
+        "value": "linear-gradient(rgb(229, 227, 223) 0%, rgb(213, 210, 204) 100%)",
+        "count": 16,
+        "where": [
+          "div.flex.h-full"
+        ]
+      },
+      {
+        "value": "linear-gradient(to right, rgb(70, 70, 69) 50%, rgb(213, 210, 204) 50%)",
+        "count": 12,
+        "where": [
+          "div.h-[3px].w-3"
+        ]
+      },
+      {
+        "value": "linear-gradient(rgb(32, 33, 32), rgb(0, 0, 0))",
+        "count": 8,
+        "where": [
+          "div.absolute.left-0",
+          "div.absolute.-right-[var(--removed-body-scroll-bar-size,0px)]"
+        ]
+      },
+      {
+        "value": "radial-gradient(closest-side, rgba(199, 147, 68, 0.5), rgba(0, 0, 0, 0))",
+        "count": 8,
+        "where": [
+          "div.pointer-events-none.absolute"
+        ]
+      },
+      {
+        "value": "linear-gradient(240.64deg, rgba(255, 255, 255, 0.7) 1.19%, rgba(255, 255, 255, 0.3) 49.2%, rgba(255, 255, 255, 0.7) 98.78%)",
+        "count": 8,
+        "where": [
+          "@mattress_pdp_backpain_support_section.flex.w-full",
+          "@mattress_pdp_cooling_technology_section.flex.w-full"
+        ]
+      },
+      {
+        "value": "url(\"https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-mattress-gallery-lux-front-thumb_2026-05-21T11-24-01.jpg?&width=200&format=webp&quality=75\")",
+        "count": 4,
+        "where": [
+          "@pdp_img_carousel_puffy-lux-mattress_thumb1.overflow-hidden.rounded-lg"
+        ]
+      },
+      {
+        "value": "url(\"https://cdn.shopify.com/s/files/1/1740/0017/files/gallery-thumbnail--lux--04--v19.05.26.png?&width=200&format=webp&quality=75\")",
+        "count": 4,
+        "where": [
+          "@pdp_img_carousel_puffy-lux-mattress_thumb2.cursor-pointer.overflow-hidden"
+        ]
+      },
+      {
+        "value": "url(\"https://cdn.shopify.com/s/files/1/1740/0017/files/gallery-thumbnail--lux--05--v19.05.26.png?&width=200&format=webp&quality=75\")",
+        "count": 4,
+        "where": [
+          "@pdp_img_carousel_puffy-lux-mattress_thumb3.cursor-pointer.overflow-hidden"
+        ]
+      },
+      {
+        "value": "radial-gradient(85% 80% at 50% 42%, rgba(30, 32, 48, 0.78) 0%, rgba(15, 16, 24, 0.93) 72%, rgba(10, 11, 18, 0.97) 100%)",
+        "count": 4,
+        "where": [
+          "div.absolute.inset-0"
+        ]
+      },
+      {
+        "value": "radial-gradient(closest-side, rgba(224, 193, 148, 0.42), rgba(0, 0, 0, 0))",
+        "count": 4,
+        "where": [
+          "div.absolute.left-1/2"
+        ]
+      },
+      {
+        "value": "url(\"https://cdn.shopify.com/s/files/1/1740/0017/files/pdp-upgrade-banner-bg-left.png?v=1764141530\"), url(\"https://cdn.shopify.com/s/files/1/1740/0017/files/pdp",
+        "count": 4,
+        "where": [
+          "div.border-[1px].border-[#CEAE82]"
+        ]
+      },
+      {
+        "value": "linear-gradient(rgba(213, 210, 204, 0.2) 0%, rgba(213, 210, 204, 0) 37.5%)",
+        "count": 4,
+        "where": [
+          "div.relative.flex"
+        ]
+      },
+      {
+        "value": "linear-gradient(rgb(255, 255, 255) 4.15%, rgba(255, 255, 255, 0) 42.91%)",
+        "count": 4,
+        "where": [
+          "div.flex.flex-col"
+        ]
+      },
+      {
+        "value": "linear-gradient(to top, rgb(235, 234, 231), rgb(251, 251, 250))",
+        "count": 4,
+        "where": [
+          "section.mx-auto.h-fit"
+        ]
+      },
+      {
+        "value": "linear-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 120%)",
+        "count": 4,
+        "where": [
+          "td.border-x-[rgba(75,75,75,0.40)].bg-white"
+        ]
+      },
+      {
+        "value": "url(\"https://cdn.shopify.com/s/files/1/1740/0017/files/dual-comfort--lux--M--top--v16.06.26.png?\")",
+        "count": 4,
+        "where": [
+          "div.absolute.inset-0"
+        ]
+      },
+      {
+        "value": "url(\"https://cdn.shopify.com/s/files/1/1740/0017/files/dual-comfort--lux--M--bottom--v16.06.26.png?\")",
+        "count": 4,
+        "where": [
+          "div.absolute.inset-0"
+        ]
+      },
+      {
+        "value": "linear-gradient(89.04deg, rgb(25, 23, 22) 0%, rgb(39, 39, 39) 100%)",
+        "count": 4,
+        "where": [
+          "div.px-4.py-10"
+        ]
+      },
+      {
+        "value": "linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%)",
+        "count": 4,
+        "where": [
+          "div.image-btn-wrapper.pre-btn-wrapper"
+        ]
+      },
+      {
+        "value": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05) 100%)",
+        "count": 4,
+        "where": [
+          "div.image-btn-wrapper.next-btn-wrapper"
+        ]
+      },
+      {
+        "value": "url(\"https://puffy.com/products/undefined\")",
+        "count": 4,
+        "where": [
+          "div.product-image"
+        ]
+      },
+      {
+        "value": "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 96.06%), linear-gradient(rgba(0, 0, 0, 0.8) 21%",
+        "count": 3,
+        "where": [
+          "div.bg-[#0D0D0D].px-4"
+        ]
+      },
+      {
+        "value": "url(\"https://cdn.shopify.com/s/files/1/1740/0017/files/footer-bg-tablet.png?\")",
+        "count": 2,
+        "where": [
+          "#footer.relative.overflow-hidden"
+        ]
+      },
+      {
+        "value": "linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), linear-gradient(rgba(0, 0, 0, 0.2) 47%, rgba(0, 0, 0, 0) 100%), url(\"https://cdn.shopify.com/s/",
+        "count": 1,
+        "where": [
+          "#footer.relative.overflow-hidden"
+        ]
+      },
+      {
+        "value": "url(\"https://cdn.shopify.com/s/files/1/0263/8957/7816/files/contact-us-section-bg-v3-mobile.png?\")",
+        "count": 1,
+        "where": [
+          "div.bg-[#0D0D0D].px-4"
+        ]
+      },
+      {
+        "value": "url(\"https://cdn.shopify.com/s/files/1/1740/0017/files/footer-bg-mobile.png?\")",
+        "count": 1,
+        "where": [
+          "#footer.relative.overflow-hidden"
+        ]
+      }
+    ]
+  },
+  "perViewport": {
+    "1440x900": {
+      "fontSize": [
+        {
+          "value": "16px",
+          "count": 4420,
+          "where": [
+            "html",
+            "title",
+            "iframe",
+            "body.mukta_d42cc534-module__GqjTsq__variable.pt_serif_a5906e0c-module__hlwxJW__variable",
+            "span",
+            "div",
+            "#desktop-navbar-backdrop-portal",
+            "#desktop-navbar-backdrop.absolute.left-0",
+            "#header-barrier.header-barrier.pointer-events-none",
+            "#header.ease-[cubic-bezier(0.4,0,0.2,1)].transition-transform",
+            "#header-content.relative.z-20",
+            "#navbar.relative.z-10"
+          ]
+        },
+        {
+          "value": "14px",
+          "count": 675,
+          "where": [
+            "#header-sheet.flex.flex-col",
+            "span.tracking-[-0.07em.relative",
+            "#radix-_R_alpbbb_.w-72.rounded-xl",
+            "div.w-fit.items-center",
+            "span",
+            "div.cursor-default.flex-row-reverse",
+            "button.flex.shrink-0",
+            "div.relative",
+            "div.absolute.left-1/2",
+            "#info-24",
+            "path",
+            "#multi-layer-popover-trigger.inline-flex.items-center"
+          ]
+        },
+        {
+          "value": "12px",
+          "count": 520,
+          "where": [
+            "div.w-fit.items-center",
+            "span",
+            "time.tabular-nums.text-lp-accent",
+            "span.sr-only",
+            "#base-ui-_r_3h_.!left-[var(--lp-timeline-thumb-position)].size-4",
+            "#base-ui-_r_3h_-input",
+            "#base-ui-_r_3m_.!left-[var(--lp-timeline-thumb-position)].size-4",
+            "#base-ui-_r_3m_-input",
+            "#base-ui-_r_3f_.!left-[var(--lp-timeline-thumb-position)].size-4",
+            "#base-ui-_r_3f_-input",
+            "#base-ui-_r_3b_.!left-[var(--lp-timeline-thumb-position)].size-4",
+            "#base-ui-_r_3b_-input"
+          ]
+        },
+        {
+          "value": "20px",
+          "count": 421,
+          "where": [
+            "#desktop-header-menu.flex-1.justify-center",
+            "div",
+            "ul.group.flex",
+            "li",
+            "#primary-Mattresses.group.inline-flex",
+            "#primary-Smart Beds.group.inline-flex",
+            "#primary-Bed Frames.group.inline-flex",
+            "#primary-Bedding.group.inline-flex",
+            "div.absolute.left-0",
+            "div.hidden.whitespace-nowrap",
+            "span",
+            "p.text-center.font-medium"
+          ]
+        },
+        {
+          "value": "18px",
+          "count": 236,
+          "where": [
+            "#menu_header_mattress_desktop.flex.min-h-[60px]",
+            "span.relative.before:absolute",
+            "#menu_header_smartbeds_desktop.flex.min-h-[60px]",
+            "#menu_header_bedframes_desktop.flex.min-h-[60px]",
+            "#menu_header_beddings_desktop.flex.min-h-[60px]",
+            "div.block.w-full",
+            "div.invisible.block",
+            "span",
+            "@pdp_sticky_add_to_cart_btn.ring-offset-background.focus-visible:outline-none",
+            "span.pointer-events-none.relative",
+            "div.flex.items-center",
+            "hr.h-4.w-px"
+          ]
+        },
+        {
+          "value": "0px",
+          "count": 212,
+          "where": [
+            "div.vstar-star",
+            "div.star-item",
+            "svg",
+            "path",
+            "div.star-item.half-star",
+            "div.item-nostar",
+            "div.item-star",
+            "button.head-button.tt-write-qa",
+            "div.tt-form-title",
+            "#ttFormCancelBtn.tt-form-btn.tt-form-btn-cancel",
+            "#ttFormSubmit.tt-form-btn.tt-form-btn-submit",
+            "div.user-verified"
+          ]
+        },
+        {
+          "value": "24px",
+          "count": 103,
+          "where": [
+            "p.text-pretty.text-sm",
+            "span",
+            "br",
+            "p.line-through--not-dark.text-sm",
+            "p.text-pretty.text-center",
+            "h3.text-balance.font-serif",
+            "span.font-serif.text-xl",
+            "br.hidden.md:max-lg:block",
+            "p.m-0.max-w-screen-mlg",
+            "div.font-strong.text-center",
+            "h3.mb-3.text-center",
+            "span.text-lg.font-normal"
+          ]
+        },
+        {
+          "value": "40px",
+          "count": 74,
+          "where": [
+            "h2.block.w-full",
+            "article",
+            "p",
+            "h2.--overwrite.font-serif",
+            "strong",
+            "span.whitespace-nowrap",
+            "h2.--overwrite.md:tracking-[-1px]",
+            "h2.m-0.max-w-screen-mlg",
+            "br.max-sm:hidden",
+            "br.max-md:hidden",
+            "br.block.md:hidden",
+            "br"
+          ]
+        },
+        {
+          "value": "32px",
+          "count": 36,
+          "where": [
+            "div.mt-2.text-balance",
+            "article",
+            "p",
+            "div.mx-5.mt-2",
+            "h2.mx-5.text-balance",
+            "h2.text-balance.font-serif",
+            "br.block.min-[395px]:hidden",
+            "h3.text-balance.font-serif",
+            "h2.mb-6.text-center",
+            "strong",
+            "br",
+            "span.inline-block"
+          ]
+        },
+        {
+          "value": "28px",
+          "count": 13,
+          "where": [
+            "h2.whitespace-nowrap.font-serif",
+            "b",
+            "div.font-serif.font-bold",
+            "h1.font-serif.inline",
+            "h3.mx-auto.inline-block",
+            "span.font-normal",
+            "br",
+            "span.font-bold",
+            "h3.font-serif.text-xl"
+          ]
+        },
+        {
+          "value": "10px",
+          "count": 12,
+          "where": [
+            "span.text-xxs/[7px].font-normal",
+            "span.lg:hidden",
+            "span.hidden.lg:inline-block",
+            "span.uppercase.lg:text-xxs/[12px]"
+          ]
+        },
+        {
+          "value": "13px",
+          "count": 8,
+          "where": [
+            "div.tt-form-error-message",
+            "#tt-protection",
+            "label",
+            "a"
+          ]
+        },
+        {
+          "value": "16.2px",
+          "count": 2,
+          "where": [
+            "span.text-[0.7em]/[1.25].xs:text-[0.8em]/[1.25]",
+            "span.hidden"
+          ]
+        },
+        {
+          "value": "30px",
+          "count": 2,
+          "where": [
+            "span"
+          ]
+        }
+      ],
+      "containerMaxWidths": [
+        {
+          "value": "1025px",
+          "count": 18,
+          "where": [
+            "header.mx-auto.max-w-screen-lg",
+            "section.mx-auto.h-fit"
+          ]
+        },
+        {
+          "value": "90px",
+          "count": 12,
+          "where": [
+            "span.text-sm/[1.1].text-white"
+          ]
+        },
+        {
+          "value": "576px",
+          "count": 7,
+          "where": [
+            "div.mx-auto.w-full"
+          ]
+        },
+        {
+          "value": "2200px",
+          "count": 6,
+          "where": [
+            "img.block.h-full"
+          ]
+        },
+        {
+          "value": "112px",
+          "count": 6,
+          "where": [
+            "div.flex.h-fit"
+          ]
+        },
+        {
+          "value": "1440px",
+          "count": 5,
+          "where": [
+            "#variant-selector.fixed.bottom-[-1px]",
+            "section.mx-auto.flex",
+            "div.relative.max-w-screen-1.7xl",
+            "@pdp_mattress_collection_section.mx-auto.max-w-full",
+            "#vstar-reviews.trustoo-widget.qa"
+          ]
+        },
+        {
+          "value": "351px",
+          "count": 4,
+          "where": [
+            "@unbox_section_grid_item_0.flex.select-none",
+            "@unbox_section_grid_item_1.flex.select-none",
+            "@unbox_section_grid_item_2.flex.select-none",
+            "@unbox_section_grid_item_3.flex.select-none"
+          ]
+        },
+        {
+          "value": "95px",
+          "count": 3,
+          "where": [
+            "img.h-20.lg:h-[46px]"
+          ]
+        },
+        {
+          "value": "1400px",
+          "count": 3,
+          "where": [
+            "section.container.px-6",
+            "@spotlight_cols_section.container.w-full",
+            "div.container.flex"
+          ]
+        },
+        {
+          "value": "637px",
+          "count": 3,
+          "where": [
+            "article.mx-auto.max-w-[637px]"
+          ]
+        },
+        {
+          "value": "642px",
+          "count": 3,
+          "where": [
+            "img.hidden.h-full"
+          ]
+        },
+        {
+          "value": "302px",
+          "count": 3,
+          "where": [
+            "div.flex.min-h-[200px]"
+          ]
+        },
+        {
+          "value": "324px",
+          "count": 2,
+          "where": [
+            "div.w-full.min-w-0"
+          ]
+        },
+        {
+          "value": "1000px",
+          "count": 2,
+          "where": [
+            "#pdp_awards_tabs.mx-auto.mb-8",
+            "#before-after-tabs.scrollbar-none.scrollbar-width-none"
+          ]
+        },
+        {
+          "value": "514px",
+          "count": 2,
+          "where": [
+            "article.flex.max-w-[514px]"
+          ]
+        },
+        {
+          "value": "992px",
+          "count": 2,
+          "where": [
+            "h2.m-0.max-w-screen-mlg",
+            "p.m-0.max-w-screen-mlg"
+          ]
+        },
+        {
+          "value": "320px",
+          "count": 2,
+          "where": [
+            "div.flex.max-w-[140px]"
+          ]
+        },
+        {
+          "value": "284px",
+          "count": 2,
+          "where": [
+            "p.text-sm.font-medium"
+          ]
+        },
+        {
+          "value": "200px",
+          "count": 2,
+          "where": [
+            "div.flex.max-w-[140px]"
+          ]
+        },
+        {
+          "value": "964px",
+          "count": 2,
+          "where": [
+            "div.mx-auto.flex",
+            "div.hidden.w-full"
+          ]
+        }
+      ]
+    },
+    "1024x900": {
+      "fontSize": [
+        {
+          "value": "16px",
+          "count": 4513,
+          "where": [
+            "html",
+            "title",
+            "iframe",
+            "body.mukta_d42cc534-module__GqjTsq__variable.pt_serif_a5906e0c-module__hlwxJW__variable",
+            "span",
+            "div",
+            "#desktop-navbar-backdrop-portal",
+            "#desktop-navbar-backdrop.absolute.left-0",
+            "#header-barrier.header-barrier.pointer-events-none",
+            "#header.ease-[cubic-bezier(0.4,0,0.2,1)].transition-transform",
+            "#header-content.relative.z-20",
+            "#navbar.relative.z-10"
+          ]
+        },
+        {
+          "value": "14px",
+          "count": 666,
+          "where": [
+            "#header-sheet.flex.flex-col",
+            "span.tracking-[-0.07em.relative",
+            "#radix-_R_alpbbb_.w-72.rounded-xl",
+            "div.w-fit.items-center",
+            "span",
+            "div.cursor-default.flex-row-reverse",
+            "button.flex",
+            "div.relative",
+            "div.absolute.left-1/2",
+            "#info-24",
+            "path",
+            "#multi-layer-popover-trigger.inline-flex.items-center"
+          ]
+        },
+        {
+          "value": "12px",
+          "count": 520,
+          "where": [
+            "div.w-fit.items-center",
+            "span",
+            "time.tabular-nums.text-lp-accent",
+            "span.sr-only",
+            "#base-ui-_r_34_.!left-[var(--lp-timeline-thumb-position)].size-4",
+            "#base-ui-_r_34_-input",
+            "#base-ui-_r_36_.!left-[var(--lp-timeline-thumb-position)].size-4",
+            "#base-ui-_r_36_-input",
+            "#base-ui-_r_32_.!left-[var(--lp-timeline-thumb-position)].size-4",
+            "#base-ui-_r_32_-input",
+            "#base-ui-_r_2u_.!left-[var(--lp-timeline-thumb-position)].size-4",
+            "#base-ui-_r_2u_-input"
+          ]
+        },
+        {
+          "value": "18px",
+          "count": 421,
+          "where": [
+            "#menu_header_mattress_desktop.flex.min-h-[60px]",
+            "span.relative.before:absolute",
+            "#menu_header_smartbeds_desktop.flex.min-h-[60px]",
+            "#menu_header_bedframes_desktop.flex.min-h-[60px]",
+            "#menu_header_beddings_desktop.flex.min-h-[60px]",
+            "div.block.w-full",
+            "div.invisible.block",
+            "span",
+            "@pdp_sticky_add_to_cart_btn.ring-offset-background.focus-visible:outline-none",
+            "span.pointer-events-none.relative",
+            "div.flex.items-center",
+            "hr.h-4.w-px"
+          ]
+        },
+        {
+          "value": "20px",
+          "count": 217,
+          "where": [
+            "#desktop-header-menu.flex-1.justify-center",
+            "div",
+            "ul.group.flex",
+            "li",
+            "#primary-Mattresses.group.inline-flex",
+            "#primary-Smart Beds.group.inline-flex",
+            "#primary-Bed Frames.group.inline-flex",
+            "#primary-Bedding.group.inline-flex",
+            "div.absolute.left-0",
+            "div.hidden.whitespace-nowrap",
+            "span",
+            "div.font-serif.font-bold"
+          ]
+        },
+        {
+          "value": "0px",
+          "count": 212,
+          "where": [
+            "div.vstar-star",
+            "div.star-item",
+            "svg",
+            "path",
+            "div.star-item.half-star",
+            "div.item-nostar",
+            "div.item-star",
+            "button.head-button.tt-write-qa",
+            "div.tt-form-title",
+            "#ttFormCancelBtn.tt-form-btn.tt-form-btn-cancel",
+            "#ttFormSubmit.tt-form-btn.tt-form-btn-submit",
+            "div.user-verified"
+          ]
+        },
+        {
+          "value": "32px",
+          "count": 92,
+          "where": [
+            "h2.block.w-full",
+            "article",
+            "p",
+            "h1.font-serif.inline",
+            "b",
+            "h2.--overwrite.font-serif",
+            "strong",
+            "span.whitespace-nowrap",
+            "h2.--overwrite.md:tracking-[-1px]",
+            "h3.text-balance.font-serif",
+            "h2.m-0.max-w-screen-mlg",
+            "br.max-sm:hidden"
+          ]
+        },
+        {
+          "value": "24px",
+          "count": 77,
+          "where": [
+            "h2.whitespace-nowrap.font-serif",
+            "b",
+            "div.mt-2.text-balance",
+            "article",
+            "p",
+            "div.mx-5.mt-2",
+            "h2.mx-5.text-balance",
+            "h3.text-balance.font-serif",
+            "h2.text-balance.font-serif",
+            "br.block.min-[395px]:hidden",
+            "h3.mb-3.text-center",
+            "h3.mx-auto.inline-block"
+          ]
+        },
+        {
+          "value": "10px",
+          "count": 12,
+          "where": [
+            "span.text-xxs/[7px].font-normal",
+            "span.lg:hidden",
+            "span.hidden.lg:inline-block",
+            "span.uppercase.lg:text-xxs/[12px]"
+          ]
+        },
+        {
+          "value": "13px",
+          "count": 8,
+          "where": [
+            "div.tt-form-error-message",
+            "#tt-protection",
+            "label",
+            "a"
+          ]
+        },
+        {
+          "value": "28px",
+          "count": 4,
+          "where": [
+            "div.text-balance.font-serif",
+            "br"
+          ]
+        },
+        {
+          "value": "16.2px",
+          "count": 2,
+          "where": [
+            "span.text-[0.7em]/[1.25].xs:text-[0.8em]/[1.25]",
+            "span.hidden"
+          ]
+        },
+        {
+          "value": "30px",
+          "count": 2,
+          "where": [
+            "span"
+          ]
+        }
+      ],
+      "containerMaxWidths": [
+        {
+          "value": "1025px",
+          "count": 18,
+          "where": [
+            "header.mx-auto.max-w-screen-lg",
+            "section.mx-auto.h-fit"
+          ]
+        },
+        {
+          "value": "576px",
+          "count": 7,
+          "where": [
+            "div.mx-auto.w-full"
+          ]
+        },
+        {
+          "value": "2200px",
+          "count": 6,
+          "where": [
+            "img.block.h-full"
+          ]
+        },
+        {
+          "value": "112px",
+          "count": 6,
+          "where": [
+            "div.flex.h-fit"
+          ]
+        },
+        {
+          "value": "100px",
+          "count": 5,
+          "where": [
+            "article.flex.w-[max(153px,32%)]"
+          ]
+        },
+        {
+          "value": "95px",
+          "count": 3,
+          "where": [
+            "img.h-20.lg:h-[46px]"
+          ]
+        },
+        {
+          "value": "637px",
+          "count": 3,
+          "where": [
+            "article.mx-auto.max-w-[637px]"
+          ]
+        },
+        {
+          "value": "642px",
+          "count": 3,
+          "where": [
+            "img.hidden.h-full"
+          ]
+        },
+        {
+          "value": "302px",
+          "count": 3,
+          "where": [
+            "div.flex.min-h-[200px]"
+          ]
+        },
+        {
+          "value": "440px",
+          "count": 2,
+          "where": [
+            "div.flex.w-full",
+            "div.relative.aspect-[6/5]"
+          ]
+        },
+        {
+          "value": "514px",
+          "count": 2,
+          "where": [
+            "article.flex.max-w-[514px]"
+          ]
+        },
+        {
+          "value": "992px",
+          "count": 2,
+          "where": [
+            "h2.m-0.max-w-screen-mlg",
+            "p.m-0.max-w-screen-mlg"
+          ]
+        },
+        {
+          "value": "342px",
+          "count": 2,
+          "where": [
+            "div.items-center.relative"
+          ]
+        },
+        {
+          "value": "1440px",
+          "count": 2,
+          "where": [
+            "div.relative.max-w-screen-1.7xl",
+            "#vstar-reviews.trustoo-widget.qa"
+          ]
+        },
+        {
+          "value": "190px",
+          "count": 2,
+          "where": [
+            "h3.mx-auto.inline-block"
+          ]
+        },
+        {
+          "value": "160px",
+          "count": 2,
+          "where": [
+            "div.flex.max-w-[140px]"
+          ]
+        },
+        {
+          "value": "200px",
+          "count": 2,
+          "where": [
+            "div.flex.max-w-[140px]"
+          ]
+        },
+        {
+          "value": "640px",
+          "count": 2,
+          "where": [
+            "div.relative.mx-auto",
+            "div.mx-auto.flex"
+          ]
+        },
+        {
+          "value": "592px",
+          "count": 2,
+          "where": [
+            "@mattress_pdp_backpain_support_section.flex.w-full",
+            "@mattress_pdp_cooling_technology_section.flex.w-full"
+          ]
+        },
+        {
+          "value": "968px",
+          "count": 2,
+          "where": [
+            "#gleen-product-faqs.w-full.max-w-[968px]",
+            "div.mx-auto.flex"
+          ]
+        }
+      ]
+    },
+    "768x900": {
+      "fontSize": [
+        {
+          "value": "16px",
+          "count": 4491,
+          "where": [
+            "html",
+            "title",
+            "iframe",
+            "body.mukta_d42cc534-module__GqjTsq__variable.pt_serif_a5906e0c-module__hlwxJW__variable",
+            "span",
+            "div",
+            "#desktop-navbar-backdrop-portal",
+            "#desktop-navbar-backdrop.absolute.left-0",
+            "#header-barrier.header-barrier.pointer-events-none",
+            "#header.ease-[cubic-bezier(0.4,0,0.2,1)].transition-transform",
+            "#header-content.relative.z-20",
+            "#navbar.relative.z-10"
+          ]
+        },
+        {
+          "value": "14px",
+          "count": 666,
+          "where": [
+            "#header-sheet.flex.flex-col",
+            "span.tracking-[-0.07em.relative",
+            "#radix-_R_alpbbb_.w-72.rounded-xl",
+            "div.w-fit.items-center",
+            "span",
+            "div.cursor-default.flex-row-reverse",
+            "button.flex",
+            "div.relative",
+            "div.absolute.left-1/2",
+            "#info-24",
+            "path",
+            "#multi-layer-popover-trigger.inline-flex.items-center"
+          ]
+        },
+        {
+          "value": "12px",
+          "count": 501,
+          "where": [
+            "div.w-fit.items-center",
+            "span",
+            "time.tabular-nums.text-lp-accent",
+            "span.sr-only",
+            "#base-ui-_r_36_.!left-[var(--lp-timeline-thumb-position)].size-4",
+            "#base-ui-_r_36_-input",
+            "#base-ui-_r_3a_.!left-[var(--lp-timeline-thumb-position)].size-4",
+            "#base-ui-_r_3a_-input",
+            "#base-ui-_r_2t_.!left-[var(--lp-timeline-thumb-position)].size-4",
+            "#base-ui-_r_2t_-input",
+            "#base-ui-_r_2v_.!left-[var(--lp-timeline-thumb-position)].size-4",
+            "#base-ui-_r_2v_-input"
+          ]
+        },
+        {
+          "value": "18px",
+          "count": 441,
+          "where": [
+            "#menu_header_mattress_desktop.flex.min-h-[60px]",
+            "span.relative.before:absolute",
+            "#menu_header_smartbeds_desktop.flex.min-h-[60px]",
+            "#menu_header_bedframes_desktop.flex.min-h-[60px]",
+            "#menu_header_beddings_desktop.flex.min-h-[60px]",
+            "div.block.w-full",
+            "div.invisible.block",
+            "span",
+            "@pdp_sticky_add_to_cart_btn.ring-offset-background.focus-visible:outline-none",
+            "span.pointer-events-none.relative",
+            "div.flex.items-center",
+            "hr.h-4.w-px"
+          ]
+        },
+        {
+          "value": "0px",
+          "count": 232,
+          "where": [
+            "div.vstar-star",
+            "div.star-item",
+            "svg",
+            "path",
+            "div.star-item.half-star",
+            "div.item-nostar",
+            "div.item-star",
+            "button.head-button.tt-write-qa",
+            "div.tt-form-title",
+            "#ttFormCancelBtn.tt-form-btn.tt-form-btn-cancel",
+            "#ttFormSubmit.tt-form-btn.tt-form-btn-submit",
+            "span.rev-rating-num"
+          ]
+        },
+        {
+          "value": "20px",
+          "count": 217,
+          "where": [
+            "#desktop-header-menu.flex-1.justify-center",
+            "div",
+            "ul.group.flex",
+            "li",
+            "#primary-Mattresses.group.inline-flex",
+            "#primary-Smart Beds.group.inline-flex",
+            "#primary-Bed Frames.group.inline-flex",
+            "#primary-Bedding.group.inline-flex",
+            "div.absolute.left-0",
+            "div.hidden.whitespace-nowrap",
+            "span",
+            "div.font-serif.font-bold"
+          ]
+        },
+        {
+          "value": "32px",
+          "count": 92,
+          "where": [
+            "h2.block.w-full",
+            "article",
+            "p",
+            "h1.font-serif.inline",
+            "b",
+            "h2.--overwrite.font-serif",
+            "strong",
+            "span.whitespace-nowrap",
+            "h2.--overwrite.md:tracking-[-1px]",
+            "h3.text-balance.font-serif",
+            "h2.m-0.max-w-screen-mlg",
+            "br.max-sm:hidden"
+          ]
+        },
+        {
+          "value": "24px",
+          "count": 77,
+          "where": [
+            "h2.whitespace-nowrap.font-serif",
+            "b",
+            "div.mt-2.text-balance",
+            "article",
+            "p",
+            "div.mx-5.mt-2",
+            "h2.mx-5.text-balance",
+            "h3.text-balance.font-serif",
+            "h2.text-balance.font-serif",
+            "br.block.min-[395px]:hidden",
+            "h3.mb-3.text-center",
+            "h3.mx-auto.inline-block"
+          ]
+        },
+        {
+          "value": "10px",
+          "count": 12,
+          "where": [
+            "span.text-xxs/[7px].font-normal",
+            "span.lg:hidden",
+            "span.hidden.lg:inline-block",
+            "span.uppercase.lg:text-xxs/[12px]"
+          ]
+        },
+        {
+          "value": "13px",
+          "count": 8,
+          "where": [
+            "div.tt-form-error-message",
+            "#tt-protection",
+            "label",
+            "a"
+          ]
+        },
+        {
+          "value": "28px",
+          "count": 4,
+          "where": [
+            "div.text-balance.font-serif",
+            "br"
+          ]
+        },
+        {
+          "value": "16.2px",
+          "count": 2,
+          "where": [
+            "span.text-[0.7em]/[1.25].xs:text-[0.8em]/[1.25]",
+            "span.hidden"
+          ]
+        },
+        {
+          "value": "30px",
+          "count": 2,
+          "where": [
+            "span"
+          ]
+        }
+      ],
+      "containerMaxWidths": [
+        {
+          "value": "1025px",
+          "count": 18,
+          "where": [
+            "header.mx-auto.max-w-screen-lg",
+            "section.mx-auto.h-fit"
+          ]
+        },
+        {
+          "value": "576px",
+          "count": 7,
+          "where": [
+            "div.mx-auto.w-full"
+          ]
+        },
+        {
+          "value": "2200px",
+          "count": 6,
+          "where": [
+            "img.block.h-full"
+          ]
+        },
+        {
+          "value": "112px",
+          "count": 6,
+          "where": [
+            "div.flex.h-fit"
+          ]
+        },
+        {
+          "value": "100px",
+          "count": 5,
+          "where": [
+            "article.flex.w-[max(153px,32%)]"
+          ]
+        },
+        {
+          "value": "95px",
+          "count": 3,
+          "where": [
+            "img.h-20.lg:h-[46px]"
+          ]
+        },
+        {
+          "value": "637px",
+          "count": 3,
+          "where": [
+            "article.mx-auto.max-w-[637px]"
+          ]
+        },
+        {
+          "value": "642px",
+          "count": 3,
+          "where": [
+            "img.hidden.h-full"
+          ]
+        },
+        {
+          "value": "302px",
+          "count": 3,
+          "where": [
+            "div.flex.min-h-[200px]"
+          ]
+        },
+        {
+          "value": "440px",
+          "count": 2,
+          "where": [
+            "div.flex.w-full",
+            "div.relative.aspect-[6/5]"
+          ]
+        },
+        {
+          "value": "514px",
+          "count": 2,
+          "where": [
+            "article.flex.max-w-[514px]"
+          ]
+        },
+        {
+          "value": "992px",
+          "count": 2,
+          "where": [
+            "h2.m-0.max-w-screen-mlg",
+            "p.m-0.max-w-screen-mlg"
+          ]
+        },
+        {
+          "value": "342px",
+          "count": 2,
+          "where": [
+            "div.items-center.relative"
+          ]
+        },
+        {
+          "value": "1440px",
+          "count": 2,
+          "where": [
+            "div.relative.max-w-screen-1.7xl",
+            "#vstar-reviews.trustoo-widget.qa"
+          ]
+        },
+        {
+          "value": "190px",
+          "count": 2,
+          "where": [
+            "h3.mx-auto.inline-block"
+          ]
+        },
+        {
+          "value": "160px",
+          "count": 2,
+          "where": [
+            "div.flex.max-w-[140px]"
+          ]
+        },
+        {
+          "value": "200px",
+          "count": 2,
+          "where": [
+            "div.flex.max-w-[140px]"
+          ]
+        },
+        {
+          "value": "640px",
+          "count": 2,
+          "where": [
+            "div.relative.mx-auto",
+            "div.mx-auto.flex"
+          ]
+        },
+        {
+          "value": "592px",
+          "count": 2,
+          "where": [
+            "@mattress_pdp_backpain_support_section.flex.w-full",
+            "@mattress_pdp_cooling_technology_section.flex.w-full"
+          ]
+        },
+        {
+          "value": "968px",
+          "count": 2,
+          "where": [
+            "#gleen-product-faqs.w-full.max-w-[968px]",
+            "div.mx-auto.flex"
+          ]
+        }
+      ]
+    },
+    "390x844": {
+      "fontSize": [
+        {
+          "value": "16px",
+          "count": 3971,
+          "where": [
+            "html",
+            "title",
+            "iframe",
+            "body.mukta_d42cc534-module__GqjTsq__variable.pt_serif_a5906e0c-module__hlwxJW__variable",
+            "span",
+            "div",
+            "#desktop-navbar-backdrop-portal",
+            "#desktop-navbar-backdrop.absolute.left-0",
+            "#header-barrier.header-barrier.pointer-events-none",
+            "#header.ease-[cubic-bezier(0.4,0,0.2,1)].transition-transform",
+            "#header-content.relative.z-20",
+            "#navbar.relative.z-10"
+          ]
+        },
+        {
+          "value": "18px",
+          "count": 1092,
+          "where": [
+            "#header-sheet.flex.flex-col",
+            "#menu_header_mattress_desktop.flex.min-h-[60px]",
+            "span.relative.before:absolute",
+            "#menu_header_smartbeds_desktop.flex.min-h-[60px]",
+            "#menu_header_bedframes_desktop.flex.min-h-[60px]",
+            "#menu_header_beddings_desktop.flex.min-h-[60px]",
+            "span.tracking-[-0.07em.relative",
+            "#radix-_R_alpbbb_.w-72.rounded-xl",
+            "div.block.w-full",
+            "div.invisible.block",
+            "span",
+            "span.line-clamp-2.whitespace-break-spaces"
+          ]
+        },
+        {
+          "value": "14px",
+          "count": 563,
+          "where": [
+            "div.w-fit.items-center",
+            "span",
+            "div.cursor-default.flex-row-reverse",
+            "button.flex",
+            "div.relative",
+            "div.absolute.left-1/2",
+            "#info-24",
+            "path",
+            "#multi-layer-popover-trigger.inline-flex.items-center",
+            "div.flex.w-full",
+            "svg",
+            "span.block.max-xl:text-sm"
+          ]
+        },
+        {
+          "value": "12px",
+          "count": 533,
+          "where": [
+            "span.font-serif.text-xs",
+            "div.w-fit.items-center",
+            "span",
+            "article.flex.w-[max(153px,32%)]",
+            "#sleep-trial-64",
+            "path",
+            "#shipping-64",
+            "svg",
+            "#warranty-64",
+            "g",
+            "#usa-flag-64",
+            "div.inline-flex.items-center"
+          ]
+        },
+        {
+          "value": "0px",
+          "count": 232,
+          "where": [
+            "div.vstar-star",
+            "div.star-item",
+            "svg",
+            "path",
+            "div.star-item.half-star",
+            "div.item-nostar",
+            "div.item-star",
+            "button.head-button.tt-write-qa",
+            "div.tt-form-title",
+            "#ttFormCancelBtn.tt-form-btn.tt-form-btn-cancel",
+            "#ttFormSubmit.tt-form-btn.tt-form-btn-submit",
+            "span.rev-rating-num"
+          ]
+        },
+        {
+          "value": "20px",
+          "count": 212,
+          "where": [
+            "#desktop-header-menu.flex-1.justify-center",
+            "div",
+            "ul.group.flex",
+            "li",
+            "#primary-Mattresses.group.inline-flex",
+            "#primary-Smart Beds.group.inline-flex",
+            "#primary-Bed Frames.group.inline-flex",
+            "#primary-Bedding.group.inline-flex",
+            "div.absolute.left-0",
+            "div.hidden.whitespace-nowrap",
+            "span",
+            "div.mt-2.text-balance"
+          ]
+        },
+        {
+          "value": "28px",
+          "count": 76,
+          "where": [
+            "h2.--overwrite.font-serif",
+            "strong",
+            "span.whitespace-nowrap",
+            "h2.--overwrite.md:tracking-[-1px]",
+            "h3.text-balance.font-serif",
+            "h2.m-0.max-w-screen-mlg",
+            "br.max-sm:hidden",
+            "h2.mb-6.text-center",
+            "br",
+            "span.inline-block",
+            "br.max-md:hidden",
+            "br.block.md:hidden"
+          ]
+        },
+        {
+          "value": "24px",
+          "count": 59,
+          "where": [
+            "h2.whitespace-nowrap.font-serif",
+            "b",
+            "h2.block.w-full",
+            "article",
+            "p",
+            "h3.text-balance.font-serif",
+            "h1.font-serif.inline",
+            "h2.text-balance.font-serif",
+            "br.block.min-[395px]:hidden",
+            "h3.mb-3.text-center",
+            "h3.font-serif.text-xl",
+            "span.whitespace-nowrap"
+          ]
+        },
+        {
+          "value": "10px",
+          "count": 9,
+          "where": [
+            "span.text-xxs/[7px].font-normal",
+            "span.lg:hidden",
+            "span.hidden.lg:inline-block"
+          ]
+        },
+        {
+          "value": "13px",
+          "count": 8,
+          "where": [
+            "div.tt-form-error-message",
+            "#tt-protection",
+            "label",
+            "a"
+          ]
+        },
+        {
+          "value": "22px",
+          "count": 4,
+          "where": [
+            "@call-phone-number-button.flex.min-w-[min(100%,250px)]",
+            "button.flex.min-w-[min(100%,250px)]",
+            "a.flex.min-w-[min(100%,250px)]",
+            "div.window-title"
+          ]
+        },
+        {
+          "value": "9px",
+          "count": 2,
+          "where": [
+            "div.font-sans.font-medium",
+            "div.inline-flex.items-center"
+          ]
+        },
+        {
+          "value": "14.4px",
+          "count": 2,
+          "where": [
+            "span.text-[0.7em]/[1.25].xs:text-[0.8em]/[1.25]",
+            "span.hidden"
+          ]
+        },
+        {
+          "value": "30px",
+          "count": 2,
+          "where": [
+            "span"
+          ]
+        }
+      ],
+      "containerMaxWidths": [
+        {
+          "value": "1025px",
+          "count": 18,
+          "where": [
+            "header.mx-auto.max-w-screen-lg",
+            "section.mx-auto.h-fit"
+          ]
+        },
+        {
+          "value": "120px",
+          "count": 12,
+          "where": [
+            "li.rounded-lg.bg-white/10"
+          ]
+        },
+        {
+          "value": "576px",
+          "count": 7,
+          "where": [
+            "div.mx-auto.w-full"
+          ]
+        },
+        {
+          "value": "2200px",
+          "count": 6,
+          "where": [
+            "img.block.h-full"
+          ]
+        },
+        {
+          "value": "112px",
+          "count": 6,
+          "where": [
+            "div.flex.h-fit"
+          ]
+        },
+        {
+          "value": "140px",
+          "count": 4,
+          "where": [
+            "div.flex.max-w-[140px]"
+          ]
+        },
+        {
+          "value": "302px",
+          "count": 4,
+          "where": [
+            "div.mx-auto.flex",
+            "div.flex.min-h-[200px]"
+          ]
+        },
+        {
+          "value": "95px",
+          "count": 3,
+          "where": [
+            "img.h-20.lg:h-[46px]"
+          ]
+        },
+        {
+          "value": "637px",
+          "count": 3,
+          "where": [
+            "article.mx-auto.max-w-[637px]"
+          ]
+        },
+        {
+          "value": "642px",
+          "count": 3,
+          "where": [
+            "img.hidden.h-full"
+          ]
+        },
+        {
+          "value": "286px",
+          "count": 3,
+          "where": [
+            "span.flex.flex-row"
+          ]
+        },
+        {
+          "value": "338px",
+          "count": 3,
+          "where": [
+            "div.flex.w-full",
+            "div.w-full.max-w-[338px]",
+            "button.flex.min-w-[min(100%,250px)]"
+          ]
+        },
+        {
+          "value": "440px",
+          "count": 2,
+          "where": [
+            "div.flex.w-full",
+            "div.relative.aspect-[6/5]"
+          ]
+        },
+        {
+          "value": "514px",
+          "count": 2,
+          "where": [
+            "article.flex.max-w-[514px]"
+          ]
+        },
+        {
+          "value": "992px",
+          "count": 2,
+          "where": [
+            "h2.m-0.max-w-screen-mlg",
+            "p.m-0.max-w-screen-mlg"
+          ]
+        },
+        {
+          "value": "342px",
+          "count": 2,
+          "where": [
+            "div.items-center.relative"
+          ]
+        },
+        {
+          "value": "1440px",
+          "count": 2,
+          "where": [
+            "div.relative.max-w-screen-1.7xl",
+            "#vstar-reviews.trustoo-widget.qa"
+          ]
+        },
+        {
+          "value": "162px",
+          "count": 2,
+          "where": [
+            "h3.mx-auto.inline-block"
+          ]
+        },
+        {
+          "value": "480px",
+          "count": 2,
+          "where": [
+            "div.bottom-5.right-6",
+            "ul.!flex.!max-w-[480px]"
+          ]
+        },
+        {
+          "value": "592px",
+          "count": 2,
+          "where": [
+            "@mattress_pdp_backpain_support_section.flex.w-full",
+            "@mattress_pdp_cooling_technology_section.flex.w-full"
+          ]
+        }
+      ]
+    }
+  }
+}

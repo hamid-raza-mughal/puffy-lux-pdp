@@ -1,0 +1,1611 @@
+/* ==========================================================================
+   s-above-the-fold — gallery + layer scene + buy box.
+
+   Reference @1440x900 DPR1 (capture/dom/1440x900/{computed,geometry}.json):
+     #pdp-above-the-fold   0,121    1440 x 1836   bg black
+     left  (gallery)       0,122     990 x  928   sticky
+     right (buy box)     990,121     450 x 1836
+   The unit is captured at its FULL natural height (1836px); 900px is the
+   capture viewport, never a crop.
+
+   Numeric values below are read from the captured computed styles, not
+   estimated. Where the source builds a value through a long Tailwind chain
+   (w-fit + --gallery-height + scale-[2] ...), the resolved number is written
+   here directly and the chain is named in a comment.
+   ========================================================================== */
+
+.s-above-the-fold {
+  position: relative;
+  background-color: rgb(var(--base-black) / 0);
+  background: #000;
+  color: rgb(var(--text-strong));
+  scroll-margin-top: var(--header-height);
+}
+
+.atf__inner {
+  position: relative;
+  z-index: 2;
+  margin-inline: auto;
+}
+
+/* lg:grid lg:grid-cols-[1fr_auto] -> 990 + 450 at 1440 */
+.atf__grid {
+  flex-direction: column;
+}
+
+/* ---------------------------------------------------------------- gallery
+
+   Custom properties the source's gallery reads. Values are the source's own
+   declarations, taken from the target's inline Tailwind build
+   (capture/dom/1440x900/page.html) and cross-checked against getComputedStyle
+   on the live page (capture/gallery-probe.json, "vars").
+
+   --gallery-height  The source declares this TWICE:
+                       #pdp-above-the-fold                      { calc(100dvh - var(--header-height)) }  @1025+
+                       #pdp-above-the-fold[data-handle=puffy-lux-mattress] { 680px }                     @768+
+                     The second wins at every width on specificity (id + attr),
+                     so on THIS product it is a flat 680px and the viewport-height
+                     expression is dead code. The probe read 680px at all five
+                     gated viewport configs, so 680 is asserted, not assumed.
+   --content-width   The gallery grid track: 990 / 1016 / 1142 / 1400.
+   --content-position An object-position. PROVABLY INERT here — see the note on
+                     .atf__slide-media img.
+   ------------------------------------------------------------------------- */
+
+.atf__media {
+  /* 1366+; 520px from 1536 (see the 1536 block) */
+  --pdp-rhs-column-width: 450px;
+  --gallery-height: 680px;
+  --content-width: calc(100vw - var(--pdp-rhs-column-width));
+  --awards-size: 120px;                       /* 100 -> 85 -> 90 -> 120 at 1440+ */
+  --content-position-min: 42px;               /* -164px at 1662+ on a mattress */
+  --content-position-max: calc(var(--awards-size) * 0.75);
+  --content-position: center clamp(
+      var(--content-position-min),
+      calc(var(--content-position-min)
+           + (var(--content-position-max) - var(--content-position-min))
+             * (100dvh - 697px) / (1024px - 697px)),
+      var(--content-position-max));
+  --lux-badge-top: 590px;
+  --header-height: 122px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The gallery stage — the source's
+     <div class="relative left-0 top-0 z-[1] h-full w-full md:pb-0 lg:absolute">
+   The source absolutely positions it inside the sticky media column; here the
+   column is an ordinary flow item, so the stage is `relative` instead and takes
+   its height from the carousel. Either way the box is identical (990x928 at
+   1440x900) and it is what .atf__nav positions against. */
+.atf__stage {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* `lg:h-full` of the stage, itself `h-full` of the media column, which is
+     lg:h-[min(100%, calc(100dvh - var(--header-height) + 150px))]
+   The 100% term (the section's 1836px) never binds at a 900px- or 700px-tall
+   viewport, so the calc is what resolves: 928 at h900, 728 at h700 — both
+   confirmed against computed.json. Written as the expression rather than as
+   two constants so the two probe heights are not special-cased. */
+.atf__carousel {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: calc(100dvh - var(--header-height) + 150px);
+  overflow: hidden;
+}
+
+/* source: <div class="h-full is-loop cursor-grab"> */
+.atf__viewport {
+  height: 100%;
+  cursor: grab;
+}
+
+.atf__track {
+  display: flex;
+  gap: var(--space-4);      /* gap-4; the slide step is width + 16 */
+  margin-left: 0;
+  height: 100%;
+  overflow: visible;
+}
+
+/* SLIDE MECHANISM — measured, not guessed.
+   capture/gallery-probe.json walks all six states. The track never moves
+   (`ml-0`, no transform). Instead every slide carries its own translateX:
+
+     active   translateX(-(n-1) * (slideWidth + 16))   opacity 1  pointer-events auto
+     inactive translateX(slideWidth + 2)               opacity 0  pointer-events none
+
+   i.e. the active slide is pulled back by its own flex offset so it lands on the
+   carousel origin, and every other slide is parked just past the right edge.
+   Recorded values at 1440x900 (slide width 990): active slide 2 -1006,
+   3 -2012, 4 -3018, 5 -4024; inactive +992 at 1440, +1018 at 1536, +1144 at
+   1662, +1402 at 1920 — width + 2 at every width, so the +2 is reproduced
+   rather than rounded away.
+
+   The active slide also gains `z-[1] is-snapped is-in-view`. Note the source
+   leaves data-active="false" on ALL six slides at all times, so that attribute
+   is NOT the state signal; the rebuild keeps it literal for the same reason. */
+.atf__slide {
+  position: static;
+  flex: 0 0 100%;
+  min-width: 0;
+  transform: translate3d(calc(100% + 2px), 0, 0);
+  opacity: 0;
+  pointer-events: none;
+  height: 100%;
+  padding-inline: 0;
+}
+
+.atf__slide.is-snapped {
+  /* --slide-offset is set once per slide by js/modules/gallery.js: it is
+     -(index) * (100% + 16px), which CSS cannot express from the element itself. */
+  transform: translate3d(var(--slide-offset, 0px), 0, 0);
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+/* source: `relative flex h-full justify-center bg-black lg:w-full xl:h-[initial]`
+   `xl:h-[initial]` (xl = 1201) drops the h-full, so the box is content-height:
+   680 at 1440/1536/1662, and 1722 at 1920 where the frame grows (see 1920). */
+.atf__slide-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
+/* source: `gallery-gradient h-[var(--gallery-height)] w-fit
+            4xl:h-[max(var(--gallery-height),100%)] gallery-gradient--image`
+
+   `.gallery-gradient::before` paints a symmetric edge fade, but its `content` is
+   `none` until `min-width: 2700px` for image galleries — the probe confirms
+   content:none at every slide and every gated width, so nothing is drawn here
+   and no gradient is reproduced. The element is purely the 680px-tall relative
+   box that the photo overflows out of.
+
+   `w-fit` + a 1024px-min photo makes this 1024 wide inside a 990 track; the
+   parent's `justify-content: center` is what pushes it to x=-17. That is the
+   source's own centring, so no negative margin is needed. */
+.atf__slide-frame {
+  position: relative;
+  width: fit-content;
+  height: var(--gallery-height);
+}
+
+/* source: <div class="block w-fit"> — height comes from the img below it. */
+.atf__slide-media {
+  display: block;
+  width: fit-content;
+}
+
+/* THE HERO PHOTO.
+   Reference img at 1440x900: layout 1024 x 1259.52, transform scale(1.3),
+   bounds 1331.2 x 1637.37 at (-170.6, -66.93).
+
+   OBJECT-POSITION IS WHAT PLACES THE PHOTO. This is the answer to a question
+   this rebuild previously carried as a magic number, so it is worth stating
+   plainly.
+
+   `h-full` against an auto-height parent resolves to `auto`, so the box height
+   is the width x the ASSET's own ratio, and the parent takes that height. All
+   six assets are the same 0.813 family (3000x3690, 4500x5535, 2250x2768), so
+   `object-fit: cover` scales the content to EXACTLY the box: zero overflow
+   (gallery-probe.json records coverOverflow {x: 0, y: 0} for every decoded
+   slide at every gated width).
+
+   Zero overflow does NOT make object-position a no-op. A PERCENTAGE would
+   resolve to (box - content) * pct = 0, but --content-position is a LENGTH, and
+   a length places the content's edge exactly that far from the box's edge
+   regardless of overflow. So `center 71.798px` really does push the photo down
+   71.798px inside the box, leaving 71.798px of the box empty at the top and
+   clipping the same amount off the bottom.
+
+   And 71.798 x the 1.3 scale = 93.3px. That is the "calibrated 93px" this file
+   used to carry on .atf__slide-media, described in DEVIATIONS as an unexplained
+   disagreement between the reference PNG and its own geometry dump. It was not a
+   disagreement: the geometry dump does not record object-position (it is not in
+   profile.STYLE_PROPS), so the offset was invisible in the dump and the sweep
+   rediscovered it empirically. The 1662/1920 figure lands the same way:
+   --content-position-min is -164px there, the clamp gives -6.318px, and
+   -6.318 x 1.3 = -8.2px -- the "-8px" the 3xl block used to hardcode.
+
+   So both magic numbers are gone, replaced by the source's own expression. This
+   ALSO settles the --awards-size question the per-slide multipliers raise
+   (`object-[center_calc(var(--awards-size)*1.6)]`, 1.6/1.5/1.4 per slide): at lg
+   they are all overridden by `lg:object-[var(--content-position)]`, so the
+   per-slide variation is mobile-only -- but the MECHANISM is the same one, and
+   it is live and load-bearing here.
+
+   Note also: computed.json puts the slide 3-6 img box at 1024 x 651.688. That is
+   the width/height ATTRIBUTE ratio (1400x891) standing in for an image that had
+   not decoded yet, not a real layout — the probe shows all of them settle to
+   ~1024 x 1259.5 once visited. Building to 651.688 would bake in a load artefact. */
+.atf__slide-media img {
+  display: block;
+  width: var(--content-width);
+  min-width: 1024px;                /* md:min-w-[1024px] */
+  max-width: 2200px;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--content-position);
+  transform: scale(1.3);            /* xl:1.1 -> 1.5xl:1.2 -> 1.7xl:1.3; 1.7xl = 1440 */
+}
+
+/* No vertical calibration. The frame sits at the slide's top edge, exactly as
+   the captured geometry says, and the photo's placement inside it comes from
+   object-position above. See docs/DEVIATIONS.md for the number this replaced. */
+
+/* ------------------------------------------------- per-slide overlay content
+
+   Each slide carries a different overlay. Measured at 1440x900; the only
+   cross-width changes in the whole set are noted at their breakpoints:
+     slide 2  benefit <li> padding-inline 24 -> 32 at 2xl (1536)
+     slide 3  identical at all five configs
+     slide 4  value frame 135 -> 156 wide at min-[1800px], which grows the row
+              122 -> 138 and the overlay 218 -> 234
+
+   CAVEAT on slide 4's widths: computed.json records its two bundle <img>s at
+   56x56, which is the width/height ATTRIBUTE square standing in for images that
+   had not decoded (slide 4 is never visited in the rest-state capture). Loaded,
+   they are 414x180 and 191x128 natural, so at `h-14` they are ~129 and ~84 wide
+   and the row is ~800px, not the 705.36 the dump reports. The rebuild uses the
+   real images and therefore the real widths — matching the per-slide PNGs in
+   capture/reference/states/gallery/, not the rest-state dump.
+   ------------------------------------------------------------------------- */
+
+/* Slides 2-4 wrap their overlay in
+     `pointer-events-none absolute inset-0 z-[1] mx-auto h-fit w-fit pt-4
+      lg:w-full lg:rounded-xl lg:pt-8`
+   Slide 1/5/6 use a <header> with the same box; see .atf__overlay above. */
+/* Doubled class: plain `.atf__overlay` sets `width: 100%` and is declared later in
+   this file, so a single-class modifier would lose the cascade to it. */
+.atf__overlay.atf__overlay--fit {
+  width: 100%;              /* slides 2-3 are `w-fit lg:w-full` -> 100% at lg */
+}
+
+/* `block ... font-serif text-2xl font-bold ... lg:hidden` — display:none from
+   1025 up, so it never paints in this build's range. Kept because it is in the
+   reference DOM and its absence would change the element inventory. */
+.atf__slide-title {
+  display: none;
+}
+
+/* measured 32px/40 PT Serif 400 white, centred, mx-5 (20px) */
+.atf__slide-sub {
+  margin-inline: var(--space-5);
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);        /* 1.7xl:text-4xl */
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-3xl);
+  color: rgb(var(--base-white));
+}
+
+.atf__slide-sub--pad   { padding-bottom: var(--space-6); }  /* lg:pb-6, box 64 tall */
+.atf__slide-sub--tight { padding-bottom: var(--space-4); }  /* pb-4,   box 56 tall */
+.atf__slide-sub--flush { padding-bottom: 0; }               /* slide 4 uses gap-6 instead */
+
+/* --- slide 2: cooling benefits --- */
+
+/* `mx-auto h-fit w-fit max-w-full` around the pill; measured 740.19 x 96 */
+.atf__benefits-wrap {
+  margin-inline: auto;
+  width: fit-content;
+  max-width: 100%;
+  height: fit-content;
+}
+
+/* `mx-4 flex flex-wrap justify-center rounded-lg bg-white/10 lg:mx-2
+    lg:rounded-xl xl:mx-4` — 708.19 x 96, radius 12, no gap between items */
+.atf__benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-inline: var(--space-4);
+  border-radius: var(--radius-2xl);
+  background-color: rgb(255 255 255 / 0.1);
+}
+
+/* `px-3 py-1 xsm:gap-1 md:px-6 md:py-4 lg:px-2 lg:py-6 xl:px-4 1.7xl:px-6 2xl:px-8` */
+.atf__benefit {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-6);           /* py-6 = 24, 1.7xl:px-6 = 24 */
+}
+
+.atf__benefit-icon {
+  display: block;
+  color: rgb(var(--base-white));
+}
+
+/* `[&>svg]:size-6 md:[&>svg]:size-9 xl:[&>svg]:size-12` -> 48px */
+.atf__benefit-icon svg { display: block; width: 48px; height: 48px; }
+
+/* `font-serif text-xs font-bold ... md:text-base xl:text-lg 1.7xl:text-xl` */
+.atf__benefit-label {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-lg);
+  color: rgb(var(--base-white));
+}
+
+/* --- slide 3: the 2-in-1 firmness diagram --- */
+
+/* `flex max-w-full justify-center gap-4 md:gap-16 lg:gap-20` -> 80px */
+.atf__firmness {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-20);
+  max-width: 100%;
+}
+
+/* `flex flex-col items-center text-center text-white xxs:max-md:w-[166px] lg:px-10` */
+.atf__firm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: var(--space-10);
+  text-align: center;
+  color: rgb(var(--base-white));
+}
+
+/* `size-10 shrink-0 text-white md:size-12`; the firm icon adds translate-y-[-2px] */
+.atf__firm-icon { flex: 0 0 auto; width: 48px; height: 48px; }
+.atf__firm-icon--firm { transform: translateY(-2px); }
+
+/* `font-serif text-base font-bold lg:text-xl` / `flex-wrap font-serif text-base lg:text-xl` */
+.atf__firm-name,
+.atf__firm-note {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  line-height: var(--leading-lg);
+}
+.atf__firm-name { font-weight: var(--weight-bold); }
+.atf__firm-note { font-weight: var(--weight-regular); }
+
+/* --- slide 4: the free bundle --- */
+
+/* `mx-auto flex h-fit w-fit flex-col gap-4 pt-4 md:gap-6 lg:pt-8` -> gap 24 */
+/* Slide 4's overlay is `w-fit` with NO `lg:w-full`, so it really is shrink-to-fit
+   and `mx-auto` is what centres it in the 990px slide. Doubled class for the same
+   cascade reason as .atf__overlay--fit above: with `width: 100%` winning, the
+   bundle row (a left-aligned flex row) started at the slide's left edge instead
+   of centred. */
+.atf__overlay.atf__overlay--gifts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-inline: auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* `relative flex max-md:rounded-2xl max-md:bg-white/10 md:gap-6` */
+.atf__gifts {
+  position: relative;
+  display: flex;
+  gap: var(--space-6);
+}
+
+/* `relative flex rounded-2xl px-3 py-2 max-md:min-w-[160px] md:bg-white/10
+    md:px-4 md:py-3` -> 16/12 padding, radius 16, white/10 */
+.atf__gift {
+  position: relative;
+  display: flex;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-3xl);
+  background-color: rgb(255 255 255 / 0.1);
+}
+.atf__gift--center { justify-content: center; }
+
+/* `absolute -top-3 left-10 w-fit rounded-sm bg-fill-green-strong px-2 py-1
+    text-base font-medium uppercase leading-none text-white hidden md:block`
+   The source also carries a SECOND, mobile-only FREE pill (`md:hidden`) on the
+   row; it is display:none from md up and is not reproduced — see DEVIATIONS. */
+.atf__gift-free {
+  position: absolute;
+  top: -12px;
+  left: var(--space-10);
+  width: fit-content;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  background-color: rgb(var(--fill-green-strong));
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-xs);
+  text-transform: uppercase;
+  color: rgb(var(--base-white));
+}
+
+/* `flex flex-col items-center gap-3 md:flex-row` */
+.atf__gift-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* `h-10 w-auto shrink-0 object-contain md:h-14` -> 56px tall */
+.atf__gift-row img {
+  flex: 0 0 auto;
+  width: auto;
+  height: var(--space-14);
+  object-fit: contain;
+}
+
+/* `flex flex-col items-center gap-0.5 text-center md:items-start md:text-left` */
+.atf__gift-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-0-5);
+  text-align: left;
+}
+
+/* `text-pretty text-sm font-medium leading-snug text-white md:text-lg 1.7xl:text-2xl */
+.atf__gift-name {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-xl);
+  color: rgb(var(--base-white));
+}
+
+/* `text-sm font-medium text-white/50 line-through md:text-lg 1.7xl:text-2xl` */
+.atf__gift-was {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-xl);
+  color: rgb(255 255 255 / 0.5);
+  text-decoration-line: line-through;
+}
+
+/* The "$315 VALUE" laurel. `absolute hidden ... xl:static xl:block` — from
+   xl (1201) it is a plain third flex item, 135 wide, 156 at min-[1800px]. */
+.atf__value {
+  position: relative;
+  display: block;
+  width: 135px;
+}
+
+.atf__value-frame-art {
+  display: block;
+  width: inherit;
+  height: auto;
+  color: rgb(var(--base-white));
+}
+
+.atf__value-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: max-content;
+  transform: translate(-50%, -50%);
+  padding-right: var(--space-2);
+  text-align: center;
+}
+
+/* `font-serif font-bold ... lg:text-2xl ... 1.7xl:text-[28px]` */
+.atf__value-amount {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-xl);
+  color: rgb(var(--base-white));
+}
+
+/* `font-sans font-medium lg:text-base ... 1.7xl:text-lg` */
+.atf__value-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-md);
+  color: rgb(var(--base-white));
+}
+
+/* --------------------------------------------------- mobile-only controls
+
+   Both the dot pagination and the two overlay arrows are `lg:hidden` in the
+   source, and this rebuild is desktop-only (>=1440). They are present in the
+   markup because they ARE in the reference DOM at every width — the container's
+   element inventory would otherwise be wrong — and hidden here for the same
+   reason the source hides them. Nothing about them is carried into the desktop
+   layout. Their measured mobile geometry is recorded in
+   capture/gallery-probe.json for whenever the mobile range comes back in scope.
+   ------------------------------------------------------------------------- */
+
+.atf__dots,
+.atf__arrow {
+  display: none;
+}
+
+/* ------------------------------------------------------- navigation wrapper
+
+   source: <div class="z-10 w-full pb-0 lg:absolute lg:flex lg:h-fit lg:px-4
+                lg:pb-4 1.5xl:px-6 1.5xl:pb-6 lg:top-[min(55%,662px)] lg:w-fit
+                lg:-translate-y-1/2 lg:translate-x-0 lg:left-0
+                xl:[@media(max-height:716px)]:top-[min(50%,662px)]
+                lg:[@media(max-height:716px)]:-translate-y-[68%]
+                1.7xl:[@media(max-height:716px)]:-translate-y-[56%]">
+
+   Measured boxes (doc coords, computed.json):
+     1440x900 / 1536x900   0, 488.39   112 x 288    top 510.391  translateY -144
+     1662x900 / 1920x900   0, 468.39   124 x 328    top 510.391  translateY -164
+     1440x700              0, 323.72   112 x 288    top 364      translateY -161.28
+
+   All three fall out of the source's own expressions once the percentages are
+   resolved against the 928/728-tall stage: 55% of 928 = 510.391, and -50% of the
+   wrapper's own 288 = -144. At h700 the 716px branch swaps 55% for 50%
+   (364) and -50% for -56% (-161.28), which is why the expressions are kept
+   rather than flattened to constants.
+   ------------------------------------------------------------------------- */
+.atf__nav {
+  position: absolute;
+  left: 0;
+  top: min(55%, 662px);
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  padding-inline: var(--space-6);   /* lg:px-4 -> 1.5xl:px-6 (1.5xl = 1366) */
+  padding-bottom: var(--space-6);   /* lg:pb-4 -> 1.5xl:pb-6; part of the 288 */
+}
+
+/* `flex items-center lg:gap-3 min-[1600px]:gap-4
+    lg:[@media(min-height:864px)]:flex-col lg:[@media(min-height:864px)]:justify-center`
+   Only ONE of its three children is displayed above lg (the rail; both mobile
+   arrows are display:none), so the row/column switch at min-height 864 has no
+   observable effect here and the gap never applies. Reproduced as a column
+   because that is the >=864 case, which is four of the five gated configs. */
+.atf__nav-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+/* `hidden lg:flex lg:flex-col lg:items-center lg:gap-2 min-[1600px]:gap-3`
+   Height check at 1440: two 36px arrows + three 48px thumbs + 4 gaps of 8 +
+   the arrows' own mb-2/mt-2 = 216 + 32 + 16 = 264, exactly as measured.
+   At 1662: 240 + 48 + 16 = 304, also exact. */
+.atf__rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* `h-9 w-9 ... rounded bg-black/15`, with `cursor-default opacity-30` when
+    disabled and `hover:bg-black/50` when not. The up arrow is disabled on
+    slide 1 and the down arrow on slide 6 — both confirmed by the probe. */
+.atf__rail-arrow {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: var(--radius-md);
+  background-color: rgb(0 0 0 / 0.15);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 500ms ease;
+}
+
+.atf__rail-arrow--up   { margin-bottom: var(--space-2); }  /* mb-2 */
+.atf__rail-arrow--down { margin-top: var(--space-2); }     /* mt-2 */
+
+.atf__rail-arrow:hover:not(:disabled) { background-color: rgb(0 0 0 / 0.5); }
+
+.atf__rail-arrow:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+/* `flex items-center justify-center rounded-full w-7 bg-transparent text-white
+    -rotate-90` (up) / `rotate-90` (down). The 28px box is rotated, so its
+    measured bounds are 18.66 x 28 with an 18.66px chevron inside (`size-2/3`). */
+.atf__rail-arrow-inner {
+  display: flex;
+  width: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: rgb(var(--base-white));
+}
+.atf__rail-arrow--up   .atf__rail-arrow-inner { transform: rotate(-90deg); }
+.atf__rail-arrow--down .atf__rail-arrow-inner { transform: rotate(90deg); }
+
+.atf__rail-chev { display: block; width: 66.667%; height: auto; }
+
+/* THUMBNAILS — a sliding window of THREE over six slides.
+
+   Which three is not guessable from a static DOM dump (the reference ships only
+   thumb1..thumb3), so it was driven and recorded. gallery-probe.json, per state:
+
+     active slide  1  2  3  4  5  6
+     window        123 123 234 345 456 456
+
+   i.e. start = clamp(active - 1, 1, 4) — the window centres on the active slide
+   and clamps at both ends. testids are SLIDE-indexed, not position-indexed:
+   at slide 6 the first button is thumb4, and clicking it goes to slide 4.
+
+   Painted state, also measured: the border is blue-200 on ALL of them (it does
+   NOT change with selection — an easy thing to get wrong), the background is
+   `bg-cover` at `50% 50%`, and the only difference between selected and not is
+   `filter: brightness(1)` vs `brightness(0.5)` plus the cursor. */
+.atf__thumb {
+  display: block;
+  width: 64px;
+  height: 48px;
+  overflow: hidden;
+  border: var(--border-2) solid rgb(var(--blue-200));
+  border-radius: var(--radius-xl);
+  background-color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  filter: brightness(0.5);
+  cursor: pointer;
+  padding: 0;
+}
+
+.atf__thumb[aria-current='true'] {
+  filter: brightness(1);
+  cursor: default;
+}
+
+/* --- overlay: heading + award badges (header.absolute.inset-0.z-[1]) --- */
+
+.atf__overlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  height: fit-content;
+  width: 100%;
+  padding-top: var(--space-8); /* lg:pt-8 */
+}
+
+.atf__headline {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 48px; /* xl:px-12 */
+  text-align: center;
+}
+
+/* Reference computed: 32px / 40px, weight 400, PT Serif, centred - one line in
+   the 894px box. 36px (the nominal text-4xl) overflows and wraps to two lines. */
+.atf__headline p {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-regular);
+  line-height: 40px;
+  color: rgb(var(--base-white));
+}
+
+/* ul.--awards : 1.2xl:gap-2 1.2xl:px-2 -> 8px both */
+.atf__awards {
+  pointer-events: none;
+  display: flex;
+  height: max-content;
+  justify-content: center;
+  gap: var(--space-2);
+  padding-inline: var(--space-2);
+  /* reference: headline block ends at doc y 194, awards ul starts at 218 */
+  margin-top: var(--space-6);
+}
+
+.atf__award {
+  display: flex;
+  flex: 1;
+  min-width: max-content;
+  max-width: max-content;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3); /* md:px-3 md:py-2 */
+  text-align: center;
+  background-color: rgb(255 255 255 / 0.1);
+  border-radius: var(--radius-xl);
+}
+
+.atf__award svg {
+  width: 74px;
+  height: 74px;
+  flex: 0 0 74px;
+}
+
+.atf__award span {
+  font-size: var(--text-sm);
+  line-height: 1.1;
+  color: rgb(var(--base-white));
+}
+
+/* Source: `1.7xl:max-2xl:max-w-[90px] 1.7xl:max-2xl:[&_br]:hidden` - between
+   1440 and 1535 the hard <br> breaks are suppressed and the label wraps inside
+   90px, giving 2 lines (90x31) instead of 3. */
+@media (min-width: 1440px) and (max-width: 1535px) {
+  .atf__award span { max-width: 90px; }
+  .atf__award span br { display: none; }
+}
+
+/* the unattributed gold laurel: intrinsic 144x81, scale-[2] */
+.atf__award--laurel {
+  position: relative;
+  display: flex;
+  /* `flex: 1` from .atf__award was letting this grow to 300px, which scale(2)
+     then doubled to a 600x338 laurel. Source is `w-20 shrink-0 ... xsm:w-36`. */
+  flex: 0 0 144px;
+  width: 144px;
+  /* .atf__award sets min/max-width: max-content, which the img's intrinsic size
+     was inflating; both must be overridden here. */
+  min-width: 0;
+  max-width: 144px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+}
+
+.atf__award--laurel img {
+  height: auto;
+  width: 100%;
+  transform: scale(2);
+  object-fit: contain;
+}
+
+/* --- "See What's Inside" pill (z-40, outside the layer scene) --- */
+
+/* The pill is visible ONLY while slide 1 is active. Measured on the live page:
+   slide 1 -> opacity 1 / pointer-events auto; slide 2 -> opacity 0 / none, with
+   the source's own `transition-opacity duration-300 motion-reduce:transition-none`
+   on the element. There is no CSS selector for it in the source — the opacity is
+   set from script — so js/modules/gallery.js publishes the active slide as
+   data-active-slide on .atf__media and this keys off that.
+
+   The pill is NOT inside the gallery container div; it is a sibling, in the same
+   `z-[40]` overlay wrapper as the layer scene. It is coupled here anyway because
+   building a carousel that actually moves is what exposed the coupling. */
+.atf__see-inside {
+  transition: opacity 300ms ease;
+  position: absolute;
+  left: 50%;
+  top: 362px;          /* doc y 484; offsets here are relative to .atf__media at doc 122 */
+  z-index: 40;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* reference: pill top doc 484, chevron top doc 524 -> 4px below the 36px pill */
+  gap: var(--space-1);
+}
+
+.atf__see-inside-pill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  /* pinned to the reference box (404..587 x 484..520). Synthesised 800 weight
+     renders ~6px narrower than the source, so the width is set rather than
+     derived, keeping the icon and text start aligned. */
+  width: 183px;
+  height: 36px;
+  padding: 0 var(--space-3) 0 var(--space-1-5);
+  border-radius: var(--radius-pill);
+  background-color: rgb(var(--blue-500));
+}
+
+.atf__see-inside-icon {
+  position: relative;
+  display: grid;
+  place-content: center;
+  width: var(--space-6);
+  height: var(--space-6);
+  border-radius: var(--radius-pill);
+  background-color: rgb(var(--beige-700));
+}
+
+.atf__see-inside-icon svg { width: 14px; height: 14px; color: rgb(var(--base-white)); }
+
+.atf__see-inside-label {
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  line-height: 1.375;
+  letter-spacing: 0.1em;
+  color: rgb(var(--base-white));
+}
+
+.atf__see-inside-chevron { width: 16px; height: 16px; color: rgb(var(--beige-600)); }
+
+.atf__media[data-active-slide]:not([data-active-slide='1']) .atf__see-inside {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atf__see-inside { transition: none; }   /* motion-reduce:transition-none */
+}
+
+/* --- Product of the Year badge (INSIDE slide 1, not beside the carousel) ---
+
+   source: <div class="absolute z-[1] top-[var(--lux-badge-top)] lg:left-1/2
+                lg:-translate-x-1/2"><picture>...
+   It lives inside slide 1's inner box, so it is gone on slides 2-6 — including
+   slides 5 and 6, which DO repeat the awards header. gallery-probe.json records
+   hasPoyBadge true for slide 1 only. As a sibling of the carousel it would have
+   survived onto every slide, which is why it moved.
+
+   The box is shrink-to-fit against `left: 50%`, so its width is
+   min(212 x 3.389, containing-block / 2) — 474.44 at 1440/1536 (unclamped),
+   then clamped to 571 at 1662 and 700 at 1920, with object-contain
+   letterboxing the 732x216 SVG inside. Measured exactly.
+   --------------------------------------------------------------------------- */
+
+.atf__poy {
+  position: absolute;
+  left: 50%;
+  top: var(--lux-badge-top);
+  z-index: 1;
+  transform: translateX(-50%);
+  width: 474px;
+  height: 140px;
+}
+
+.atf__poy img { width: 100%; height: 140px; object-fit: contain; }
+
+/* --- layer scene: present in the DOM at opacity 0, as captured --- */
+
+.atf__layer-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---------------------------------------------------------------- buy box */
+
+.atf__buy {
+  position: relative;
+  z-index: 11;
+  background-color: rgb(var(--base-white));
+  color: rgb(var(--bg-base-black));
+}
+
+.atf__buy-inner {
+  overflow: hidden;
+  background-color: rgb(var(--base-white));
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+.atf__buy-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);          /* md:gap-y-4 */
+  padding-top: 20px;            /* measured: title row starts at doc y 141 */
+  background-color: rgb(var(--base-white));
+}
+
+/* title */
+.atf__title-row {
+  order: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);   /* measured 4px between title line and rating */
+}
+
+.atf__title-line { display: flex; align-items: center; gap: var(--space-3); width: 100%; }
+
+.atf__title {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: var(--weight-regular);
+  line-height: 36px;
+  text-align: left;
+}
+
+.atf__title b { font-weight: var(--weight-bold); }
+
+/* Reference chip is OUTLINED with a gold underline, not a filled grey pill. */
+.atf__hybrid {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 1px var(--space-1);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgb(var(--bg-base-black));
+  background: none;
+  border: var(--border-1) solid rgb(var(--border-soft));
+  border-radius: var(--radius-xs);
+  text-decoration: underline;
+  text-decoration-color: rgb(var(--highlight-strong));
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+/* rating */
+.atf__rating { display: flex; align-items: center; justify-content: center; gap: var(--space-2); }
+.atf__stars { display: flex; gap: 1px; color: rgb(var(--beige-700)); }
+.atf__stars svg { width: 16px; height: 16px; fill: currentColor; }
+.atf__rating a {
+  position: relative;
+  top: 1px;
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  text-decoration: underline;
+}
+
+/* USP rows */
+.atf__usps {
+  padding-block: var(--space-1);
+  border-top: var(--border-1) solid rgb(var(--border-soft));
+  border-bottom: var(--border-1) solid rgb(var(--border-soft));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.atf__usp { display: flex; align-items: center; gap: var(--space-2); height: 40px; }
+.atf__usp svg { width: 32px; height: 32px; flex: 0 0 32px; color: rgb(var(--bg-base-black)); }
+.atf__usp h3 {
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-md);
+  color: rgb(var(--text-soft));
+}
+
+/* upgrades */
+.atf__upgrades-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);   /* mb-5 with a 1.5xl override -> 4px at 1440 */
+}
+
+.atf__section-label { font-size: var(--text-xl); font-weight: var(--weight-regular); line-height: 28px; }
+.atf__link {
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  text-decoration: underline;
+  color: rgb(var(--bg-base-black));
+}
+
+.atf__upgrades {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* reference: cards 201px wide at x=1006 and x=1223 -> 16px column gap */
+  column-gap: var(--space-4);
+  row-gap: var(--space-2);
+  padding-top: var(--space-5);
+}
+
+.atf__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-2);
+  border: var(--border-1) solid rgb(var(--border-soft));
+  border-radius: var(--radius-xl);
+}
+
+.atf__card--selected {
+  border-color: rgb(var(--bg-base-black));
+  background-color: rgb(var(--fill-offer));
+  pointer-events: none;
+}
+
+.atf__card-top { display: flex; align-items: center; gap: var(--space-2); height: 24px; }
+
+.atf__radio {
+  display: grid;
+  place-content: center;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  border-radius: var(--radius-pill);
+  border: var(--border-2) solid rgb(var(--border-sub-strong));
+}
+
+.atf__radio--on { border: 0; background-color: rgb(var(--fill-green-strong)); color: rgb(var(--base-white)); }
+.atf__radio--on svg { width: 14px; height: 14px; }
+
+.atf__card-delta { font-size: var(--text-md); font-weight: var(--weight-medium); }
+.atf__card-dot { width: 10px; height: 10px; border-radius: var(--radius-pill); background: rgb(var(--fill-green-strong)); margin-left: auto; }
+
+.atf__card-media { position: relative; width: 100%; height: 90px; }
+.atf__card-media img { display: block; margin: 0 auto var(--space-2); width: auto; height: 82px; object-fit: contain; }
+
+.atf__card-body { display: flex; flex-direction: column; gap: var(--space-1); }
+/* Reference card-name box is exactly 20px tall WITH the HYBRID chip inline, so
+   the chip must not grow the line. */
+.atf__card-name { font-family: var(--font-serif); font-size: var(--text-sm); line-height: var(--leading-sm); }
+.atf__card-name { height: 20px; }   /* pinned: the chip must not grow the line */
+.atf__card-name .atf__hybrid { padding: 0 2px; font-size: var(--text-2xs); line-height: 14px; }
+.atf__card-name b { font-weight: var(--weight-bold); }
+.atf__card-list { display: flex; flex-direction: column; font-size: var(--text-sm); font-weight: var(--weight-medium); }
+.atf__card-list li { display: flex; align-items: flex-start; gap: 2px; line-height: var(--leading-sm); color: rgb(var(--text-sub-strong)); }
+.atf__card-list svg { width: 14px; height: 14px; flex: 0 0 14px; margin-top: 3px; color: rgb(var(--icon-green)); }
+
+.atf__ribbon {
+  position: absolute;
+  bottom: 100%;
+  right: -1px;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding-inline: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: rgb(var(--base-white));
+  background-color: rgb(var(--bg-base-black));
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+/* size selector */
+.atf__sizes-wrap { width: 100%; }
+.atf__sizes-dl { margin-bottom: var(--space-6); }  /* mb-8 lg:mb-9 1.5xl:mb-6 -> 24px at 1440 */
+.atf__sizes-dt { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-2); }
+.atf__sizes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+  border-color: rgb(var(--blue-600));
+}
+
+/* measured: 134x52, padding-top 4, 18px/18px, weight 500 unselected /
+   700 selected, colour navy-800, border solid-beige-500 -> base-black. */
+.atf__size {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 52px;
+  padding-top: var(--space-1);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+  line-height: 18px;
+  text-align: center;
+  color: rgb(var(--text-sub-strong));
+  border: var(--border-1) solid rgb(var(--border-soft));
+  border-radius: var(--radius-xl);
+}
+
+.atf__size[aria-pressed='true'] {
+  font-weight: var(--weight-bold);
+  color: rgb(var(--bg-base-black));
+  border-color: rgb(var(--bg-base-black));
+  background-color: rgb(var(--fill-offer));
+}
+
+/* price */
+.atf__price {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  /* measured: 21px above the total row, 13px below the price line */
+  padding: 20px var(--space-2) 12px;
+  background-color: rgb(10 204 146 / 0.05);
+  border: var(--border-1) solid rgb(var(--fill-green-strong) / 0.35);
+  border-radius: var(--radius-2xl);
+}
+
+.atf__price-tag {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding-inline: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgb(var(--base-white));
+  background-color: rgb(var(--fill-green-strong));
+  border-radius: var(--radius-lg);
+}
+
+/* measured: 18px / 500, colour rgb(89,108,127) */
+.atf__price-total {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+  color: rgb(var(--text-soft));
+}
+
+.atf__price-total s { text-decoration: line-through; }
+.atf__info { width: 16px; height: 16px; color: rgb(var(--bg-base-black)); }
+
+.atf__price-main {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  line-height: 28px;
+  text-align: center;
+}
+
+.atf__price-main .atf__price-now { color: rgb(var(--fill-green-strong)); }
+
+/* add to cart */
+.atf__atc-wrap {
+  /* measured: 17px top / 17px sides / 1px bottom (border only) */
+  padding: var(--space-4) var(--space-4) 0;
+  background-color: var(--raw-upgrade-bg);
+  border: var(--border-1) solid var(--raw-upgrade-border);
+  border-radius: var(--radius-2xl);
+}
+
+.atf__atc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 100%;
+  height: 64px;
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  color: rgb(var(--base-white));
+  background-color: rgb(var(--fill-cta));
+  border-radius: var(--radius-xl);
+  white-space: nowrap;
+}
+
+.atf__atc-sub { font-size: 0.7em; line-height: 1.25; }
+
+.atf__atc-note {
+  padding-block: var(--space-3);
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  line-height: 28px;
+  text-align: center;
+}
+
+/* finance / guarantee / delivery */
+.atf__fine { display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-2); }
+.atf__affirm { font-size: var(--text-md); font-weight: var(--weight-medium); line-height: 26px; text-align: center; }
+.atf__affirm a { text-decoration: underline; font-size: var(--text-sm); }
+.atf__guarantee { display: flex; align-items: center; justify-content: center; gap: var(--space-1); }
+.atf__guarantee span { font-size: var(--text-md); font-weight: var(--weight-medium); line-height: var(--leading-md); }
+.atf__delivery { font-size: var(--text-lg); font-weight: var(--weight-medium); line-height: 28px; text-align: center; color: rgb(var(--text-soft)); }
+.atf__delivery b { font-weight: var(--weight-bold); }
+
+/* bundle */
+.atf__bundle-wrap { margin-top: var(--space-1); }   /* source mt-1 */
+.atf__bundle {
+  position: relative;
+  width: 100%;
+  padding-block: var(--space-4);
+  background-color: rgb(var(--solid-beige-100));
+  border: var(--border-1) solid rgb(var(--border-soft));
+  border-radius: var(--radius-2xl);
+}
+
+.atf__bundle-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 var(--space-4) var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: var(--border-1) solid rgb(var(--border-soft));
+}
+
+.atf__bundle-title { font-family: var(--font-serif); font-size: var(--text-xl); line-height: 28px; }
+.atf__bundle-price { text-align: right; }
+.atf__bundle-price s { display: block; font-family: var(--font-serif); font-size: var(--text-2xl); line-height: 28px; text-decoration: line-through; }
+.atf__bundle-price em { line-height: 17px; }
+.atf__bundle-price em { display: block; font-size: var(--text-xs); font-weight: var(--weight-bold); font-style: normal; color: rgb(var(--fill-green-strong)); }
+
+/* Reference: [two pillows 190px][+ 24px][mask 87px] with 8px gaps, centred in
+   the 416px box. Items are 95/95/87 wide with a 70px-max image inside. */
+.atf__bundle-grid { display: flex; align-items: flex-start; justify-content: center; gap: var(--space-2); margin-inline: auto; max-width: 456px; }
+.atf__bundle-item { width: 95px; }
+.atf__bundle-item:last-of-type { width: 87px; }
+.atf__bundle-item { position: relative; display: flex; min-width: 0; flex-direction: column; gap: var(--space-2); align-items: center; }
+.atf__bundle-item div { display: flex; align-items: center; justify-content: center; width: 95px; height: 58px; }
+/* measured: 95x58 with max-width 95 and object-fit contain */
+.atf__bundle-item img { width: 95px; height: 58px; max-width: 95px; object-fit: contain; }
+.atf__bundle-item p { font-size: var(--text-sm); line-height: 22px; text-align: center; }
+.atf__bundle-plus { display: grid; place-content: center; width: 24px; height: 24px; align-self: center; border-radius: var(--radius-pill); background: rgb(var(--solid-beige-300)); }
+
+/* trust row */
+.atf__trust-wrap { display: flex; justify-content: center; padding-top: var(--space-5); padding-bottom: 2px; }
+/* Reference has all four items on ONE row, content-sized (82/93/82/82) with
+   16px gaps filling the 386px content box exactly - not the 2x2 wrap that
+   flex-[1_1_calc(50%-16px)] would give at this width. */
+.atf__trust {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 13px var(--space-4);
+  background-color: rgb(var(--solid-beige-100));
+  border-radius: var(--radius-2xl);
+}
+/* measured: icon 52x52 at y1489, label 16px/24 at y1541 -> zero gap, 100px tall */
+.atf__trust-item { display: flex; flex: 0 0 auto; flex-direction: column; align-items: center; gap: 0; height: 100px; justify-content: center; }
+.atf__trust-item svg { width: 52px; height: 52px; color: rgb(var(--bg-base-black)); }
+.atf__trust-item p { max-width: max-content; font-size: var(--text-md); font-weight: var(--weight-medium); line-height: var(--leading-md); text-align: center; color: rgb(var(--text-sub-strong)); }
+
+/* concierge */
+.atf__concierge-wrap { height: fit-content; background: rgb(var(--base-white)); padding-top: var(--space-14); padding-bottom: var(--space-3); }
+.atf__concierge {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 37px var(--space-6) 25px;   /* measured from the reference box */
+  background-color: #fafafa;
+  border-radius: var(--radius-5xl);
+}
+.atf__concierge-avatar { position: absolute; left: 50%; top: -22px; width: 58px; height: 58px; transform: translateX(-50%); border-radius: var(--radius-pill); }
+.atf__concierge h3 { font-family: var(--font-serif); font-size: var(--text-2xl); font-weight: var(--weight-bold); line-height: 32px; text-align: center; text-wrap: balance; }
+.atf__concierge p { margin-top: var(--space-2); font-size: var(--text-lg); font-weight: var(--weight-medium); line-height: var(--leading-md); text-align: center; color: rgb(var(--text-sub-strong)); }
+.atf__concierge-actions { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); width: 100%; margin-top: var(--space-3); }
+.atf__call {
+  display: flex; align-items: center; justify-content: center; gap: var(--space-2);
+  width: 100%; height: 56px;
+  font-size: var(--text-lg); font-weight: var(--weight-medium);
+  color: rgb(var(--base-white)); background-color: rgb(var(--neutral-500));
+  border-radius: var(--radius-xl);
+}
+.atf__or { font-size: var(--text-md); line-height: var(--leading-md); color: rgb(var(--text-sub-strong)); }
+.atf__chat-link svg { width: var(--space-6); height: var(--space-6); }
+.atf__chat-link { display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-lg); line-height: var(--leading-md); font-weight: var(--weight-medium); text-decoration: underline; color: rgb(var(--blue-500)); }
+
+/* ==========================================================================
+   lg (1025) and up: the two-column grid
+   ========================================================================== */
+
+@media (min-width: 1025px) {
+  .atf__grid {
+    display: grid;
+    /* minmax(0, …), NOT a bare 1fr: `1fr` is minmax(auto, 1fr) and so cannot go
+       below the track's min-content width. Each slide's photo carries
+       `min-width: 1024px`, so six of them made min-content ~6224px and the grid
+       blew out to that. The photos are supposed to overflow a 990px track and be
+       clipped by the carousel, which minmax(0, 1fr) allows. */
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+
+  /* The media column is sticky and takes its height from the carousel, which
+     resolves the source's own
+       lg:h-[min(100%, calc(100dvh - var(--header-height) + 150px))]
+     -> 928 at a 900px-tall viewport, 728 at 700. Neither is hardcoded. */
+  .atf__media { position: sticky; top: var(--header-height); width: 100%; }
+  .atf__buy { width: 450px; }
+}
+
+/* ==========================================================================
+   2xl (1536) and up: the buy box widens and its gutters double.
+
+   Source chains, measured in capture/dom/{1440,1536,1662,1920}x900/computed.json:
+     column   `px-4 md:px-8 lg:px-4 1.5xl:px-4 2xl:px-8`
+                450 wide / 16px inline at 1440 -> 520 / 32px at 1536, 1662, 1920
+     inner    `pt-4 lg:pt-6 1.5xl:pt-5 2xl:pt-6`
+                20px at 1440 -> 24px at 1536+
+   The value is flat across 1536/1662/1920, so this is one step, not three.
+   The gallery track is the grid's `1fr`, so it picks up the remaining width
+   automatically: 990 / 1016 / 1142 / 1400 — matching the reference exactly.
+   ========================================================================== */
+@media (min-width: 1536px) {
+  /* `--pdp-top-fold-rhs-column-width: 520px` — this is the SAME number as the
+     buy box width below, and --content-width is derived from it, so the hero
+     photo widens with the track (1016 -> 1024 floor, then 1142 / 1400). */
+  .atf__media { --pdp-rhs-column-width: 520px; }
+  .atf__buy { width: 520px; }
+  .atf__buy-inner { padding-inline: var(--space-8); }
+  .atf__buy-col { padding-top: var(--space-6); }
+
+  /* Every rule below is a `2xl:` step the source declares inside the buy box.
+     Enumerated by diffing computed values for every element in the column that
+     carries a 2xl variant, 1440 vs 1536 — not by eye. Each is flat across
+     1536/1662/1920, so this is one step, not three.
+
+     source chain                                  1440  ->  1536+          */
+  /* -order-1 ... 1.5xl:gap-1 2xl:gap-3            4px   ->  12px           */
+  .atf__title-row { gap: var(--space-3); }
+  /* font-serif ... 1.5xl:text-3xl 2xl:text-4xl    28/36 ->  32/40          */
+  .atf__title { font-size: 32px; line-height: 40px; }
+  /* h-5 w-auto ... 1.5xl:h-[16px] 2xl:h-[20px]    16    ->  20 (viewBox
+     20x19, so width tracks height: 16.83 -> 21.05)                         */
+  .atf__stars svg { width: 21.05px; height: 20px; }
+  /* mb-1 flex flex-col ... 1.5xl:mb-0 2xl:mb-2    0     ->  8px            */
+  .atf__upgrades-wrap { margin-bottom: var(--space-2); }
+  /* relative flex flex-col ... lg:p-2 2xl:p-3     8px   ->  12px           */
+  .atf__card { padding: var(--space-3); }
+  /* mb-8 lg:mb-9 1.5xl:mb-6 2xl:mb-9              24px  ->  36px           */
+  .atf__sizes-dl { margin-bottom: 36px; }
+  /* mt-1 flex flex-col ... md:gap-2 2xl:gap-3     8px   ->  12px           */
+  .atf__fine { gap: var(--space-3); }
+  /* price box `gap-2 ... gap-x-4 gap-y-0`: computed row-gap 0 -> 4px, which is
+     the whole of the block's 86 -> 90 growth (its children keep their heights
+     and simply start 4px lower).                 0     ->  4px            */
+  .atf__price { row-gap: 4px; }
+  /* h-20 lg:h-[46px] 1.5xl:h-[58px] 2xl:h-20      58px  ->  80px           */
+  .atf__bundle-item div,
+  .atf__bundle-item img { height: 80px; }
+
+  /* The Add-to-Cart sub-label is `block 2xl:inline 2xl:text-xl`, and the source
+     reveals a `hidden 2xl:inline` "- " separator alongside it. So the button
+     goes from two stacked lines to one row at 1536+. Button height is a fixed
+     64px at both, so this changes composition, not flow. */
+  .atf__atc { flex-direction: row; gap: var(--space-2); }
+  .atf__atc-sub { font-size: var(--text-xl); line-height: 28px; }
+  .atf__atc-sub::before { content: '- '; }
+}
+
+/* ==========================================================================
+   Page-level overlay stubs that the captured reference bakes into this clip.
+
+   These are NOT part of the above-the-fold module. They are third-party
+   surfaces (Iubenda consent, Gleen chat, Google Merchant badge) that the brief
+   requires be stripped and replaced by inert, visually faithful stand-ins. They
+   appear inside this section's reference PNG because they were on screen when it
+   was captured, and the cookie banner alone is 5.3% of the clip - far above the
+   0.5% gate - so the clip cannot pass without them.
+
+   Positions are section-relative (the section starts at doc y=121) and taken
+   from capture/dom/1440x900/computed.json. Once the whole page exists these
+   should become page-level fixed overlays; the absolute placement here is what
+   reproduces the captured clip. Logged in docs/DEVIATIONS.md.
+   ========================================================================== */
+
+.atf__overlay-stub { position: absolute; z-index: 200; }
+
+/* --- Iubenda consent banner: doc 0,1703  1440x97 --- */
+.stub-cookie {
+  left: 0;
+  top: 1582px;
+  width: 1440px;
+  height: 97px;
+  background-color: rgb(var(--base-white));
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  color: rgb(var(--bg-base-black));
+}
+
+.stub-cookie__inner {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-8);
+  border: var(--border-1) solid transparent;
+}
+
+/* source: `gap-x-[72px] lg:flex-row lg:justify-between 1.7xl:gap-x-[72px]`
+   832 + 72 + 470 = 1374 */
+.stub-cookie__row { display: flex; align-items: center; width: 1374px; gap: 72px; }
+
+.stub-cookie__text {
+  /* source: `px-5 text-sm font-medium md:text-base lg:px-0` -> at lg the padding
+     is removed and the size is 16px. 14px let an extra clause fit on line 2. */
+  width: 832px;
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-md);
+  color: rgb(var(--text-sub-strong));
+}
+
+.stub-cookie__text a {
+  font-weight: var(--weight-bold);
+  color: var(--raw-link-blue);
+  text-decoration: underline;
+}
+
+/* reference: actions block is flush right of the 1374px row (937..1407) */
+.stub-cookie__actions { display: flex; align-items: center; width: 470px; height: 40px; }
+
+.stub-cookie__choices {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 184px;
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  color: var(--raw-link-blue);
+}
+.stub-cookie__choices svg { width: 36px; height: 16px; }
+
+.stub-cookie__ok {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 194px;
+  height: 40px;
+  margin-left: var(--space-6);
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  color: rgb(var(--base-white));
+  background-color: rgb(var(--fill-cta));
+  border-radius: var(--radius-xl);
+}
+
+.stub-cookie__close { margin-left: var(--space-4); padding: var(--space-1); width: 28px; height: 28px; color: rgb(var(--bg-base-black)); }
+.stub-cookie__close svg { width: 20px; height: 20px; }
+
+/* --- Gleen chat launcher: doc 1245,794  155x66 --- */
+.stub-chat {
+  left: 1245px;
+  top: 673px;
+  z-index: 48;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 155px;
+  height: 66px;
+  padding-left: var(--space-3);
+  background-color: rgb(var(--neutral-500));
+  border-radius: 33px;
+  color: rgb(var(--base-white));
+}
+.stub-chat span { font-size: var(--text-lg); line-height: var(--leading-md); }
+.stub-chat img { width: 48px; height: 48px; border-radius: var(--radius-pill); margin-right: 12px; }
+
+/* --- Google Merchant badge: doc 0,789  84x84 --- */
+.stub-merchant {
+  left: 0;
+  top: 668px;
+  z-index: 49;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+}
+/* Google's badge is a white pill with a coloured glyph, not a solid blue dot. */
+.stub-merchant span {
+  display: grid;
+  place-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-pill);
+  background: #fff;
+  color: #4285f4;
+  font-size: var(--text-xl);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.25);
+}
+
+/* ==========================================================================
+   Gallery column above 1536.
+
+   Every number below was read from capture/dom/{1440,1536,1662,1920}x900/
+   computed.json by diffing each element that carries a 3xl:/4xl:/min-[1600px]
+   variant. The awards row, the thumbnail rail and the badges are all FLAT at
+   1440 and 1536 and step once at 1662, holding through 1920 — so this is a
+   single 1662 block plus the two genuinely fluid positions.
+   ========================================================================== */
+
+/* `min-[1600px]` thumbnail rail: outer gap 12 -> 16, inner gap 8 -> 12,
+   thumbs 64x48 -> 76x56. The rail keeps a constant centre (498.39 from the
+   slide origin at both 1440 and 1662), so it is anchored by that centre rather
+   than by a per-width top: its height changes 264 -> 304 and the centre holds. */
+/* `min-[1600px]` — the one arbitrary breakpoint the rail uses. Outer gap 12->16,
+   inner gap 8->12, thumbs 64x48 -> 76x56, which grows the rail 264 -> 304 and the
+   wrapper 112x288 -> 124x328. All four measured at 1662 and 1920; the wrapper's
+   own top/translate expressions then re-centre it with no per-width constant. */
+@media (min-width: 1600px) {
+  .atf__nav-col { gap: var(--space-4); }
+  .atf__rail { gap: var(--space-3); }
+  .atf__thumb { width: 76px; height: 56px; }
+}
+
+@media (min-width: 1662px) {
+  /* HERO VERTICAL OFFSET. Like the 93px at 1440, this is CALIBRATED TO THE
+     REFERENCE PNG, not derived: the captured geometry puts the hero's layout box
+     at the section top at every width, yet the PNGs disagree with their own
+     geometry dump — by +93px at 1440/1536 and by -8px at 1662/1920. Swept the
+     same way, and the minimum is sharp at both widths:
+       1662   -11: 5.06%   -9: 3.23%   -8: 3.04% <-min   -7: 3.94%
+       1920   -11: 6.60%   -9: 4.48%   -8: 3.51% <-min   -7: 3.94%
+     The step lands exactly on 3xl, which is suspicious but unexplained; it is a
+     capture-side artifact, not a rule the source states. See DEVIATIONS. */
+  /* `--content-position--min: -232px`, then `-164px` for
+     [data-product-type=mattress] — which this page is. The clamp then lands on
+     -6.318px at h900, which x1.3 is the -8px the 3xl block used to hardcode as a
+     calibration. It is now derived. */
+  .atf__media {
+    --content-position-min: -164px;
+    --lux-badge-top: 500px;
+  }
+  /* `3xl:gap-6 3xl:px-6` — gap and inline padding 8px -> 24px, row 90 -> 102 */
+  .atf__awards { gap: var(--space-6); padding-inline: var(--space-6); }
+  /* `size-[74px] 3xl:size-[86px]` */
+  .atf__award svg { width: 86px; height: 86px; flex: 0 0 86px; }
+  /* `xsm:w-36 3xl:w-44` plus `scale-[2] 3xl:scale-[1.5]` */
+  .atf__award--laurel { flex: 0 0 176px; width: 176px; max-width: 176px; }
+  .atf__award--laurel img { transform: scale(1.5); }
+  /* `md:h-[140px] 3xl:h-[212px]`; the box width is container-driven, measured
+     571 at 1662 and 700 at 1920 (see the 1920 block below). */
+  .atf__poy { width: 571px; height: 212px; }   /* top comes from --lux-badge-top */
+  .atf__poy img { height: 212px; }
+  /* `3xl:top-auto` + `3xl:bottom-[calc(580px-(100vw-1662px)*0.25)]`, against the
+     928px carousel. Reproduces 292px at 1662 and 356.5px at 1920 exactly, so it
+     is written as the source's own expression rather than two constants. */
+  .atf__see-inside { top: auto; bottom: calc(580px - (100vw - 1662px) * 0.25); }
+}
+
+/* `min-[1800px]:w-[156px]` on slide 4's value laurel: 135 -> 156, which grows
+   the bundle row 122 -> 138 and the overlay 218 -> 234. Measured at 1920. */
+@media (min-width: 1800px) {
+  .atf__value { width: 156px; }
+}
+
+@media (min-width: 1920px) {
+  /* `--lux-badge-top: clamp(500px, calc(500px + (760-500)*(100dvh-768px)/(1024-768)), 760px)`
+     -> 634.06px at a 900px-tall viewport, which is what computed.json records.
+     Written as the source's clamp so it stays correct off the probe heights. */
+  .atf__media {
+    --lux-badge-top: clamp(500px, calc(500px + (760 - 500) * (100dvh - 768px) / (1024 - 768)), 760px);
+  }
+  .atf__poy { width: 700px; }
+
+  /* `4xl:h-[max(var(--gallery-height),100%)]` on the photo frame. At 1920 Chrome
+     resolves this to the frame's content height (1722px = the 1400-wide photo's
+     own height), which also grows .atf__slide-inner 680 -> 1722. Nothing painted
+     changes — the frame has no background and the carousel clips at 928 — but it
+     is the source's box, so it is reproduced. */
+  .atf__slide-frame { height: max(var(--gallery-height), 100%); }
+}
+
+/* ==========================================================================
+   Height-sensitive rules. The source keys several gallery values off viewport
+   HEIGHT as well as width; 1440x700 is the gated probe below 720.
+   ========================================================================== */
+
+/* `@media (min-width:1440px) and (max-height:700px) { --lux-badge-top: 540px }`
+   is overridden by the later
+   `@media (max-width:1440px) and (max-height:720px) { --lux-badge-top: 475px }`,
+   and 475 is what computed.json records at 1440x700. Both are declared so the
+   1441..1535 band is not silently wrong. */
+@media (max-width: 1536px) and (max-height: 720px) {
+  .atf__media { --content-position-min: -5px; --lux-badge-top: 459px; }
+}
+@media (max-width: 1440px) and (max-height: 720px) {
+  .atf__media { --content-position-min: 10px; --lux-badge-top: 475px; }
+}
+
+/* The nav wrapper's own height branch:
+     xl:[@media(max-height:716px)]:top-[min(50%,662px)]     -> 364 at h700
+     1.7xl:[@media(max-height:716px)]:-translate-y-[56%]    -> -161.28 of 288
+   Both measured at 1440x700 (wrapper at y 323.72). */
+@media (min-width: 1440px) and (max-height: 716px) {
+  .atf__nav { top: min(50%, 662px); transform: translateY(-56%); }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "puffy-lux-pdp-capture",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Capture + pixel-verification tooling. NOT required to view the rebuilt page.",
+  "scripts": {
+    "capture": "node capture.mjs",
+    "verify": "node verify.mjs",
+    "gen": "node gen-html.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.62.1",
+    "pixelmatch": "7.2.0",
+    "pngjs": "7.0.0"
+  }
+}

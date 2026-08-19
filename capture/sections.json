@@ -1,0 +1,359 @@
+{
+  "discoveredAt": "2026-08-18T19:29:02.953Z",
+  "viewport": "1440x900",
+  "count": 28,
+  "sections": [
+    {
+      "slug": "header",
+      "selector": "#header",
+      "kind": "chrome",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 122
+      }
+    },
+    {
+      "slug": "sale-banner",
+      "selector": "#sale-banner",
+      "kind": "chrome",
+      "rect": {
+        "x": 0,
+        "y": 64,
+        "w": 1440,
+        "h": 58
+      }
+    },
+    {
+      "slug": "above-the-fold",
+      "selector": "#product-page > *:nth-child(1)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 121,
+        "w": 1440,
+        "h": 1836
+      },
+      "heading": "Puffy Lux",
+      "id": "pdp-above-the-fold"
+    },
+    {
+      "slug": "usp-tag-banner",
+      "selector": "#product-page > *:nth-child(2)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 1956,
+        "w": 1440,
+        "h": 104
+      },
+      "heading": null,
+      "id": null
+    },
+    {
+      "slug": "americas-1-award-winning-mattress",
+      "selector": "#product-page > *:nth-child(3)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 2060,
+        "w": 1440,
+        "h": 896
+      },
+      "heading": "America’s #1 Award-Winning Mattress",
+      "id": null
+    },
+    {
+      "slug": "risk-free-365-night-sleep",
+      "selector": "#product-page > *:nth-child(4)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 2956,
+        "w": 1440,
+        "h": 364
+      },
+      "heading": "Risk-Free 365-Night Sleep Trial",
+      "id": null
+    },
+    {
+      "slug": "experience-8-layers-of-luxurious",
+      "selector": "#product-page > *:nth-child(5)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 3320,
+        "w": 1440,
+        "h": 829
+      },
+      "heading": "Experience 8 Layers of Luxurious Comfort",
+      "id": null
+    },
+    {
+      "slug": "stay-cool-all-night-with",
+      "selector": "#product-page > *:nth-child(6)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 4149,
+        "w": 1440,
+        "h": 3544
+      },
+      "heading": "Stay Cool All-Night With Our Cooling Cloud™ Layer",
+      "id": null
+    },
+    {
+      "slug": "shop-our-award-winning-mattresses",
+      "selector": "#product-page > *:nth-child(8)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 7692,
+        "w": 1440,
+        "h": 1157
+      },
+      "heading": "Shop Our Award-Winning Mattresses Loved by 1M+ Sleepers",
+      "id": null
+    },
+    {
+      "slug": "the-2-in-1-mattress",
+      "selector": "#product-page > *:nth-child(9)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 8849,
+        "w": 1440,
+        "h": 671
+      },
+      "heading": "The 2-in-1 Mattress: Plush + Firm",
+      "id": null
+    },
+    {
+      "slug": "free-luxury-pillows-and-sleep",
+      "selector": "#product-page > *:nth-child(10)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 9520,
+        "w": 1440,
+        "h": 454
+      },
+      "heading": "Free Luxury Pillows and Sleep Mask",
+      "id": null
+    },
+    {
+      "slug": "feel-incredible-every-morning-with",
+      "selector": "#product-page > *:nth-child(11)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 9974,
+        "w": 1440,
+        "h": 1074
+      },
+      "heading": "Feel Incredible Every Morning With Puffy",
+      "id": null
+    },
+    {
+      "slug": "the-peoples-choice-puffy-lux",
+      "selector": "#product-page > *:nth-child(12)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 11048,
+        "w": 1440,
+        "h": 855
+      },
+      "heading": "The People’s Choice: Puffy Lux Hybrid Voted Product of the Year 2025",
+      "id": null
+    },
+    {
+      "slug": "find-your-perfect-mattress-match",
+      "selector": "#product-page > *:nth-child(13)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 11903,
+        "w": 1440,
+        "h": 660
+      },
+      "heading": "Find Your Perfect Mattress Match in Under 2 Minutes",
+      "id": null
+    },
+    {
+      "slug": "experience-superior-back-support-and",
+      "selector": "#product-page > *:nth-child(14)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 12563,
+        "w": 1440,
+        "h": 1162
+      },
+      "heading": "Experience Superior Back Support and Cooling for Your Best Rest Yet",
+      "id": null
+    },
+    {
+      "slug": "questions-weve-got-answers",
+      "selector": "#product-page > *:nth-child(15)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 13725,
+        "w": 1440,
+        "h": 1434
+      },
+      "heading": "Questions? We’ve Got Answers",
+      "id": null
+    },
+    {
+      "slug": "9-reasons-why-1m-sleepers",
+      "selector": "#product-page > *:nth-child(16)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 15159,
+        "w": 1440,
+        "h": 796
+      },
+      "heading": "9 Reasons Why 1M+ Sleepers Choose the Puffy Lux Hybrid",
+      "id": null
+    },
+    {
+      "slug": "unbox-your-puffy-mattress-in",
+      "selector": "#product-page > *:nth-child(17)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 15955,
+        "w": 1440,
+        "h": 763
+      },
+      "heading": "Unbox Your Puffy Mattress in Minutes",
+      "id": null
+    },
+    {
+      "slug": "real-sleep-problems-real-solutions",
+      "selector": "#product-page > *:nth-child(18)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 16718,
+        "w": 1440,
+        "h": 1297
+      },
+      "heading": "Real Sleep Problems, Real Solutions",
+      "id": null
+    },
+    {
+      "slug": "hear-from-our-14-000",
+      "selector": "#product-page > *:nth-child(19)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 18015,
+        "w": 1440,
+        "h": 6661
+      },
+      "heading": "Hear From Our 14,000+ Satisfied Puffy Sleepers",
+      "id": null
+    },
+    {
+      "slug": "contact-us-7-days-a",
+      "selector": "#product-page > *:nth-child(20)",
+      "kind": "content",
+      "rect": {
+        "x": 0,
+        "y": 24676,
+        "w": 1440,
+        "h": 1008
+      },
+      "heading": "Contact Us 7 Days a Week for Best-in-Class Support",
+      "id": null
+    },
+    {
+      "slug": "gallery",
+      "selector": "[data-testid=\"pdp_gallery_carousel\"]",
+      "kind": "subcomponent",
+      "heightSensitive": false,
+      "rect": {
+        "x": 0,
+        "y": 122,
+        "w": 990,
+        "h": 928
+      }
+    },
+    {
+      "slug": "layer-scene",
+      "selector": "#see-inside-layer-scene",
+      "kind": "subcomponent",
+      "heightSensitive": true,
+      "rect": {
+        "x": 0,
+        "y": 122,
+        "w": 990,
+        "h": 928
+      }
+    },
+    {
+      "slug": "buy-box",
+      "selector": "#pdp-description",
+      "kind": "subcomponent",
+      "heightSensitive": false,
+      "rect": {
+        "x": 990,
+        "y": 121,
+        "w": 450,
+        "h": 1836
+      }
+    },
+    {
+      "slug": "footer-products",
+      "selector": "#footer section:nth-of-type(1)",
+      "kind": "footer",
+      "rect": {
+        "x": 76,
+        "y": 25684,
+        "w": 1288,
+        "h": 834
+      },
+      "heading": "Products"
+    },
+    {
+      "slug": "footer-part-2",
+      "selector": "#footer section:nth-of-type(2)",
+      "kind": "footer",
+      "rect": {
+        "x": 0,
+        "y": 26518,
+        "w": 1440,
+        "h": 186
+      },
+      "heading": null
+    },
+    {
+      "slug": "footer-part-3",
+      "selector": "#footer section:nth-of-type(3)",
+      "kind": "footer",
+      "rect": {
+        "x": 78,
+        "y": 26704,
+        "w": 1284,
+        "h": 88
+      },
+      "heading": null
+    },
+    {
+      "slug": "footer",
+      "selector": "#footer",
+      "kind": "footer",
+      "rect": {
+        "x": 0,
+        "y": 25684,
+        "w": 1440,
+        "h": 1188
+      }
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+/* ==========================================================================
+   s-header — announcement bar + primary navigation.
+
+   Reference geometry @1440x900 (capture/dom/1440x900/geometry.json):
+     #header       1440 x 122   position: fixed
+     #navbar       1440 x  64   padding-inline 40px
+     #sale-banner  1440 x  58
+   All values below were read from capture/dom/<viewport>/computed.json via
+   `node capture/q.mjs`, not estimated.
+   ========================================================================== */
+
+.s-header {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  width: calc(100% - var(--removed-body-scroll-bar-size, 0px));
+  transition: transform var(--duration-fast) var(--ease-in-out);
+}
+
+.header__content {
+  position: relative;
+  z-index: 20;
+}
+
+/* ---- navbar ---------------------------------------------------------- */
+
+.header__navbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+                          /* h-14; becomes 64px at xl (1201) */
+  color: rgb(var(--text-sub-soft));
+}
+
+/* Painted as a layer rather than a background so it sits under z-20 content,
+   matching the source's z-[19] gradient div. */
+.header__navbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 19;
+  background-image: linear-gradient(var(--raw-navbar-gradient-from), #000000);
+}
+
+.header__navbar > * {
+  position: relative;
+  z-index: 20;
+}
+
+/* ---- mobile menu trigger --------------------------------------------- */
+
+.header__menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-1-5) var(--space-3);
+  color: rgb(var(--text-sub-soft));
+  border: var(--border-1) solid rgb(var(--border-soft));
+  border-radius: var(--radius-xl);
+}
+
+/* ---- logo ------------------------------------------------------------- */
+
+.header__logo {
+  z-index: 30;
+  display: block;
+}
+
+.header__logo svg {
+  max-height: 28px;
+  color: rgb(var(--beige-100));
+}
+
+/* ---- navigation ------------------------------------------------------- */
+
+/* The source ULs carry `space-x-1` = 4px between items. Reference UL widths are
+   445.969 + 12 (primary) and 425.328 + 12 (secondary), i.e. 3 gaps of 4px each.
+   Omitting this offset every nav item and was the bulk of the residual diff. */
+.header__nav-primary ul,
+.header__nav-secondary ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+}
+
+.header__nav-primary a {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  font-size: var(--text-lg);
+  line-height: var(--leading-md);
+}
+
+.header__nav-secondary a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-md);
+}
+
+.header__nav-primary a:hover span,
+.header__nav-secondary a:hover {
+  color: rgb(var(--highlight-soft));
+}
+
+.header__right {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+/* ---- cart ------------------------------------------------------------- */
+
+.header__cart {
+  z-index: 20;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.header__cart-link {
+  position: relative;
+  display: block;
+}
+
+/* Source class chain is `size-6 ... md:size-8 md:h-6 xl:h-7`, so the box is
+   24x24 -> 32x24 at md -> 32x28 at xl. Getting the width wrong here (28 instead
+   of 32) shifted the whole navbar 4px and was the bulk of the header's diff. */
+.header__cart-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(var(--beige-200));
+  border-radius: var(--radius-lg);
+}
+
+.header__cart-count {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  letter-spacing: -0.07em;
+  color: rgb(var(--blue-500));
+  background-color: rgb(var(--beige-200));
+  border-radius: var(--radius-pill);
+}
+
+/* ---- sale banner ------------------------------------------------------ */
+
+.header__sale-banner {
+  position: relative;
+}
+
+/* Mobile: two rows. Reference @390x844 -> bar 390x64, columns
+   1fr auto auto 1fr, row-gap 8px, name 203.47x18, timer 149.61x18,
+   description 374x18 spanning all four columns. */
+.header__sale-bar {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px var(--space-2);
+  color: rgb(var(--base-white));
+  text-align: center;
+  background-color: rgb(var(--fill-cta));
+  user-select: none;
+}
+
+.header__sale-name {
+  grid-area: name;
+  width: fit-content;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* The source styles spans inside BOTH banner cells:
+   [&_span]:font-semibold [&_span]:text-highlight-soft */
+.header__sale-name span,
+.header__sale-desc span {
+  font-weight: var(--weight-semibold);
+  color: rgb(var(--highlight-soft));
+}
+
+.header__sale-desc {
+  grid-area: description;
+}
+
+/* The source renders the banner copy in an inner div at `text-xl leading-none`,
+   not at the cell's inherited 16px/24px. Reference: 20px font, 20px line-height,
+   giving a 20px-tall cell and a 221.641px name width. */
+.header__sale-text {
+  white-space: nowrap;
+  font-size: var(--text-lg);
+  line-height: 1;
+}
+
+/* ---- countdown -------------------------------------------------------- */
+
+.header__timer {
+  grid-area: timer;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.header__timer-groups {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.header__timer-inner {
+  display: flex;
+  align-items: center;
+  color: rgb(var(--text-strong));
+}
+
+.header__timer-unit {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.header__timer-digits {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header__timer-digit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(var(--base-white));
+}
+
+.header__timer-digit p {
+  font-weight: var(--weight-medium);
+  text-align: center;
+  color: rgb(var(--base-black));
+}
+
+.header__timer-colon {
+  position: absolute;
+  right: -10px;
+  font-family: var(--font-serif);
+  font-size: var(--text-md);
+  color: rgb(var(--icon-soft));
+}
+
+.header__timer-label {
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-regular);
+  text-transform: uppercase;
+  color: rgb(var(--text-sub-soft));
+}
+
+/* ---- spacer for the fixed header ------------------------------------- */
+
+.header-spacer {
+  height: calc(var(--header-height) - var(--hp-sale-banner-height, 0px) - 1px);
+}
+
+/* ==========================================================================
+   Breakpoints. Values are the source's real ones (lg=1025, xl=1201), not
+   Tailwind defaults. See css/tokens.css.
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  /* Source: `text-lg ... md:text-sm` -> 18px/24px below md, 14px/20px at md+.
+     Reference @768: 62.75 x 34. Missing this made the button 73.23 x 38. */
+  .header__menu-btn { font-size: var(--text-sm); line-height: var(--leading-sm); }
+
+  .header__cart-icon { width: var(--space-8);  }
+
+  .header__cart-count {
+    top: -4px;
+    right: -5px;
+    width: var(--space-5);
+    height: var(--space-5);
+    font-size: var(--text-sm);
+  }
+}
+@media (min-width: 1025px) {
+  .header__sale-bar {
+    grid-template-columns: none;
+    grid-template-areas: 'name description timer';
+    min-height: 58px;
+    padding-block: var(--space-2);
+    row-gap: 0;
+    column-gap: 0;
+  }
+  .header__sale-text--mobile { display: none; }
+  .header__sale-text--desktop { display: block; font-size: var(--text-xl); }
+  .header__sale-desc { width: auto; padding-left: var(--space-1); }
+  .header__timer-inner { gap: var(--space-4); padding-left: var(--space-4); }
+  .header__timer-unit { flex-direction: column; }
+  .header__timer-digits { gap: var(--space-1); }
+  .header__timer-digit { width: var(--space-6); height: var(--space-6); border-radius: var(--radius-sm); }
+  .header__timer-digit p { font-size: var(--text-xl); }
+  .header__timer-colon { display: block; bottom: 2px; line-height: var(--leading-md); }
+  .header__timer-label { line-height: 12px; }
+  .header__timer-label .is-short { display: none; }
+  .header__timer-label .is-long { display: inline-block; }
+}
+@media (min-width: 1201px) {
+  .header__navbar { height: 64px; }
+  .header__cart-icon { height: 28px; }
+  .header__menu-btn-wrap { display: none; }
+  /* Both navs are `hidden xl:flex` in the source — the `display: none` half of
+     that pair only ever applied below 1201 and is gone (desktop-only scope). */
+  .header__nav-primary { display: flex; flex: 1; align-items: center; justify-content: center; height: 100%; max-width: 100%; }
+  /* Source: `pr-[46px] xl:pr-6 min-[1640px]:pr-4 min-[1740px]:pr-[46px]`. The 46px
+     base was unreachable above 1201 and is removed. 24px is correct at both gated
+     widths (1440, 1536). The 1640/1740 steps are measured but NOT implemented —
+     see docs/DEVIATIONS.md, "Above 1536". */
+  .header__nav-secondary { display: flex; align-items: stretch; height: 100%; padding-right: var(--space-6); }
+  .header__nav-secondary ul { height: 100%; }
+  .header__nav-secondary li { height: 100%; }
+  .header__logo svg { max-width: 134px; }
+}
+@media (min-width: 1341px) {
+  .header__navbar { padding-inline: var(--space-10); }
+  .header__nav-primary a { padding-inline: var(--space-4); }
+  .header__nav-secondary a { padding-inline: var(--space-4); }
+}
+/* The source's primary nav stops being a flex sibling at 1640 and becomes a
+   full-width centred overlay:
+     `xl:flex min-[1640px]:absolute min-[1640px]:left-0 min-[1640px]:flex
+      min-[1640px]:w-full min-[1640px]:justify-center`
+   Confirmed against the live capture, not just the class chain:
+     1440/1536  position static,   x=174  w=732.67 / 828.67
+     1662       position absolute, x=0    w=1662
+     1920       position absolute, x=0    w=1920
+   .header__navbar is position:relative, so left:0 / width:100% resolve against
+   its padding box, which is the full navbar width. */
+@media (min-width: 1640px) {
+  .header__nav-primary { position: absolute; left: 0; width: 100%; }
+  /* `min-[1640px]:pr-4` — reference padding-right at 1662 is 16px (nav width
+     drops 461.33 -> 453.33 accordingly). */
+  .header__nav-secondary { padding-right: var(--space-4); }
+}
+@media (min-width: 1740px) {
+  /* `min-[1740px]:pr-[46px]` — the 46px that was unreachable below xl returns
+     here as a real value. Reference padding-right at 1920 is 46px. */
+  .header__nav-secondary { padding-right: 46px; }
+}

@@ -1,0 +1,319 @@
+/* ==========================================================================
+   tokens.css — the design system.
+
+   The COLOUR system is not our invention: it is the source's own two-tier
+   token architecture, recovered verbatim from the captured stylesheet
+   (capture/dom/1440x900/page.html) — 49 primitives plus 70 semantic aliases.
+   Using their names means a token here maps back to something real in the
+   product rather than to a label we made up.
+
+   Tier 1  primitives   space-separated RGB triplets, consumed as rgb(var(--x)).
+                        Variants suffixed -50/-200/-800 carry a baked alpha, e.g.
+                        --navy-blue-light-200 is "43 47 68/.2".
+   Tier 2  semantic      aliases pointing at tier 1. Section CSS uses ONLY these.
+
+   Type, spacing, radii, motion and layout were derived mechanically from the
+   computed-style dump; usage counts are inline as provenance.
+
+   Reasoning, and every place the source contradicts itself: docs/TOKENS.md
+   ========================================================================== */
+
+:root {
+  /* =======================================================================
+     TIER 1 — primitives (source values, verbatim)
+     ======================================================================= */
+
+  /* base */
+  --base-black: 51 51 51;              /* #333333 */
+  --base-white: 255 255 255;           /* #ffffff */
+  --base-green: 6 122 87;              /* #067a57 */
+  --base-amber: 199 58 58;             /* #c73a3a */
+  --base-red: 143 108 26;              /* #8f6c1a  (yes: source maps base-red to a gold) */
+
+  /* solid beige — the warm neutral ramp that carries most surfaces */
+  --solid-beige-100: 251 251 250;      /* #fbfbfa */
+  --solid-beige-200: 235 234 231;      /* #ebeae7 */
+  --solid-beige-300: 229 227 223;      /* #e5e3df */
+  --solid-beige-400: 241 227 207;      /* #f1e3cf */
+  --solid-beige-500: 213 210 204;      /* #d5d2cc */
+  --solid-beige-600: 142 140 137;      /* #8e8c89 */
+  --solid-beige-700: 70 70 69;         /* #464645 */
+
+  /* beige (tint ramp, distinct from solid-beige) */
+  --beige-100: 250 246 239;            /* #faf6ef */
+  --beige-150: 247 245 242;            /* #f7f5f2 */
+  --beige-200: 241 238 234;            /* #f1eeea */
+  --beige-300: 217 209 197;            /* #d9d1c5 */
+  --beige-500: 241 227 207;            /* #f1e3cf */
+  --beige-600: 224 193 148;            /* #e0c194 */
+  --beige-700: 199 147 68;             /* #c79344 */
+
+  /* blue / navy */
+  --blue-100: 244 245 249;             /* #f4f5f9 */
+  --blue-200: 218 220 232;             /* #dadce8 */
+  --blue-300: 145 151 185;             /* #9197b9 */
+  --blue-500: 43 47 68;                /* #2b2f44 */
+  --blue-600: 27 29 43;                /* #1b1d2b */
+  --navy-blue-light-1000: 43 47 68;    /* #2b2f44 */
+  --navy-blue-light-800: 43 47 68/.8;
+  --navy-blue-light-200: 43 47 68/.2;
+  --navy-blue-light-50: 43 47 68/.05;
+  --navy-blue-dark-1000: 119 123 145;  /* #777b91 */
+  --navy-blue-dark-800: 119 123 145/.8;
+  --navy-blue-dark-200: 119 123 145/.2;
+  --navy-blue-dark-50: 119 123 145/.08;
+
+  /* neutral / slate */
+  --neutral-100: 255 255 255;
+  --neutral-200: 246 248 249;          /* #f6f8f9 */
+  --neutral-300: 177 189 200;          /* #b1bdc8 */
+  --neutral-500: 89 108 127;           /* #596c7f */
+  --neutral-600: 53 73 94;             /* #35495e */
+  --neutral-700: 44 54 64;             /* #2c3640 */
+  --neutral-800: 31 31 31;             /* #1f1f1f */
+  --slate-gray-light-1000: 89 108 127; /* #596c7f */
+  --slate-gray-dark-1000: 134 156 178; /* #869cb2 */
+  --slate-gray-dark-800: 134 156 178/.8;
+
+  /* amber (the award / offer accent) */
+  --amber-dark-1000: 224 190 112;      /* #e0be70 */
+  --amber-dark-200: 224 190 112/.2;
+  --amber-light-1000: 143 108 26;      /* #8f6c1a */
+  --amber-light-800: 143 108 26/.8;
+  --amber-light-200: 143 108 26/.2;
+  --amber-light-50: 255 192 46/.05;
+
+  /* green (success / sale price) */
+  --green-500: 110 150 114;            /* #6e9672 */
+  --green-600: 21 125 18;              /* #157d12 */
+  --green-light-1000: 6 122 87;        /* #067a57 */
+  --green-light-200: 6 122 87/.14;
+  --green-light-50: 10 204 146/.05;
+  --green-dark-1000: 119 199 175;      /* #77c7af */
+
+  /* red (warning) */
+  --red-500: 174 65 52;                /* #ae4134 */
+  --red-light-1000: 199 58 58;         /* #c73a3a */
+  --red-light-200: 199 58 58/.14;
+  --red-light-50: 199 58 58/.05;
+  --red-dark-1000: 255 156 156;        /* #ff9c9c */
+
+  /* =======================================================================
+     TIER 2 — semantic aliases (source names). Section CSS uses ONLY these.
+     ======================================================================= */
+
+  /* text */
+  --text-strong: var(--base-white);            /* NOTE: "strong" is WHITE here — */
+  --text-sub-soft: var(--solid-beige-500);     /* the ramp is authored for DARK   */
+  /* The source declares --text-sub-strong: var(--slate-gray-dark-800), but on this
+     light page it computes to rgba(43,47,68,0.8) - i.e. the navy-light ramp. The
+     measured value is used; the source presumably swaps ramps per theme. */
+  --text-sub-strong: var(--navy-blue-light-800); /* surfaces. See docs/TOKENS.md. */
+  --text-soft: var(--slate-gray-light-1000);
+
+  /* fills */
+  --fill-cta: var(--navy-blue-light-1000);
+  --fill-offer: var(--solid-beige-400);
+  --fill-soft: var(--solid-beige-300);
+  --fill-sub: var(--solid-beige-500);
+  --fill-lighter: var(--solid-beige-200);
+  --fill-strong: var(--solid-beige-700);
+  --fill-white: var(--base-white);
+  --fill-green-strong: var(--green-light-1000);
+  --fill-green-soft: var(--green-light-50);
+  --fill-amber-strong: var(--amber-light-1000);
+  --fill-amber-soft: var(--amber-light-50);
+  --fill-red-strong: var(--red-light-1000);
+  --fill-red-soft: var(--red-light-50);
+
+  /* backgrounds */
+  --bg-base-black: var(--base-black);
+  --bg-base-white: var(--base-white);
+  --bg-sub-soft: var(--solid-beige-100);
+  --bg-soft: var(--solid-beige-200);
+  --bg-normal: var(--solid-beige-300);
+  --bg-sub-strong: var(--solid-beige-500);
+  --bg-strong: var(--solid-beige-600);
+
+  /* borders */
+  --border-soft: var(--solid-beige-500);
+  --border-sub-strong: var(--solid-beige-600);
+  --border-strong: var(--navy-blue-light-1000);
+  --border-black: var(--base-black);
+  --border-white: var(--base-white);
+  --border-amber-strong: var(--amber-light-1000);
+  --border-amber-soft: var(--amber-light-200);
+  --border-green-strong: var(--green-light-1000);
+  --border-green-soft: var(--green-light-200);
+  --border-red-strong: var(--red-light-1000);
+  --border-red-soft: var(--red-light-200);
+
+  /* icons */
+  --icon-strong: var(--base-black);
+  --icon-soft: var(--solid-beige-500);
+  --icon-soft-slate: var(--slate-gray-dark-1000);
+  --icon-amber-soft: var(--amber-dark-1000);
+  --icon-amber-strong: var(--amber-light-800);
+  --icon-green: var(--green-light-1000);
+  --icon-red: var(--red-light-1000);
+
+  /* highlight / status */
+  --highlight-soft: var(--amber-dark-1000);
+  --highlight-strong: var(--amber-light-1000);
+  --success: var(--green-light-1000);
+  --warning: var(--red-light-1000);
+  --brand-light-1000: var(--navy-blue-light-1000);
+  --brand-dark-1000: var(--navy-blue-dark-1000);
+
+  /* One-offs where the source bypassed its own system. Kept for fidelity;
+     flagged in docs/TOKENS.md rather than tidied away. */
+  --raw-footer-bg: #0d0d0d;            /* footer */
+  --raw-navbar-gradient-from: #202120; /* navbar gradient top */
+  --raw-upgrade-border: #ceae82;       /* upgrade banner */
+  --raw-upgrade-bg: #eceae8;
+  --raw-link-blue: #1773b0;            /* privacy link */
+
+  /* =======================================================================
+     TYPOGRAPHY — derived from computed styles (counts = element usages)
+     ======================================================================= */
+  --font-sans: 'Mukta', 'Mukta Fallback', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'PT Serif', 'PT Serif Fallback', Georgia, serif;
+
+  --text-2xs: 10px;   /*     45 */
+  --text-xs: 12px;    /*  2,074 */
+  --text-sm: 14px;    /*  2,570 */
+  --text-md: 16px;    /* 17,395  <- the system's anchor */
+  --text-lg: 18px;    /*  2,190 */
+  --text-xl: 20px;    /*  1,067 */
+  --text-2xl: 24px;   /*    316 */
+  --text-3xl: 28px;   /*     97 */
+  --text-4xl: 32px;   /*    221 */
+  --text-5xl: 40px;   /*     74 */
+
+  /* Only 400/500/600/700 have font files. 450 (24 uses) and 800 (8 uses) appear
+     in the source's computed styles with no matching face, so the browser
+     synthesises them; we ship the same four faces so synthesis matches. */
+  --weight-regular: 400;   /* 19,496 */
+  --weight-medium: 500;    /*  5,821 */
+  --weight-semibold: 600;  /*    383 */
+  --weight-bold: 700;      /*  1,271 */
+
+  /* Absolute px leading, matching the source's Tailwind scale. */
+  --leading-xs: 16px;
+  --leading-sm: 20px;
+  --leading-md: 24px;      /* 19,211  <- base */
+  --leading-lg: 28px;
+  --leading-xl: 32px;
+  --leading-2xl: 36px;
+  --leading-3xl: 40px;
+  --leading-4xl: 48px;
+
+  --tracking-tight: -1px;      /* 183 */
+  --tracking-snug: -0.32px;
+  --tracking-wide: 0.56px;
+  --tracking-wider: 1.4px;
+  --tracking-widest: 1.6px;
+
+  /* =======================================================================
+     SPACING — predominantly a 4px grid; 8px most used (1,882).
+     Authored non-multiples of 4 that genuinely exist: 2, 5, 6, 10, 11, 13, 15, 18.
+     Fractional values in the dump are computed flex/percentage results, not
+     authored steps — see docs/TOKENS.md.
+     ======================================================================= */
+  --space-0: 0;
+  --space-px: 1px;
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-1-5: 6px;
+  --space-2: 8px;
+  --space-2-5: 10px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-13: 52px;
+  --space-14: 56px;
+  --space-20: 80px;
+
+  /* ==================== SHAPE ==================== */
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;        /* 2,287 */
+  --radius-2xl: 12px;
+  --radius-3xl: 16px;
+  --radius-4xl: 20px;      /* 2,738 */
+  --radius-5xl: 24px;
+  --radius-pill: 9999px;   /* 3,076  <- most used */
+
+  --border-1: 1px;         /* 1,593 */
+  --border-2: 2px;
+  --border-3: 3px;
+  --border-5: 5px;
+
+  --shadow-sm: 0 0 0 1px rgb(0 0 0 / 0.05), 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-ring-light: 0 0 0 1px rgb(255 255 255 / 0.4);
+
+  /* ==================== MOTION ==================== */
+  /* `motion-reduce:` appears ~40x on the live page: reduced motion genuinely
+     changes the design, so it is pinned during capture and verification. */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 300ms;
+
+  /* ==================== LAYOUT ==================== */
+  --container-content: 1288px;
+  --container-wide: 1440px;
+  --container-narrow: 576px;
+  --container-max: 2200px;
+
+  /* Runtime layout variables the source drives from JS; reproduced so the same
+     calc() chains resolve identically. */
+  /* Source drives this from JS off the real header box. Resolved: 120px below
+     xl (navbar 56 + banner 64), 122px at xl+ (navbar 64 + banner 58). The page
+     spacer is header-height - sale-banner-height - 1px, which yields the
+     reference's 121px content offset at 1440. */
+  --hp-sale-banner-height: 0px;
+  --countdown-banner-height: 0px;
+  --pdp-sticky-footer-offset: 0px;
+  --removed-body-scroll-bar-size: 0px;
+
+  /* ==================== FIDELITY MODE ==================== */
+  /* The dev banner does not exist on the live page, so its presence would shift
+     every pixel below it. verify.mjs screenshots ?fidelity=1 only. The gate
+     therefore proves the page MINUS this banner. See docs/DEVIATIONS.md §8. */
+  --dev-banner-display: block;
+}
+
+/* Desktop-only scope: the sub-1201 base value (120px) was unreachable and is
+   removed, so this is the only definition. The media wrapper is kept because it
+   is where the source's own xl variant puts it. */
+@media (min-width: 1201px) {
+  :root { --header-height: 122px; }
+}
+
+[data-mode='fidelity'] {
+  --dev-banner-display: none;
+}
+
+/* ==========================================================================
+   BREAKPOINTS — extracted from the source's inline Tailwind build, not guessed.
+   Custom properties cannot be used in media queries, so this is the reference
+   list and section files write the literals.
+
+     xxs   360      mlg    992      1.2xl 1280      3xl  1662
+     xs    390      lg    1025      1.5xl 1366      4xl  1920
+     xsm   481      xl    1201      1.7xl 1440
+     sm    640      md     768      2xl   1536
+
+   lg is 1025, NOT Tailwind's default 1024; xl is 1201, not 1280.
+   Also live: @media (max-height: 720px), ~93 uses on the layer scene.
+   ========================================================================== */
