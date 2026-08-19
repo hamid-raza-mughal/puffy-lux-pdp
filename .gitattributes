@@ -1,2 +1,13 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Captured third-party assets are byte-exact evidence, not ordinary source.
+# puffy-pdp-code/capture/network/manifest.json records a sha256 for 139 of them and
+# NOTICE.md ties each to its original URL, so the committed bytes must equal the
+# downloaded bytes. LF normalization would silently invalidate those hashes for the
+# text-detectable formats here — the 72 SVGs and the extensionless image-* captures —
+# so the directory is pinned as binary. Verified clean as of this commit.
+puffy-pdp-code/assets/third-party/** -text
+
+# ...except the rights notice, which is documentation rather than evidence.
+puffy-pdp-code/assets/third-party/NOTICE.md text=auto

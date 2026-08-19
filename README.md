@@ -6,27 +6,42 @@ verified against the live page by **automated pixel diff rather than by eye**.
 > **Not affiliated with Puffy.** This is an internal design-reference and prototyping
 > artifact for a UX team. Layout, copy, photography and brand assets belong to Puffy
 > (and, for the award badges, to their respective publishers). Nothing here is licensed
-> for redistribution. See [`assets/third-party/NOTICE.md`](assets/third-party/NOTICE.md).
+> for redistribution. See [`assets/third-party/NOTICE.md`](puffy-pdp-code/assets/third-party/NOTICE.md).
+
+## Where the code lives
+
+Everything below lives in **`puffy-pdp-code/`**, not at the repository root:
+
+```
+puffy-lux-pdp/            <- repository root (this README, .gitignore, .gitattributes)
+└── puffy-pdp-code/       <- the project. all paths in this document are relative to here
+```
+
+Unless a command says otherwise, start from that directory:
+
+```bash
+cd puffy-pdp-code
+```
 
 ## What this is for
 
 It is a trustworthy **"before" artifact**: an editable, documented baseline that
 redesign work can be measured against, where every claim about the current page is
 checkable against a captured source rather than from memory. The honesty ledger is
-[`docs/DEVIATIONS.md`](docs/DEVIATIONS.md) — read it before trusting anything here.
+[`docs/DEVIATIONS.md`](puffy-pdp-code/docs/DEVIATIONS.md) — read it before trusting anything here.
 
 ## How to view it
 
 No build step, no bundler, no dependencies.
 
 ```bash
-open index.html
+cd puffy-pdp-code && open index.html
 ```
 
 Works over `file://`. It also works over a static server, and must render identically:
 
 ```bash
-python3 -m http.server 8000
+cd puffy-pdp-code && python3 -m http.server 8000
 ```
 
 Then visit `http://localhost:8000/`.
@@ -39,6 +54,7 @@ which a pixel comparison against the reference is meaningful.
 ## Folder map
 
 ```
+puffy-pdp-code/
 index.html               the page. generated in part — see "Changing content" below
 css/
   tokens.css             design tokens as CSS custom properties
@@ -54,7 +70,9 @@ data/
   product.json           CANONICAL: sizes, prices, promo strings, bundle contents
   content.json           CANONICAL: section headings and body copy
 assets/third-party/      all captured brand assets, plus NOTICE.md
-capture/                 tooling + ground truth. NOT part of the deliverable page
+capture/                 tooling + ground truth. NOT part of the deliverable page,
+                         and NOT in version control — gitignored, ~1.2 GB. See
+                         "Restoring references from a clean checkout" below.
   profile.mjs            the single shared determinism definition
   capture.mjs            live site -> reference
   verify.mjs             THE ACCEPTANCE GATE
@@ -93,7 +111,7 @@ Edit **`data/content.json`** or **`data/product.json`** — these are the single
 truth. Then regenerate:
 
 ```bash
-cd capture && node gen-html.mjs
+cd puffy-pdp-code/capture && node gen-html.mjs
 ```
 
 That writes both the inlined JSON block and the static fallback copy into `index.html`.
@@ -125,7 +143,7 @@ behaviour** — no JS edit needed.
 ## Verifying fidelity
 
 ```bash
-cd capture
+cd puffy-pdp-code/capture
 node verify.mjs                    # full gate
 node verify.mjs --only=1536x900    # single viewport
 node verify.mjs --unit=header      # single unit
@@ -157,7 +175,7 @@ the gate is runnable after every single section.
 states you reach by interacting. The gallery carousel has its own behavioural gate:
 
 ```bash
-cd capture
+cd puffy-pdp-code/capture
 node verify-gallery.mjs                 # all gated viewports
 node verify-gallery.mjs --only=1440x900
 node verify-gallery.mjs --verbose
@@ -203,7 +221,7 @@ reported — the baseline does not move unless you deliberately re-capture, beca
 it would invalidate every section that already passed.
 
 ```bash
-cd capture
+cd puffy-pdp-code/capture
 node capture.mjs --probe        # cheap: one viewport, rediscovers the section list
 node capture.mjs                # full matrix -> network/manifest.json
 node capture.mjs --only=1536x900   # one viewport -> network/manifest-1536x900.json
@@ -214,16 +232,25 @@ Capture is polite: one pass, sequential, no parallel requests, settle pauses thr
 
 ### Restoring references from a clean checkout
 
-The PNGs are not tracked individually. See
-[`capture/reference/README.md`](capture/reference/README.md):
+**`puffy-pdp-code/capture/` is not in version control at all** — the whole directory is
+gitignored, tooling and evidence alike. It is ~1.2 GB: 452 reference PNGs, the derived
+DOM evidence, `diffs/` gate output, `node_modules/`, and a 435 MB reference bundle that
+exceeds GitHub's 100 MB per-file limit. A fresh clone can open and read the page, but
+**cannot run either gate** until `capture/` is supplied out of band.
+
+Once you have it, restore the references and verify them — see
+[`capture/reference/README.md`](puffy-pdp-code/capture/reference/README.md):
 
 ```bash
-cd capture && tar -xzf reference-bundle-<date>.tar.gz
+cd puffy-pdp-code/capture && tar -xzf reference-bundle-<date>.tar.gz
 cd reference && shasum -a 256 -c MANIFEST.sha256
 ```
 
 If that check fails, any diff percentage computed against those references is
 meaningless. Re-capture instead of proceeding.
+
+Because `capture/` is untracked, this working copy is its only copy. The bundle plus
+`MANIFEST.sha256` is the minimum worth keeping somewhere durable off this machine.
 
 ## What is stubbed
 
@@ -235,7 +262,7 @@ Add-to-cart is a `console.log` no-op wired to no endpoint.
 Note that reviews are **first-party** on the live page (no Yotpo/Okendo/Trustpilot), so
 the reviews module is a content reproduction rather than a vendor replacement.
 
-Full list with what each replaced: [`docs/DEVIATIONS.md`](docs/DEVIATIONS.md) §12.
+Full list with what each replaced: [`docs/DEVIATIONS.md`](puffy-pdp-code/docs/DEVIATIONS.md) §12.
 
 ## Things you should know before relying on this
 
