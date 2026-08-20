@@ -549,17 +549,39 @@
    (364) and -50% for -56% (-161.28), which is why the expressions are kept
    rather than flattened to constants.
    ------------------------------------------------------------------------- */
+/* ===== REDESIGN D1 — NOT a live-site measurement =========================
+   Everything above this point in the nav block is measured off puffy.com. The
+   four rules below (.atf__nav, .atf__nav-col, .atf__rail, and the two
+   .atf__rail-arrow--up/--down pairs) are a DELIBERATE first-fold redesign
+   decision: the thumbnail rail moves from a left-centre VERTICAL column to a
+   bottom-centre HORIZONTAL row, and the two rail chevrons change from up/down
+   to left/right. The numbers here were tuned by eye against the rendered page,
+   not read off the reference. The source expressions they replace are kept in
+   the comment above so the "before" is still legible. See docs/DEVIATIONS.md
+   §22. Nothing about the rail's BEHAVIOUR changes — js/modules/gallery.js and
+   index.html are untouched, which is why the --up/--down class names stay.
+
+   Vertical anchor. The stage is `100dvh - var(--header-height) + 150px` tall
+   and starts at the header's bottom edge, so its bottom edge is ALWAYS exactly
+   150px below the fold — at h900 and at h700 alike (measured: stage bottom
+   1050 vs fold 900; 850 vs 700). `bottom: 0` would therefore park the row
+   off-screen. `bottom: 150px` pins the nav box's bottom edge to the fold, and
+   the retained `padding-bottom` then lifts the visible row clear of it. The
+   offset is height-invariant, which is why the max-height:716px override that
+   used to fix up the vertical centring is gone rather than retuned.
+   ------------------------------------------------------------------------- */
 .atf__nav {
   position: absolute;
-  left: 0;
-  top: min(55%, 662px);
-  transform: translateY(-50%);
+  left: 50%;
+  top: auto;
+  bottom: 150px;                    /* the stage's constant overhang past the fold */
+  transform: translateX(-50%);
   z-index: 10;
   display: flex;
   width: fit-content;
   height: fit-content;
-  padding-inline: var(--space-6);   /* lg:px-4 -> 1.5xl:px-6 (1.5xl = 1366) */
-  padding-bottom: var(--space-6);   /* lg:pb-4 -> 1.5xl:pb-6; part of the 288 */
+  padding-inline: var(--space-6);   /* kept from the source; symmetric now, so inert */
+  padding-bottom: var(--space-6);   /* kept: the row's clearance above the fold */
 }
 
 /* `flex items-center lg:gap-3 min-[1600px]:gap-4
@@ -570,7 +592,7 @@
    because that is the >=864 case, which is four of the five gated configs. */
 .atf__nav-col {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;   /* REDESIGN D1: was column */
   align-items: center;
   justify-content: center;
   gap: var(--space-3);
@@ -582,7 +604,7 @@
    At 1662: 240 + 48 + 16 = 304, also exact. */
 .atf__rail {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;   /* REDESIGN D1: was column */
   align-items: center;
   gap: var(--space-2);
 }
@@ -604,8 +626,11 @@
   transition: background-color 500ms ease;
 }
 
-.atf__rail-arrow--up   { margin-bottom: var(--space-2); }  /* mb-2 */
-.atf__rail-arrow--down { margin-top: var(--space-2); }     /* mt-2 */
+/* REDESIGN D1: the source's mb-2/mt-2 gave each arrow a little more breathing
+   room from the adjacent thumbnail than the thumbnails have from each other.
+   Same relationship, rotated 90 degrees. */
+.atf__rail-arrow--up   { margin-right: var(--space-2); }   /* was margin-bottom (mb-2) */
+.atf__rail-arrow--down { margin-left:  var(--space-2); }   /* was margin-top (mt-2) */
 
 .atf__rail-arrow:hover:not(:disabled) { background-color: rgb(0 0 0 / 0.5); }
 
@@ -626,8 +651,11 @@
   background: transparent;
   color: rgb(var(--base-white));
 }
-.atf__rail-arrow--up   .atf__rail-arrow-inner { transform: rotate(-90deg); }
-.atf__rail-arrow--down .atf__rail-arrow-inner { transform: rotate(90deg); }
+/* REDESIGN D1: the chevron path (`m14 30 12-12L14 6`) points RIGHT unrotated.
+   The source rotated it -90/+90 for an up/down pair; a left/right pair needs
+   180deg for prev and none at all for next. */
+.atf__rail-arrow--up   .atf__rail-arrow-inner { transform: rotate(180deg); }  /* points left  */
+.atf__rail-arrow--down .atf__rail-arrow-inner { transform: rotate(0deg); }    /* points right */
 
 .atf__rail-chev { display: block; width: 66.667%; height: auto; }
 
@@ -1602,10 +1630,13 @@
   .atf__media { --content-position-min: 10px; --lux-badge-top: 475px; }
 }
 
-/* The nav wrapper's own height branch:
+/* REMOVED by REDESIGN D1 — the nav wrapper's own height branch:
      xl:[@media(max-height:716px)]:top-[min(50%,662px)]     -> 364 at h700
      1.7xl:[@media(max-height:716px)]:-translate-y-[56%]    -> -161.28 of 288
-   Both measured at 1440x700 (wrapper at y 323.72). */
-@media (min-width: 1440px) and (max-height: 716px) {
-  .atf__nav { top: min(50%, 662px); transform: translateY(-56%); }
-}
+   Both measured at 1440x700 (wrapper at y 323.72). It existed only to re-centre
+   a percentage-positioned, translateY-offset column on a short viewport. The
+   bottom-anchored row has no percentage term: the stage overhangs the fold by a
+   constant 150px at every height, so one `bottom: 150px` is correct at h900 and
+   h700 alike (verified at 1440x700 — same 24px gap above the fold as at h900).
+   Retuning it would have been a no-op, so it is gone rather than kept as dead
+   code. See docs/DEVIATIONS.md §22. */

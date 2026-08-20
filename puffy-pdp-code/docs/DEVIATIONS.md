@@ -12,13 +12,20 @@ in `capture/built.json`.
 |---|---|---|---|---|---|---|
 | `header` | 0.007 / 0.006 | 0.006 / 0.006 | 0.006 / 0.005 | 0.005 / 0.004 | 0.8 % | **PASS** |
 | `sale-banner` | 0.008 / 0.003 | 0.008 / 0.003 | 0.007 / 0.003 | 0.006 / 0.002 | 0.3 % | **PASS** |
-| `above-the-fold` | 1.923 / 1.694 | 2.717 / 2.420 | 3.036 / 2.724 | 3.513 / 3.272 | 96.9 % | **FAIL** |
+| `above-the-fold` | — | — | — | — | — | **REPORT-ONLY (§22)** |
 
 (DPR1 / DPR2, percent of differing pixels. Gate: ≤0.5 % per section, ≤5 % worst tile.)
 
-**All four widths are gated. Nothing is report-only.** `header` and `sale-banner` pass at
-every width and DPR. `above-the-fold` fails at every width and DPR — it has never passed,
-at any width, and remains the unit in progress (§20).
+**All four widths are gated.** `header` and `sale-banner` pass at every width and DPR.
+
+**`above-the-fold` is no longer gated, and its old numbers are gone rather than stale.**
+It previously read 1.923 / 1.694 at 1440 rising to 3.513 / 3.272 at 1920, worst tile
+96.9 %, and it never passed at any width. Those figures describe a state that no longer
+reproduces: commits `bfd5718` and `81f54fb` removed content from the section and left it
+622 px shorter than the reference, so it now fails on **dimension mismatch** at 100 % —
+a number that measures nothing. It is also now mid-redesign (§22). It was dropped from
+`capture/built.json` on 2026-08-20 and is **report-only, not passing**; see §22f. The
+§20 and §21h matrices are stale for the same reason.
 
 ---
 
@@ -957,3 +964,152 @@ including the header repeated three times. Diffing word-by-word against
 - `README.md` documents `data/product.json`, `data/content.json`, `capture/gen-html.mjs`,
   `css/components.css` and three `docs/*.md` files that **do not exist**. `index.html` is
   hand-authored today; `verify.mjs` correctly reports `SKIP  gen-html.mjs not present yet`.
+
+---
+
+## 22. REDESIGN D1 — gallery nav rail: left-centre column → bottom-centre row
+
+**This is the first entry in this file that is not a fidelity note.** Everything above
+records a place where the rebuild *failed* or *chose not* to reproduce the live page.
+This one records a place where the rebuild **deliberately stops reproducing it**. It is a
+first-fold redesign decision (D1), not a reproduction error, and it is expected to move
+`above-the-fold` further from the frozen reference, not closer.
+
+### 22a. What changed
+
+| | before (live-site baseline) | after (D1) |
+|---|---|---|
+| Rail orientation | vertical column | horizontal row |
+| Rail position | left edge, vertically centred on the stage | horizontally centred, anchored above the fold |
+| `.atf__nav` anchor | `left: 0; top: min(55%,662px); translateY(-50%)` | `left: 50%; bottom: 150px; translateX(-50%)` |
+| `.atf__nav-col`, `.atf__rail` | `flex-direction: column` | `flex-direction: row` |
+| Arrow extra spacing | `--up { margin-bottom }` / `--down { margin-top }` | `--up { margin-right }` / `--down { margin-left }` |
+| Chevron direction | up (`rotate(-90deg)`) / down (`rotate(90deg)`) | left (`rotate(180deg)`) / right (`rotate(0deg)`) |
+| Short-viewport override | `@media (min-width:1440px) and (max-height:716px)` retuned `top`/`translateY` | removed — see 22c |
+
+All of it is in `css/sections/above-the-fold.css`. **`index.html` and
+`js/modules/gallery.js` are untouched**, and that is the point: the change is purely
+geometric.
+
+### 22b. Why the `--up` / `--down` class names stay
+
+They are no longer visually accurate — `--up` now points left. They are kept anyway
+because `js/modules/gallery.js` resolves direction from them:
+
+```js
+goTo(active + (arrow.classList.contains('atf__rail-arrow--up') ? -1 : 1));
+```
+
+Renaming to `--prev`/`--next` would force an edit to a JS file this change has no other
+reason to touch, for zero user-visible benefit. The class name is an internal
+implementation detail; the `aria-label`s ("Previous slide" / "Next slide") were already
+function-based rather than direction-based, so no user-facing copy changed either.
+
+### 22c. Why `bottom: 150px` and not `bottom: 0`
+
+`.atf__nav` is absolutely positioned inside `.atf__stage`, whose height comes from
+`.atf__carousel`:
+
+```css
+height: calc(100dvh - var(--header-height) + 150px);
+```
+
+The stage starts at the header's bottom edge, so its bottom edge is **always exactly
+150px below the fold** — the `100dvh` and `--header-height` terms cancel. Measured:
+stage bottom 1050 against a 900px fold, and 850 against a 700px fold. A literal
+`bottom: 0` would therefore have parked the row off-screen at every viewport, which is a
+poor outcome for a change whose entire justification is the first fold.
+
+`bottom: 150px` pins the nav box's bottom edge to the fold; the retained
+`padding-bottom: var(--space-6)` then lifts the visible row 24px clear of it. Because the
+offset is height-invariant, the `max-height: 716px` override — which existed only to
+re-centre a percentage-positioned column on a short viewport — became a no-op and was
+deleted rather than left as dead code.
+
+Measured result, all five gated configs:
+
+| viewport | stage centre x | rail centre x | rail box | gap above fold |
+|---|---|---|---|---|
+| 1440x900 | 495 | 495 | 312 x 48 | 24 |
+| 1536x900 | 508 | 508 | 312 x 48 | 24 |
+| 1662x900 | 571 | 571 | 364 x 56 | 24 |
+| 1920x900 | 700 | 700 | 364 x 56 | 24 |
+| 1440x700 | 495 | 495 | 312 x 48 | 24 |
+
+`elementFromPoint` at the rail's left, centre and right returns the rail's own controls at
+all five, so nothing overlaps it. (The "See What's Inside" pill and the award badges are
+not in the DOM at this checkpoint — they were removed by the two panel-cleanup commits,
+`bfd5718` and `81f54fb` — so the no-overlap check is against the layer scene and the hero
+photo only, and will need re-running when that content returns.)
+
+### 22d. Behaviour is unchanged, and this was verified rather than assumed
+
+`node verify-gallery.mjs` — the behavioural gate — **passes in full** at all five
+viewports after the change. Driven by hand in a browser as well:
+
+- Arrows 1→6 and 6→1: windows `123 / 123 / 234 / 345 / 456 / 456`, exactly as recorded.
+- Left arrow `disabled` on slide 1, right arrow `disabled` on slide 6; clicking a disabled
+  arrow is inert.
+- Thumbnails remain slide-indexed: from window `234`, clicking the leftmost button goes to
+  slide 2 and the window recentres to `123`.
+- Focus order is now left arrow → thumb → thumb → thumb → right arrow, with strictly
+  ascending `x` (339 / 391 / 463 / 535 / 615 at 1440), i.e. it matches the new visual
+  order without a single DOM move. On slide 1 the disabled left arrow drops out of the tab
+  order, as it should.
+- No console errors, no failed requests, and no scroll jump when a rail control takes
+  focus 24px above the fold.
+
+Keyboard *activation* could not be exercised through the automation pane in use — it
+injects `keydown` without producing the button's default activation, and no button on the
+page responds, including ones this change does not touch. `Enter`/`Space` activation of a
+native `<button>` is browser default and cannot be affected by CSS.
+
+### 22e. Effect on the pixel gate: none, because the section was already at 100 %
+
+The honest reading, and it is not the one this entry was expected to give.
+
+`above-the-fold` does **not** merely regress by the area of the moved rail. As of this
+checkpoint it already fails with a **dimension mismatch** — `ref 1440x1836 vs 1440x1214`,
+reported as `100.000 %` — at all four widths and both DPRs. That is a consequence of
+commits `bfd5718` and `81f54fb`, which removed the "See What's Inside" pill, the award
+badges and the layer-scene content and left the section 622px shorter than the reference.
+
+This was checked, not assumed: stashing the CSS change and re-running
+`node verify.mjs --unit=above-the-fold --dpr=1` produces **byte-identical failures** — the
+same `DIM` lines, the same `100.000 %`, the same text-content failure. **The redesign
+changes the gate outcome for this section by exactly nothing.**
+
+Two things follow. First, the pixel numbers for `above-the-fold` in this file's header
+table (1.923 / 1.694 at 1440, and the §21h before/after matrix) describe a state that
+predates those cleanup commits and no longer reproduces; they are stale for reasons
+unrelated to D1. Second, the frozen reference can no longer say anything useful about this
+section — it is not "close and drifting", it is dimensionally incomparable, and now
+intentionally so as well.
+
+`header` and `sale-banner` are untouched and still pass at every width and DPR.
+
+### 22f. Gating decision: `above-the-fold` dropped to report-only
+
+`capture/built.json` no longer lists `above-the-fold`. This is the same mechanism that
+carried the 1662 and 1920 widths while their `min-[1640px]` states were unimplemented
+(`profile.mjs`, `isGated`) — the honest way to hold a unit that is measured but not
+finished — applied to a section rather than a width.
+
+The alternative was to leave it gated and permanently red. It was rejected because a gate
+that can never go green stops being a signal: it reports `100.000 %` whatever anyone does
+to the section, so it would have masked a genuine regression just as effectively as
+removing it does. Dropping it states the situation instead of encoding it as noise.
+
+**What this costs, stated plainly:** `node verify.mjs` now prints `pending` beside
+`above-the-fold` at every viewport instead of `FAIL`, and the section drops out of the
+gated results table entirely. The largest and least finished section on the page is
+therefore unverified, and nothing in the gate's own output says so — only this entry does.
+Section gating now covers `header` and `sale-banner`: **2 of 28 units.**
+
+The run still ends `RESULT: FAIL`, but on two `rights` signals that have nothing to do with
+any section and predate this change — `dev banner present in markup — default
+internal-review mode` and `git repo has no remote (internal-only)`. Do not read that FAIL
+as the pixel gate holding the line on `above-the-fold`; it is not.
+
+Re-add `"above-the-fold"` to `built` when the section is rebuilt against a re-captured
+reference that includes the D1 layout. Until then its diff is reported, never gated.
