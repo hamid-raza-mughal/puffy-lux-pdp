@@ -4,7 +4,28 @@
 # Capture tooling and ground-truth evidence — local only, not part of the
 # deliverable page. ~1.2 GB: the reference PNGs, the 435 MB reference bundle,
 # the derived DOM evidence, gate output under diffs/, and node_modules.
-puffy-pdp-code/capture/
+#
+# NOTE the trailing `*`. It must stay. `capture/` (a directory exclusion) makes
+# git skip the directory entirely, and any `!` negation below it is silently
+# inert — no error, it just never matches. `capture/*` excludes each ENTRY
+# inside capture instead, so git still descends and the negations below work.
+#
+# Three small files are deliberately tracked. All three are decisions or
+# integrity records, not evidence, and all three are load-bearing:
+#   built.json            which sections verify.mjs gates. Untracked, a clone
+#                         gates a different set than the docs describe.
+#   MANIFEST.sha256       50 KB; verify.mjs:72 hash-checks every reference
+#                         against it and degrades to "references unverified"
+#                         if absent. reference/README.md already claimed it was
+#                         tracked — it was not, until now.
+#   reference/README.md   how to restore reference/ from the bundle. Without it
+#                         MANIFEST.sha256 lands in a clone unexplained.
+puffy-pdp-code/capture/*
+!puffy-pdp-code/capture/built.json
+!puffy-pdp-code/capture/reference/
+puffy-pdp-code/capture/reference/*
+!puffy-pdp-code/capture/reference/MANIFEST.sha256
+!puffy-pdp-code/capture/reference/README.md
 
 # Saved copies of the live page, kept for reference. Local only: this is captured
 # third-party markup, and the repo already carries frozen ground truth under

@@ -1113,3 +1113,114 @@ as the pixel gate holding the line on `above-the-fold`; it is not.
 
 Re-add `"above-the-fold"` to `built` when the section is rebuilt against a re-captured
 reference that includes the D1 layout. Until then its diff is reported, never gated.
+
+---
+
+## 23. `capture/` is a harness, not part of the deliverable
+
+Prompted by a reasonable question that the folder names do not answer: *why isn't
+`capture/reference/` just part of `assets/`?* Both are directories full of images. The
+answer is that they have nothing in common except the file extension, and nothing on disk
+says so. Writing it down here.
+
+### 23a. The deliverable has zero dependency on `capture/` — verified, not assumed
+
+Checked on 2026-08-20 by stripping every comment (`/* */`, `//`, `<!-- -->`) out of
+`index.html`, `css/**`, `js/**` and `data/**` and re-grepping the remainder:
+
+- **No reference to `capture/` survives comment stripping.** Not one.
+- `js/**` contains no `fetch(`, `import`, `require(` or `XMLHttpRequest` in live code —
+  the sole textual hit is the sentence in `main.js` explaining why classic scripts are
+  used instead.
+- Every `url()` in `css/**` resolves under `assets/`. No `@import` anywhere. The only
+  non-`assets/` `url()`s in `index.html` are `url(#…)` SVG mask fragments, which are
+  in-document references.
+- There is **no build step at all**: `capture/gen-html.mjs` does not exist (`verify.mjs`
+  reports `SKIP gen-html.mjs not present yet`), so `index.html` is hand-authored and
+  nothing under `capture/` has to run to produce anything the page ships.
+
+The ~40 mentions of `capture/…` across the CSS and JS are **provenance citations in
+comments** — "this number came from `capture/dom/1440x900/computed.json`". They are the
+reason the values are auditable. They are not couplings.
+
+Direction of dependency, stated once: **`capture/` reads the deliverable. The deliverable
+never reads `capture/`.** `verify.mjs` serves `index.html` and grades it. If `capture/`
+were deleted, the page would render and behave identically; only the ability to *prove*
+that would be lost.
+
+### 23b. `gallery.js` is the worked example
+
+The carousel is the place you would most expect entanglement, because its behaviour was
+*discovered* by recording the live page (§21a). It is not entangled:
+
+| | where it lives |
+|---|---|
+| Sliding 3-of-6 window | `gallery.js:136` — `Math.max(0, Math.min(active - 1, count - WINDOW))` |
+| Slide gap, window size, drag threshold | `gallery.js:42-46` — `GAP = 16`, `WINDOW = 3`, `DRAG_THRESHOLD = 40` |
+| Arrow disabled states | `gallery.js:150-151` — `active === 0` / `active === count - 1` |
+| Per-slide transforms | `gallery.js:113-121`, plus `--slide-offset` in CSS |
+| Thumbnail art | `data-thumb-art` attribute in `index.html` |
+
+`gallery-probe.json` is read by exactly two files, both under `capture/`:
+`verify-gallery.mjs:29` (grading) and `probe-gallery.mjs:432` (writing). `gallery.js`
+mentions it only in its header comment.
+
+So the recorded behaviour was **copied into code, not linked to**. `gallery.js` plus its
+header comments already *are* the durable copy of those decisions — informed by the
+recording, independent of it. Nothing needs duplicating into `js/`; doing so would create
+a second source of truth free to drift from the first, which is the exact failure mode
+`profile.mjs` exists to prevent on the capture side.
+
+### 23c. Why `capture/reference/` is not `assets/`, and must not become it
+
+The 452 PNGs under `capture/reference/` are **not product imagery**. They are screenshots
+of the whole live page, taken to be pixel-diffed against. Concretely, from
+`reference/1440x900/dpr-1/`:
+
+| file | dimensions |
+|---|---|
+| `full.png` | 1440 x **26872** — the entire page, top to bottom |
+| `section-01-header.png` | 1440 x 122 |
+| `section-03-above-the-fold.png` | 1440 x 1836 |
+
+29 files per viewport/DPR combination, named by section slug, across 5 viewports x 2 DPRs
+(plus `_retired/` and `states/`). 450 MB. The tallest is 390 x 31122.
+
+Three reasons they cannot be folded into `assets/`:
+
+1. **Different purpose.** `assets/third-party/images/` holds cropped, display-ready
+   product photography that the page actually renders. These are diff targets — a
+   26,872px-tall strip of an entire web page is not something any `<img>` will ever point
+   at. Nothing in `index.html` references them, and nothing should.
+2. **Different rights posture.** The files in `assets/third-party/` are specific,
+   enumerated image assets recorded in `capture/network/manifest.json` with their
+   provenance. A full-page screenshot is an indiscriminate capture of *everything* on the
+   live page at once — third-party widgets, promotional copy, other brands' logos, all
+   baked into one raster. `lib-rights.mjs` enforces that third-party binaries stay
+   confined to `assets/third-party/`; moving raw page captures in there would launder
+   whole-page captures into the same bucket as licensed per-asset imagery, and defeat the
+   check rather than satisfy it.
+3. **Size.** `assets/` is what ships. Adding 450 MB of screenshots to it would grow the
+   deliverable by three orders of magnitude for zero runtime benefit.
+
+The right mental model: `assets/` is **product**; `capture/reference/` is **evidence about
+the product's source**. They sit in different directories because they answer to different
+owners — one to the browser, one to the audit.
+
+### 23d. What is tracked out of `capture/`, and why only that
+
+`capture/` is gitignored, but three files are excepted (`.gitignore`, see the note there
+about the mandatory trailing `*`):
+
+| file | size | why |
+|---|---|---|
+| `built.json` | 433 B | which sections `verify.mjs` gates. A decision, not evidence. Untracked, a clone gates a different set than §22f documents. |
+| `reference/MANIFEST.sha256` | 50 KB | `verify.mjs:72` hash-checks every reference against it before diffing; absent, it prints `references unverified`. `reference/README.md` already asserted this file was "Tracked in git" — that was aspirational until 2026-08-20. |
+| `reference/README.md` | 1.5 KB | the restore procedure. Without it the manifest arrives in a clone unexplained. |
+
+Everything else stays out: the PNGs, the 435 MB bundle, `dom/`, `diffs/`, `network/`,
+`node_modules/`, and `gallery-probe.json` (5.2 MB). **The 18 `.mjs` tooling scripts are
+also still untracked** — ~130 KB of source that exists on one laptop. That is a real
+exposure, called out here rather than quietly fixed, because tracking them is a separate
+decision: it would protect the code but still would not make the gate runnable from a
+clean clone, which needs the 450 MB reference set restored from the bundle first.
